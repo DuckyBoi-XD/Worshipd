@@ -37,6 +37,27 @@ nav{
     gap: 30px;
 }
 
+a.nav-button{
+    text-decoration: none;
+    color: #FFC300;
+}
+
+a.nav-button:hover{
+    color: hsl(46, 100%, 82%);
+}
+
+a.nav-button-base{
+    text-decoration: underline;
+    color: #FFC300;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 18px;
+
+}
+
+a.nav-button-base:hover{
+    color: hsl(46, 100%, 82%);
+}
+
 .logo{
     display: flex;
     justify-content: center;

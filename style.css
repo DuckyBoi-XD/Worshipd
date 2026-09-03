@@ -22,8 +22,11 @@ nav{
 }
 
 .Nav-Bar{
-    align-items: center;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
     gap: 20px;
 }
 
@@ -38,26 +41,27 @@ nav{
     height: 60px;
 }
 
-.Nav-Bar.title{
-    align-items: center;
-    justify-content: center;
+.Nav-Bar .left{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-h2{
+.Nav-Bar .left h2{
     font-family: "DM Serif Display", serif;
     font-size: 30px;
     font-weight: 800;
     margin-top: 0px;
     margin-bottom: 0px;
+    margin-left: 15px;
 }
 
 
 .Nav-Buttons{
-    position: absolute;
-    right: 50px;
     align-items: center;
     display: flex;
+    white-space: nowrap;
     font-family: "DM Serif Display", serif;
     font-size: 20px;
     font-weight: 400;
@@ -85,5 +89,39 @@ a.nav-button-base:hover{
     color: hsl(46, 100%, 82%);
 }
 
+.main-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    padding: 25px;
+    margin-top: 50px;
+    background-color: #FFFFFF;
+}
+
+.main-title .box h2{
+    font-family: "DM Serif Display", serif;
+    font-size: 80px;
+    font-weight: 800;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.main-title .box p{
+    font-family: "DM Serif Display", serif;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
 /* Nav Stuff */ 

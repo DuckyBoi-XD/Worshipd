@@ -139,8 +139,10 @@ a.nav-button-base:hover{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
     gap: 30px;
     margin-top: 30px;
+
     font-family: "DM Serif Display", serif;
     font-size: 28px;
     font-weight: 600;
@@ -154,6 +156,8 @@ a.nav-button-base:hover{
     background-color: #00162f;
     border: 1px solid #004186;
     border-radius: 10px;
+
+    transition: transform 0.2s ease; background-color: 0.2s ease;
 }
 
 .main-title .game-info{
@@ -169,9 +173,13 @@ a.nav-button-base:hover{
 
     text-align: center;
     visibility: hidden;
-    margin-top: 10px;
+    margin-top: 20px;
     position: absolute;
     width: 100%;
+    opacity: 0;
+
+    transform: translateY(-5px);
+    transition: transform 0.2s ease, opacity 0.2s ease;
 
 }
 
@@ -190,20 +198,27 @@ a.nav-button-base:hover{
 
 a.game-button1:hover,a.game-button2:hover,a.game-button3:hover{
     background-color: #003369;
+    transform: translateY(5px);
 }
 
 
 
 .game-buttons:has(.game-button1:hover) ~ .game-info .popout-info1{
     visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .game-buttons:has(.game-button2:hover) ~ .game-info .popout-info2{
     visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .game-buttons:has(.game-button3:hover) ~ .game-info .popout-info3{
     visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 

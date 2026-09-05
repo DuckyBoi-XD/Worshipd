@@ -19,7 +19,7 @@ nav{
     align-items: center;
     height: 60px;
     min-width: 10vw;
-    margin: 30px 100px 0px 100px;
+    margin: 50px 100px 0px 100px;
 
     flex-direction: row;
     align-items: center;
@@ -67,8 +67,6 @@ nav h2{
     font-family: "DM Serif Display", serif;
     font-size: 30px;
     font-weight: 800;
-    margin-top: 0px;
-    margin-bottom: 0px;
 }
 
 
@@ -231,10 +229,10 @@ a.github-logo:hover{
     display: inline-block;
 
     padding: 8px 10px 5px 10px;
-    border: 1px solid #ffdb6678;;
+    border: 3px solid #ffb22d86;
     border-radius: 10px;
 
-    transition: transform 0.5s ease, background-color 0.5s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
 }
 
 .main-title .game-info{
@@ -273,30 +271,32 @@ a.github-logo:hover{
 
 }
 
-.game-button1{
+.game-button1-wrapper{
     opacity: 0;
     transform: translateY(200px);
     animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: 200ms;
 }
 
-.game-button2{
+.game-button2-wrapper{
     opacity: 0;
     transform: translateY(200px);
     animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: 250ms;
 }
 
-.game-button3{
+.game-button3-wrapper{
     opacity: 0;
     transform: translateY(200px);
     animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: 300ms;
+    animation-delay: 3ms;
 }
 
 a.game-button1:hover,a.game-button2:hover,a.game-button3:hover{
+    border: 3px solid #ffffff86;
+    border-radius: 30px;
     background-color: #003369;
-    transform: translateY(5px);
+    transform: translateY(10px);
 }
 
 

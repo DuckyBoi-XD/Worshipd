@@ -289,7 +289,7 @@ a.github-logo:hover{
     opacity: 0;
     transform: translateY(200px);
     animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: 3ms;
+    animation-delay: 300ms;
 }
 
 a.game-button1:hover,a.game-button2:hover,a.game-button3:hover{

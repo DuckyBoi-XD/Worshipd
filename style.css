@@ -128,7 +128,7 @@ a.nav-button:hover, a.nav-button-base:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 22vh;
+    margin-top: 20vh;
     min-width: 100%;
 }
 
@@ -150,6 +150,10 @@ a.nav-button:hover, a.nav-button-base:hover{
     font-weight: 800;
     margin-top: -10px;
     margin-bottom: -10px;
+
+    opacity: 0;
+    transform: translateX(200px);
+    animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .main-title .box p{
@@ -159,6 +163,10 @@ a.nav-button:hover, a.nav-button-base:hover{
     line-height: 40px;
     margin-top: 0px;
     margin-bottom: 0px;
+
+    opacity: 0;
+    transform: translateX(-200px);
+    animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .game-buttons{
@@ -203,25 +211,33 @@ a.nav-button:hover, a.nav-button-base:hover{
     margin-top: 20px;
     position: absolute;
     width: 100%;
-    opacity: 0;
 
+    opacity: 0;
     transform: translateY(-20px);
     transition: transform 0.5s ease, opacity 0.5s ease;
 
 }
 
+.game-buttons{
+    opacity: 0;
+    transform: translateY(200px);
+    animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 .game-button1, .popout-info1{
     color: #ffae00;
+    background-color: white;
 }
 
 .game-button2, .popout-info2{
     color: #ff9900;
+    background-color: white;
 }
 
 .game-button3, .popout-info3{
     color: #ff8300;
+    background-color: white;
 }
-
 
 a.game-button1:hover,a.game-button2:hover,a.game-button3:hover{
     background-color: #003369;
@@ -249,4 +265,19 @@ a.game-button1:hover,a.game-button2:hover,a.game-button3:hover{
 }
 
 
+
+@keyframes fade-in-up {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+}
+@media (prefers-reduced-motion: reduce){
+    .main-title .box h2, .main-title .box p, .game-buttons{
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
 /* Nav Stuff */ 

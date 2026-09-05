@@ -299,6 +299,17 @@ a.game-button1:hover,a.game-button2:hover,a.game-button3:hover{
     transform: translateY(10px);
 }
 
+a.game-button1:hover{
+    color: #3195ff;
+}
+
+a.game-button2:hover{
+    color: #3173ff;
+}
+
+a.game-button3:hover{
+    color: #1d4be1;
+}
 
 .game-buttons:has(.game-button1:hover) ~ .game-info .popout-info1{
     visibility: visible;

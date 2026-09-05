@@ -123,13 +123,14 @@ a.nav-button:hover, a.nav-button-base:hover{
     color: hsl(46, 100%, 82%);
 }
 
+/* Nav Stuff */ 
+
 .main-title{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20vh;
-    min-width: 100%;
 }
 
 .main-title .box{
@@ -139,7 +140,6 @@ a.nav-button:hover, a.nav-button-base:hover{
     justify-content: center;
     text-align: center;
     width: 540px;
-    padding: 0px 15px 0px 15px;
 
 }
 
@@ -153,7 +153,7 @@ a.nav-button:hover, a.nav-button-base:hover{
 
     opacity: 0;
     transform: translateX(200px);
-    animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .main-title .box p{
@@ -166,7 +166,7 @@ a.nav-button:hover, a.nav-button-base:hover{
 
     opacity: 0;
     transform: translateX(-200px);
-    animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .game-buttons{
@@ -197,7 +197,7 @@ a.nav-button:hover, a.nav-button-base:hover{
 
 .main-title .game-info{
     position: relative;
-    width: 40vw;
+    width: 540px;
 
 }
 
@@ -213,37 +213,49 @@ a.nav-button:hover, a.nav-button-base:hover{
     width: 100%;
 
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
     transition: transform 0.5s ease, opacity 0.5s ease;
 
 }
 
-.game-buttons{
-    opacity: 0;
-    transform: translateY(200px);
-    animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
 .game-button1, .popout-info1{
     color: #ffae00;
-    background-color: white;
 }
 
 .game-button2, .popout-info2{
     color: #ff9900;
-    background-color: white;
 }
 
 .game-button3, .popout-info3{
     color: #ff8300;
-    background-color: white;
+
+}
+
+.game-button1{
+    opacity: 0;
+    transform: translateY(200px);
+    animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 200ms;
+}
+
+.game-button2{
+    opacity: 0;
+    transform: translateY(200px);
+    animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 250ms;
+}
+
+.game-button3{
+    opacity: 0;
+    transform: translateY(200px);
+    animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 300ms;
 }
 
 a.game-button1:hover,a.game-button2:hover,a.game-button3:hover{
     background-color: #003369;
     transform: translateY(5px);
 }
-
 
 
 .game-buttons:has(.game-button1:hover) ~ .game-info .popout-info1{
@@ -269,15 +281,12 @@ a.game-button1:hover,a.game-button2:hover,a.game-button3:hover{
 @keyframes fade-in-up {
     to {
         opacity: 1;
-        transform: translateX(0);
-        transform: translateY(0);
+        transform: translate(0, 0);
     }
 }
 @media (prefers-reduced-motion: reduce){
     .main-title .box h2, .main-title .box p, .game-buttons{
         animation: none;
-        opacity: 1;
         transform: none;
     }
 }
-/* Nav Stuff */ 

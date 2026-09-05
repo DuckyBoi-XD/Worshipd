@@ -10,7 +10,6 @@ body{
     color: #FFC300;
     margin: 0;
     padding: 0;
-    min-width: 100vh;
 }
 
 /* Nav Stuff */
@@ -47,6 +46,32 @@ nav{
     height: 60px;
 }
 
+a.github-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin-right: -10px;
+
+    background-color: none;
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+
+    transition: background-color 0.5s ease;
+}
+
+.github-logo img{
+    height: 35px;
+    object-fit: contain;
+}
+
+a.github-logo:hover{
+    background-color: white;
+}
+
 nav h2{
     color: #ffdb66;
     font-family: "DM Serif Display", serif;
@@ -67,6 +92,7 @@ nav .buttons{
     gap: 30px;
 
     margin-left: 40px;
+    margin-right: 40px;
 }
 
 a.nav-button{
@@ -187,9 +213,8 @@ a.nav-button:hover, a.nav-button-base:hover{
     position: relative;
     display: inline-block;
 
-    padding: 10px 12px 7px 12px;
-    background-color: #00162f;
-    border: 1px solid #004186;
+    padding: 8px 10px 5px 10px;
+    border: 1px solid #ffdb6678;;
     border-radius: 10px;
 
     transition: transform 0.5s ease, background-color 0.5s ease;

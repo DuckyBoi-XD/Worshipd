@@ -18,18 +18,34 @@ nav{
     display: flex;
     align-items: center;
     height: 60px;
-    min-width: 100%;
-    margin: 30px 0px 0px 30px;
+    min-width: 10vw;
+    margin: 30px 100px 0px 100px;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
 }
 
-.nav-bar{
+
+.left-wing{
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    gap: 30px;
+}
 
-    gap: 20px;
-    padding-left: 20vw;
+.right-wing{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-right: 11px;
 }
 
 
@@ -37,39 +53,13 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-right: -10px;
 
 }
 .logo img{
     height: 60px;
-}
-
-a.github-logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    margin-right: -10px;
-
-    background-color: none;
-    border: 1px solid white;
-    border-radius: 8px;
-    width: 40px;
-    height: 40px;
-
-    transition: background-color 0.5s ease;
-}
-
-.github-logo img{
-    height: 35px;
-    object-fit: contain;
-}
-
-a.github-logo:hover{
-    background-color: white;
 }
 
 nav h2{
@@ -85,20 +75,21 @@ nav h2{
 nav .buttons{
     display: flex;
     align-items: center;
-    
+    flex-direction: row;
+    flex-wrap: nowrap;
+
     font-family: "DM Serif Display", serif;
     font-size: 20px;
     font-weight: 800;
-    gap: 30px;
-
-    margin-left: 40px;
-    margin-right: 40px;
+    gap: 25px;
 }
 
 a.nav-button{
     text-decoration: none;
     color: #FFC300;
     position: relative;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     transition: color 0.5s ease;
 }
 
@@ -147,6 +138,32 @@ a.nav-button-base:hover::after{
 
 a.nav-button:hover, a.nav-button-base:hover{
     color: hsl(46, 100%, 82%);
+}
+
+a.github-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin-right: -10px;
+
+    background-color: none;
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+
+    transition: background-color 0.5s ease;
+}
+
+.github-logo img{
+    height: 35px;
+    object-fit: contain;
+}
+
+a.github-logo:hover{
+    background-color: white;
 }
 
 /* Nav Stuff */ 

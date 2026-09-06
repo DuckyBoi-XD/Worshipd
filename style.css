@@ -168,6 +168,12 @@ a.github-logo:hover{
 
 /* Nav Stuff */ 
 
+.alignment{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .main-title{
     display: flex;
     flex-direction: column;
@@ -218,11 +224,10 @@ a.github-logo:hover{
     align-items: center;
     justify-content: center;
 
-    gap: 30px;
-    margin-top: 30px;
+    gap: clamp(10px, 2vw, 30px);
 
     font-family: "DM Serif Display", serif;
-    font-size: 28px;
+    font-size: clamp(18px, 2vw, 28px);
     font-weight: 600;
 }
 

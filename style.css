@@ -16,6 +16,7 @@ body{
 
 nav{
     display: flex;
+    position: sticky;
     align-items: center;
     height: 60px;
     min-width: 10vw; 
@@ -99,6 +100,8 @@ a.nav-button-base{
     color: #ff9900;
     position: relative;
     transition: color 0.5s ease;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 
 }
 
@@ -344,6 +347,39 @@ a.game-button3:hover{
 }
 
 
+.song-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.song-information h2{
+    color: #ffdb66; 
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(40px, 9vw, 70px);
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: -10px;
+
+    opacity: 0;
+    transform: translateX(200px);
+    animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.song-information ul li{
+    color: #ffdb66; 
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(15px, 9vw, 30px);
+    white-space: nowrap;
+}
+
+.song-information ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
 
 @keyframes fade-in-up {
     to {

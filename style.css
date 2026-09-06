@@ -18,14 +18,16 @@ nav{
     display: flex;
     align-items: center;
     height: 60px;
-    min-width: 10vw;
-    margin: 50px 100px 0px 100px;
+    min-width: 10vw; 
+    margin-top: clamp(20px, 5vw, 50px);
+    margin-left: clamp(50px, 10vw, 100px);
+    margin-right: clamp(50px, 10vw, 100px);
 
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
-    gap: 80px;
+    gap: clamp(40px, 1vw, 80px);
 }
 
 
@@ -35,7 +37,7 @@ nav{
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: clamp(15px, 2.5vw, 30px);
 }
 
 .right-wing{
@@ -44,7 +46,7 @@ nav{
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: clamp(15px, 2.5vw, 30px);
     margin-right: 11px;
 }
 
@@ -53,19 +55,19 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: clamp(40px, 5vw, 60px);
+    height: clamp(40px, 5vw, 60px);
     margin-right: -10px;
 
 }
 .logo img{
-    height: 60px;
+    height: clamp(40px, 5vw, 60px);
 }
 
 nav h2{
     color: #ffdb66;
     font-family: "DM Serif Display", serif;
-    font-size: 30px;
+    font-size: clamp(25px, 3vw, 30px);
     font-weight: 800;
 }
 
@@ -77,9 +79,9 @@ nav .buttons{
     flex-wrap: nowrap;
 
     font-family: "DM Serif Display", serif;
-    font-size: 20px;
+    font-size:  clamp(15px, 2vw, 20px);
     font-weight: 800;
-    gap: 25px;
+    gap: clamp(15px, 3vw, 25px);
 }
 
 a.nav-button{
@@ -149,14 +151,14 @@ a.github-logo{
     background-color: none;
     border: 1px solid white;
     border-radius: 8px;
-    width: 40px;
-    height: 40px;
+    width: clamp(25px, 4vw, 40px);
+    height: clamp(25px, 4vw, 40px);
 
     transition: background-color 0.5s ease;
 }
 
 .github-logo img{
-    height: 35px;
+    height: clamp(20px, 4vw, 35px);
     object-fit: contain;
 }
 
@@ -196,7 +198,7 @@ a.github-logo:hover{
     transform: translateX(200px);
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
-
+    
 .main-title .box p{
     font-family: "DM Serif Display", serif;
     font-size: 35px;

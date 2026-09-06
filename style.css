@@ -182,14 +182,14 @@ a.github-logo:hover{
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 540px;
+    width: clamp(300px, 40vw, 540px);
 
 }
 
 .main-title .box h2{
     color: #ffdb66; 
     font-family: "DM Serif Display", serif;
-    font-size: 120px;
+    font-size: clamp(80px, 9vw, 120px);
     font-weight: 800;
     margin-top: -10px;
     margin-bottom: -10px;
@@ -201,9 +201,9 @@ a.github-logo:hover{
     
 .main-title .box p{
     font-family: "DM Serif Display", serif;
-    font-size: 35px;
+    font-size: clamp(20px, 2.5vw, 35px);
     font-weight: 500;
-    line-height: 40px;
+    line-height: clamp(25px, 3vw, 40px);
     margin-top: 0px;
     margin-bottom: 0px;
 

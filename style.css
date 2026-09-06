@@ -195,7 +195,7 @@ a.github-logo:hover{
 .main-title .box h2{
     color: #ffdb66; 
     font-family: "DM Serif Display", serif;
-    font-size: clamp(80px, 9vw, 120px);
+    font-size: clamp(70px, 9vw, 120px);
     font-weight: 800;
     margin-top: -10px;
     margin-bottom: -10px;
@@ -225,6 +225,7 @@ a.github-logo:hover{
     justify-content: center;
 
     gap: clamp(10px, 2vw, 30px);
+    margin-top: clamp(15px, 1.5vw, 30px);
 
     font-family: "DM Serif Display", serif;
     font-size: clamp(18px, 2vw, 28px);

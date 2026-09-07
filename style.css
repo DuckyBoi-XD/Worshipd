@@ -189,6 +189,7 @@ a.github-logo:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    pointer-events: all;
 }
 
 .main-title .box{
@@ -360,7 +361,7 @@ a.game-button3:hover{
     font-size: clamp(40px, 9vw, 70px);
     font-weight: 800;
     margin-top: 20px;
-    margin-bottom: -10px;
+    margin-bottom: 10px;
 
     opacity: 0;
     transform: translateX(200px);
@@ -368,10 +369,17 @@ a.game-button3:hover{
 }
 
 .song-information ul li{
+    display: flex;
+    flex-direction: row;
     color: #ffdb66; 
     font-family: "DM Serif Display", serif;
     font-size: clamp(15px, 9vw, 30px);
     white-space: nowrap;
+    list-style: none;
+
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .song-information ul{
@@ -379,6 +387,18 @@ a.game-button3:hover{
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     row-gap: 20px;
+}
+
+.cover-art{
+    height: clamp(30px, 5vw, 55px);
+    width: clamp(30px, 5vw, 55px);
+    border: 1px solid white;
+    border-radius: 10px;
+
+    background-image: url(assets/cover-art/ElevationWorshipRed.jpg);
+    background-size: cover;
+
+    z-index: -1;
 }
 
 @keyframes fade-in-up {

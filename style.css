@@ -20,9 +20,9 @@ nav{
     align-items: center;
     height: 60px;
     min-width: 10vw; 
-    margin-top: clamp(20px, 5vw, 60px);
-    margin-left: clamp(50px, 10vw, 100px);
-    margin-right: clamp(50px, 10vw, 100px);
+    margin-top: clamp(15px, 5.25vw, 60px);
+    margin-left: clamp(30px, 8vw, 100px);
+    margin-right: clamp(30px, 8vw, 100px);
 
     flex-direction: row;
     align-items: center;

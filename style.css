@@ -385,21 +385,50 @@ a.game-button3:hover{
 .song-information ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 95%;
+    padding-left: 0;
     column-gap: 20px;
-    row-gap: 20px;
+    row-gap: clamp(10px, 2vw, 20px);
 }
 
 .cover-art{
-    height: clamp(30px, 5vw, 55px);
-    width: clamp(30px, 5vw, 55px);
+    height: clamp(30px, 4vw, 50px);
+    width: clamp(30px, 4vw, 50px);
     border: 1px solid white;
     border-radius: 10px;
 
     background-image: url(assets/cover-art/ElevationWorshipRed.jpg);
     background-size: cover;
 
-    z-index: -1;
 }
+
+.redirects{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+.Spotify-logo{
+    height: clamp(30px, 4vw, 50px);
+    width: clamp(30px, 4vw, 50px);
+    border: 1px solid white;
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/logos/Spotify-logo.png);
+    background-size: cover;
+}
+
+.Youtube-logo{
+    height: clamp(30px, 4vw, 50px);
+    width: clamp(30px, 4vw, 50px);
+    border: 1px solid white;
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/logos/Youtube-logo.png);
+    background-size: cover;
+}
+
 
 @keyframes fade-in-up {
     to {

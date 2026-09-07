@@ -392,8 +392,8 @@ a.game-button3:hover{
 }
 
 .cover-art{
-    height: clamp(30px, 4vw, 50px);
-    width: clamp(30px, 4vw, 50px);
+    height: clamp(35px, 4vw, 45px);
+    width: clamp(35px, 4vw, 45px);
     border: 1px solid white;
     border-radius: 10px;
 
@@ -407,26 +407,30 @@ a.game-button3:hover{
     flex-direction: row;
     width: auto;
     gap: clamp(10px, 2vw, 20px);
+    align-items: center;
+    justify-content: center;
 }
 
 .Spotify-logo{
-    height: clamp(30px, 4vw, 50px);
-    width: clamp(30px, 4vw, 50px);
-    border: 1px solid white;
-    border-radius: clamp(5px, 1vw, 10px);
+    height: clamp(35px, 5vw, 40px);
+    width: clamp(35px, 5vw, 40px);
 
     background-image: url(assets/logos/Spotify-logo.png);
-    background-size: cover;
+    background-position: center;
+    background-size: clamp(40px, 4vw, 48px);
+
+    border-radius: 25px;
 }
 
 .Youtube-logo{
-    height: clamp(30px, 4vw, 50px);
-    width: clamp(30px, 4vw, 50px);
-    border: 1px solid white;
-    border-radius: clamp(5px, 1vw, 10px);
+    height: clamp(35px, 5vw, 45px);
+    width: clamp(50px, 5vw, 60px);
 
     background-image: url(assets/logos/Youtube-logo.png);
-    background-size: cover;
+    background-position: center;
+    background-size: clamp(50px, 5vw, 60px);
+
+    border-radius: 8.5px;
 }
 
 

@@ -371,15 +371,15 @@ a.game-button3:hover{
 .song-information ul li{
     display: flex;
     flex-direction: row;
-    color: #ffdb66; 
+    color: #FFC300; 
     font-family: "DM Serif Display", serif;
-    font-size: clamp(15px, 9vw, 30px);
+    font-size: clamp(15px, 2vw, 25px);
     white-space: nowrap;
     list-style: none;
 
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: clamp(5px, 1vw, 15px);
 }
 
 .song-information ul{
@@ -391,22 +391,30 @@ a.game-button3:hover{
     row-gap: clamp(10px, 2vw, 20px);
 }
 
-.cover-art{
-    height: clamp(35px, 4vw, 45px);
-    width: clamp(35px, 4vw, 45px);
-    border: 1px solid white;
-    border-radius: 10px;
+.cover-artEWR{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
 
     background-image: url(assets/cover-art/ElevationWorshipRed.jpg);
     background-size: cover;
+}
+.cover-artBMC{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
 
+    background-image: url(assets/cover-art/BethelMusicCity.jpg);
+    background-size: cover;
 }
 
 .redirects{
     display: flex;
     flex-direction: row;
     width: auto;
-    gap: clamp(10px, 2vw, 20px);
+    gap: clamp(5px, 1vw, 10px);
     align-items: center;
     justify-content: center;
 }

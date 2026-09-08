@@ -368,27 +368,28 @@ a.game-button3:hover{
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.song-information ul li{
-    display: flex;
-    flex-direction: row;
-    color: #FFC300; 
-    font-family: "DM Serif Display", serif;
-    font-size: clamp(15px, 2vw, 25px);
-    white-space: nowrap;
-    list-style: none;
-
-    align-items: center;
-    justify-content: center;
-    gap: clamp(5px, 1vw, 15px);
-}
-
 .song-information ul{
     display: grid;
+    container-type: inline-size;
     grid-template-columns: 1fr 1fr;
     width: 95%;
     padding-left: 0;
     column-gap: 20px;
     row-gap: clamp(10px, 2vw, 20px);
+}
+
+.song-information ul li{
+    display: flex;
+    flex-direction: row;
+    color: #FFC300; 
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(10px, 2cqw, 25px);
+    white-space: nowrap;
+    list-style: none;
+
+    align-items: center;
+    justify-content: center;
+    gap: clamp(5px, 1cqw, 15px);
 }
 
 .cover-artEWR{
@@ -407,6 +408,66 @@ a.game-button3:hover{
     border-radius: clamp(5px, 1vw, 10px);
 
     background-image: url(assets/cover-art/BethelMusicCity.jpg);
+    background-size: cover;
+}
+
+.cover-artAI{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/AlabasterWorshipCoverArtAllIn.jpg);
+    background-size: cover;
+}
+
+.cover-artATY{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/EastgateCoverArtRegular.jpg);
+    background-size: cover;
+}
+
+.cover-artATH{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BrookeLigertwoodCoverArt1000.jpg);
+    background-size: cover;
+}
+
+.cover-artAMAZING{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationRhythmCoverArtAMAZING.jpg);
+    background-size: cover;
+}
+
+.cover-artAG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ForrestFrankCoverArtAG.jpg);
+    background-size: cover;
+}
+
+.cover-artATA{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationRhythmCoverArtATA.jpg);
     background-size: cover;
 }
 
@@ -455,11 +516,11 @@ a.game-button3:hover{
     }
 }
 
-@media (max-width:1000px){
+@media (max-width:1200px){
     .song-information ul{
         grid-template-columns: 1fr;
     }
     .song-information ul li{
-        font-size: clamp(15px, 4 =vw, 25px);
+        font-size: clamp(15px, 3vw, 35px);
     }
 }

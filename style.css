@@ -454,3 +454,12 @@ a.game-button3:hover{
         transform: none;
     }
 }
+
+@media (max-width:1000px){
+    .song-information ul{
+        grid-template-columns: 1fr;
+    }
+    .song-information ul li{
+        font-size: clamp(15px, 4vw, 25px);
+    }
+}

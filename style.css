@@ -460,6 +460,6 @@ a.game-button3:hover{
         grid-template-columns: 1fr;
     }
     .song-information ul li{
-        font-size: clamp(15px, 4vw, 25px);
+        font-size: clamp(15px, 4 =vw, 25px);
     }
 }

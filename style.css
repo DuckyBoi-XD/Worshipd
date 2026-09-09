@@ -492,6 +492,46 @@ a.game-button3:hover{
     background-size: cover;
 }
 
+.cover-artBG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BrookeLigertwoodCoverArtBG.jpg);
+    background-size: cover;
+}
+
+.cover-artTB{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BethelMusicCoverArtBLOOD.jpg);
+    background-size: cover;
+}
+
+.cover-artBEC{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/JesusCultureCoverArtBEC.jpg);
+    background-size: cover;
+}
+
+.cover-artBML{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/PatBarrettCoverArtBML.jpg);
+    background-size: cover;
+}
+
 .redirects{
     display: flex;
     flex-direction: row;

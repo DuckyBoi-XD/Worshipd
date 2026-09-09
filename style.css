@@ -387,10 +387,11 @@ a.game-button3:hover{
     white-space: nowrap;
     list-style: none;
 
-    align-items: center;
     justify-content: center;
     gap: clamp(5px, 1cqw, 15px);
+    justify-self: left;
 }
+
 
 .cover-artEWR{
     height: clamp(25px, 3vw, 35px);
@@ -451,7 +452,7 @@ a.game-button3:hover{
     background-size: cover;
 }
 
-.cover-artAG{
+.cover-artFAG{
     height: clamp(25px, 3vw, 35px);
     width: clamp(25px, 3vw, 35px);
     border: 1px solid rgba(255, 255, 255, 0.483);
@@ -468,6 +469,26 @@ a.game-button3:hover{
     border-radius: clamp(5px, 1vw, 10px);
 
     background-image: url(assets/cover-art/ElevationRhythmCoverArtATA.jpg);
+    background-size: cover;
+}
+
+.cover-artATFOTC{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/SouvenirsWorshipCoverArtATFOTC.jpg);
+    background-size: cover;
+}
+
+.cover-artHAG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongUnitedCoverArtAG.jpg);
     background-size: cover;
 }
 
@@ -516,7 +537,7 @@ a.game-button3:hover{
     }
 }
 
-@media (max-width:1200px){
+@media (max-width:1000px){
     .song-information ul{
         grid-template-columns: 1fr;
     }

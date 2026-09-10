@@ -532,6 +532,227 @@ a.game-button3:hover{
     background-size: cover;
 }
 
+.cover-artCenter{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BethelMusicCoverArtCenter.jpg);
+    background-size: cover;
+}
+
+.cover-artDIL{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BethelMusicCoverArtVICTORY.jpg);
+    background-size: cover;
+}
+
+.cover-artFH{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationRhythmCoverArtFH.png);
+    background-size: cover;
+}
+
+.cover-artFIMB{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/TiffanyHudsonCoverArtFINB.png);
+    background-size: cover;
+}
+
+.cover-artFF{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/CodyCarnesCoverArtFF.jpg);
+    background-size: cover;
+}
+
+.cover-artFG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/SouvenirsWorshipCoverArtFG.jpg);
+    background-size: cover;
+}
+
+.cover-artFREE{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/SEUWorshipCoverArtFREE.jpg);
+    background-size: cover;
+}
+
+.cover-artFreedom{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/JesusCultureCoverArtFreedom.jpg);
+    background-size: cover;
+}
+
+.cover-artFW{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongWorshipCoverArtFW.jpg);
+    background-size: cover;
+}
+
+.cover-artGMJ{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/UPPERROOMCoverArtGMJ.jpg);
+    background-size: cover;
+}
+
+.cover-artGD{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/PassionCoverArtGD.jpg);
+    background-size: cover;
+}
+
+.cover-artGIJG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationWorshipRed.jpg);
+    background-size: cover;
+}
+
+.cover-artGOR{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BethelMusicCoverArtGOR.jpg);
+    background-size: cover;
+}
+
+.cover-artGRYMG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/PentatonixCoverArtGRYMG.jpg);
+    background-size: cover;
+}
+
+.cover-artGSL{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/WeTheKingdomCoverArtGSL.jpg);
+    background-size: cover;
+}
+
+.cover-artGY{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationRhythmCoverArtGY.jpg);
+    background-size: cover;
+}
+
+.cover-artGD{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ForrestFrankCoverArtGD.jpg);
+    background-size: cover;
+}
+
+.cover-artGGF{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HousefiresCoverArtGGF.jpg);
+    background-size: cover;
+}
+
+.cover-artGOG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BethelMusicCoverArtVICTORY.jpg);
+    background-size: cover;
+}
+
+.cover-artGratitude{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BrandonLakeCoverArtGraditude.jpg);
+    background-size: cover;
+}
+
+.cover-artGAYL{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/AllSons&DaughtersCoverArtGAYL.jpg);
+    background-size: cover;
+}
+
+.cover-artGI{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/EastgateCoverArtRegular.jpg);
+    background-size: cover;
+}
+
+
 .redirects{
     display: flex;
     flex-direction: row;

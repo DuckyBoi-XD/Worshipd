@@ -753,6 +753,156 @@ a.game-button3:hover{
     background-size: cover;
 }
 
+.cover-artHH{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/EquippersRevolutionCoverArtHH.jpg);
+    background-size: cover;
+}
+
+.cover-artHFH{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BrandonLakeCoverArtHFH.jpg);
+    background-size: cover;
+}
+
+.cover-artHOW{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/MattRedmanCoverArtTHOW.jpg);
+    background-size: cover;
+}
+
+.cover-artHIATW{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongWorshipCoverArtHIATW.jpg);
+    background-size: cover;
+}
+
+.cover-artHN{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/SouvenirsWorshipCoverArtH&N.jpg);
+    background-size: cover;
+}
+
+.cover-artHTTA{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BlueprintChurchCoverArtHTTA.jpg);
+    background-size: cover;
+}
+
+.cover-artHF{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ChrisTomlinCoverArtHF.jpg);
+    background-size: cover;
+}
+
+.cover-artHP{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/AbundantWorshipCoverArtHP.jpg);
+    background-size: cover;
+}
+
+.cover-artHS{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/JesusCultureCoverArtHS.jpg);
+    background-size: cover;
+}
+
+.cover-artHosanna{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongWorshipCoverArtHosanna.jpg);
+    background-size: cover;
+}
+
+.cover-artHOM{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BrandonLakeCoverArtHOM.jpg);
+    background-size: cover;
+}
+
+.cover-artHGIOG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ChrisTomlinCoverArtHGIOG.jpg);
+    background-size: cover;
+}
+
+.cover-artHGTA{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/Shane&ShaneCoverArtHGTA.jpg);
+    background-size: cover;
+}
+
+.cover-artIGYMH{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongWorshipCoverArtIGYMH.jpg);
+    background-size: cover;
+}
+
+.cover-artILYL{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationWorshipCoverArtILYL.jpg);
+    background-size: cover;
+}
+
 
 .redirects{
     display: flex;

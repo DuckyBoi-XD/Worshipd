@@ -383,11 +383,12 @@ a.game-button3:hover{
     flex-direction: row;
     color: #FFC300; 
     font-family: "DM Serif Display", serif;
-    font-size: clamp(10px, 2cqw, 25px);
+    font-size: clamp(10px, 1.7cqw, 20px);
     white-space: nowrap;
     list-style: none;
 
     justify-content: center;
+    align-items: center;
     gap: clamp(5px, 1cqw, 15px);
     justify-self: left;
 }

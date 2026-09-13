@@ -922,6 +922,7 @@ a.game-button3:hover{
     background-size: clamp(40px, 4vw, 48px);
 
     border-radius: 25px;
+    transition: transform 0.3s ease;
 }
 
 .Youtube-logo{
@@ -933,6 +934,15 @@ a.game-button3:hover{
     background-size: clamp(50px, 5vw, 60px);
 
     border-radius: 8.5px;
+    transition: transform 0.3s ease;
+}
+
+.Spotify-logo:hover{
+    transform:scale(1.1);
+}
+
+.Youtube-logo:hover{
+    transform:scale(1.1);
 }
 
 

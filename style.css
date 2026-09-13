@@ -903,6 +903,205 @@ a.game-button3:hover{
     background-size: cover;
 }
 
+.cover-artICA{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/PassionCoverArtICA.jpg);
+    background-size: cover;
+}
+
+.cover-artIHW{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ChrisTomlinCoverArtIHW.jpg);
+    background-size: cover;
+}
+
+.cover-artISJ{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/CharityGayleCoverArtISJ.jpg);
+    background-size: cover;
+}
+
+.cover-artIS{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongWorshipCoverArtIS.jpg);
+    background-size: cover;
+}
+
+.cover-artITG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/MaverickCityMusicCoverArtITG.jpg);
+    background-size: cover;
+}
+
+.cover-artIWEY{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BrookeLigertwoodCoverArtIWEY.jpg);
+    background-size: cover;
+}
+
+.cover-artJATC{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/IsraelHoughtonCoverArtJATC.jpg);
+    background-size: cover;
+}
+
+.cover-artJBTN{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationWorshipCoverArtJBTN.jpg);
+    background-size: cover;
+}
+
+.cover-artJWLY{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/MBLWorshipCoverArtJWLY.jpg);
+    background-size: cover;
+}
+
+.cover-artTJ{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/TheBelongingCoCoverArtTJ.jpg);
+    background-size: cover;
+}
+
+.cover-artKOG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/PassionCoverArtKOG.jpg);
+    background-size: cover;
+}
+
+.cover-artKOK{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongWorshipBrookeLigertwoodCoverArtKOK.jpg);
+    background-size: cover;
+}
+
+.cover-artLemonade{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ForrestFrankCoverArtLEMONADE.jpg);
+    background-size: cover;
+}
+
+.cover-artMMNPW{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/NewPathWorshipCoverArtMMN.jpg);
+    background-size: cover;
+}
+
+.cover-artMMNIM{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/InfluenceMusicCoverArtMMN.png);
+    background-size: cover;
+}
+
+.cover-artMR{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/TheChurchWillSingCoverArtMR.jpg);
+    background-size: cover;
+}
+
+.cover-artMNOJ{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/TheBelongingCoCoverArtMNOJ.jpeg);
+    background-size: cover;
+}
+
+.cover-artMRL{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongWorshipCoverArtMRL.jpg);
+    background-size: cover;
+}
+
+.cover-artNGUTT{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ForrestFrankCoverArtNGUTT.jpg);
+    background-size: cover;
+}
+
+.cover-artNLYG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/EquippersRevolutionCoverArtNLYG.jpg);
+    background-size: cover;
+}
 
 .redirects{
     display: flex;

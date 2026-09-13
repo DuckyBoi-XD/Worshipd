@@ -1103,6 +1103,416 @@ a.game-button3:hover{
     background-size: cover;
 }
 
+.cover-artNW{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongWorshipCoverArtNW.jpg);
+    background-size: cover;
+}
+
+.cover-artNLS{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BethelMusicCoverArtNLS.jpg);
+    background-size: cover;
+}
+
+.cover-artNBTB{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/CharityGayleCoverArtNBTB.jpg);
+    background-size: cover;
+}
+
+.cover-artNE{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/CodyCarnesCoverArtNE.jpg);
+    background-size: cover;
+}
+
+.cover-artOCTTA{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationWorshipCoverArtOCTTA.jpg);
+    background-size: cover;
+}
+
+.cover-artOW{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongWorshipCoverArtOW.jpg);
+    background-size: cover;
+}
+
+.cover-artOIJ{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/EastgateWorshipCoverArtOIJ.jpg);
+    background-size: cover;
+}
+
+.cover-artOOGAI{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/GatewayALLINCoverArtOO.jpg);
+    background-size: cover;
+}
+
+.cover-artOpen{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/LOWorshipCoverArtOpen.png);
+    background-size: cover;
+}
+
+.cover-artOOEW{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationRhythmCoverArtOO.jpg);
+    background-size: cover;
+}
+
+.cover-artPraise{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationWorshipCoverArtPraise.jpg);
+    background-size: cover;
+}
+
+.cover-artProdigals{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/NorthPointWorshipCoverArtProdigals.jpg);
+    background-size: cover;
+}
+
+.cover-artRAH{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BethelMusicCoverArtRAH.jpg);
+    background-size: cover;
+}
+
+.cover-artRL{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/CoryAsburyCoverArtRL.jpg);
+    background-size: cover;
+}
+
+.cover-artROU{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/MaverickCityMusicCoverArtROU.jpg);
+    background-size: cover;
+}
+
+.cover-artSAF{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/JesusCultureCoverArtSAF.jpg);
+    background-size: cover;
+}
+
+.cover-artSTTL{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/GatewayWorshipCoverArtSTTL.jpg);
+    background-size: cover;
+}
+
+.cover-artSOM{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/EquippersRevolutionCoverArtSOM.jpg);
+    background-size: cover;
+}
+
+.cover-artSurrounded{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BethelMusicCoverArtSurrounded.png);
+    background-size: cover;
+}
+
+.cover-artTYAYW{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/CodyCarnesCoverArtTYAYW.jpg);
+    background-size: cover;
+}
+
+.cover-artTGIF{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationRhythmCoverArtTGIF.jpg);
+    background-size: cover;
+}
+
+.cover-artTYJFTB{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/CharityGayleCoverArtTYJFTB.jpg);
+    background-size: cover;
+}
+
+.cover-artTWIP{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BrandonLakeCoverArtTWIP.jpg);
+    background-size: cover;
+}
+
+.cover-artTIAG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/PhilWickhamCoverArtTIAG.jpg);
+    background-size: cover;
+}
+
+.cover-artTIOG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/PhilWickhamCoverArtTIOG.jpg);
+    background-size: cover;
+}
+
+.cover-artTIG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationWorshipCoverArtTIG.jpg);
+    background-size: cover;
+}
+
+.cover-artTS{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/JeremyKeysCoverArtTS.jpg);
+    background-size: cover;
+}
+
+.cover-artTruth{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/AlabasterCoverArtTruth.jpg);
+    background-size: cover;
+}
+
+.cover-artTuhia{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/TeRautiniCoverArtTuhia.jpg);
+    background-size: cover;
+}
+
+.cover-artWashed{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationRhythmCoverArtWashed.jpg);
+    background-size: cover;
+}
+
+.cover-artWM{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/LeelandCoverArtWM.jpg);
+    background-size: cover;
+}
+
+.cover-artWABN{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/HillsongWorshipCoverArtWABN.jpg);
+    background-size: cover;
+}
+
+.cover-artWAG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/SEUWorshipCoverArtWAG.jpeg);
+    background-size: cover;
+}
+
+.cover-artWAAG{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/PhilWickhamCoverArtWAAG.jpg);
+    background-size: cover;
+}
+
+.cover-artWE{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/GatewayAllInCoverArtWE.jpg);
+    background-size: cover;
+}
+
+.cover-artWorthy{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ElevationWorshipCoverArtWorthy.jpg);
+    background-size: cover;
+}
+
+.cover-artWOIA{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/CeCeWinansCoverArtWOIA.jpg);
+    background-size: cover;
+}
+
+.cover-artYAGIH{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/IsraelHoughtonCoverArtYAG.jpg);
+    background-size: cover;
+}
+
+.cover-artYAGBM{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/BethelMusicYAG.jpg);
+    background-size: cover;
+}
+
+.cover-artYW{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/AlabasterWorshipCoverArtYW.jpg);
+    background-size: cover;
+}
+
+.cover-artYWB{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/ForrestFrankCoverArtYWB.jpg);
+    background-size: cover;
+}
+
 .redirects{
     display: flex;
     flex-direction: row;

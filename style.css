@@ -211,7 +211,7 @@ a.github-logo:hover{
     margin-bottom: -10px;
 
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(20vw);
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
     
@@ -224,7 +224,7 @@ a.github-logo:hover{
     margin-bottom: 0px;
 
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-20vw);
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -251,6 +251,7 @@ a.github-logo:hover{
     border-radius: 10px;
 
     transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
+    user-select: none;
 }
 
 .main-title .game-info{
@@ -271,7 +272,7 @@ a.github-logo:hover{
     width: 100%;
 
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-2vw);
     transition: transform 0.5s ease, opacity 0.5s ease;
 
 }
@@ -291,21 +292,21 @@ a.github-logo:hover{
 
 .game-button1-wrapper{
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(5vw);
     animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: 200ms;
 }
 
 .game-button2-wrapper{
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(5vw);
     animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: 250ms;
 }
 
 .game-button3-wrapper{
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(5vw);
     animation: fade-in-up 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: 300ms;
 }
@@ -314,7 +315,7 @@ a.game-button1:hover,a.game-button2:hover,a.game-button3:hover{
     border: 3px solid #ffffff86;
     border-radius: 30px;
     background-color: #003369;
-    transform: translateY(10px);
+    transform: translateY(1vw);
 }
 
 a.game-button1:hover{
@@ -364,7 +365,7 @@ a.game-button3:hover{
     margin-bottom: 10px;
 
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateY(-10vw);
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -391,6 +392,16 @@ a.game-button3:hover{
     align-items: center;
     gap: clamp(5px, 1cqw, 15px);
     justify-self: left;
+
+    opacity: 0;
+    transform: translateY(-75%);
+    animation: fade-in 50ms ease-out forwards;
+    
+    @for $i from 1 through 112{
+        &:nth-of-type(#{$i}) {
+            animation-delay: calc(sin(45deg) * #{$i}ms * 50)
+        }
+    }
 }
 
 .redirects{
@@ -441,10 +452,19 @@ a.game-button3:hover{
         transform: translate(0, 0);
     }
 }
+
+@keyframes fade-in{
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
 @media (prefers-reduced-motion: reduce){
-    .main-title .box h2, .main-title .box p, .game-buttons{
+    .main-title .box h2, .main-title .box p, .game-buttons, .song-information ul li{
         animation: none;
         transform: none;
+        opacity: 1;
     }
 }
 

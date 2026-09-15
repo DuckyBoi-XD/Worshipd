@@ -29,6 +29,8 @@ nav{
     justify-content: space-between;
 
     gap: clamp(40px, 1vw, 80px);
+
+    z-index: 10;
 }
 
 
@@ -182,6 +184,28 @@ a.github-logo:hover{
     align-items: center;
     pointer-events: none;
 
+    z-index: 1;
+
+}
+
+.game-space{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+
+    position: fixed;
+    inset: 0;
+
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.game-space.hidden{
+    opacity: 0;
+    transform: translateY(10vw);
+    pointer-events: none;
 }
 
 .main-title{
@@ -189,7 +213,20 @@ a.github-logo:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    pointer-events: all;
+    pointer-events: auto;
+
+    position: fixed;
+    inset: 0;
+
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.main-title.hidden{
+    opacity: 0;
+    transform: translateY(-10vw);
+    pointer-events: none;
 }
 
 .main-title .box{

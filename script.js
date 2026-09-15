@@ -1,5 +1,8 @@
-function startGame() {
+function startgame(mode) {
+    document.querySelector(".main-title").classList.add("hidden")
+    const game = document.querySelector(".game-space.hidden")
 
+    game.classList.remove("hidden")
 }
 
 document.querySelectorAll(".song-information ul li").forEach((item, index) => {

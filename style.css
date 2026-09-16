@@ -204,8 +204,21 @@ a.github-logo:hover{
 
 .game-space.hidden{
     opacity: 0;
-    transform: translateY(10vw);
+    transform: translateY(20vw);
     pointer-events: none;
+}
+
+.game-space .box h2{
+    color: #ffdb66; 
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(70px, 9vw, 120px);
+    font-weight: 800;
+    margin-top: -10px;
+    margin-bottom: -10px;
+
+    opacity: 0;
+    transform: translateX(20vw);
+    animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .main-title{
@@ -225,7 +238,7 @@ a.github-logo:hover{
 
 .main-title.hidden{
     opacity: 0;
-    transform: translateY(-10vw);
+    transform: translateY(-20vw);
     pointer-events: none;
 }
 

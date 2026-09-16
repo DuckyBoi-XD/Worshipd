@@ -1,6 +1,12 @@
 function startgame(mode) {
     document.querySelector(".main-title").classList.add("hidden")
-    const game = document.querySelector(".game-space.hidden")
+
+    if (mode == 1){
+        game = document.querySelector(".game-space.Casual.hidden")}
+    else if (mode == 2){
+        game = document.querySelector(".game-space.Faithful.hidden")}
+    else if (mode == 3){
+            game = document.querySelector(".game-space.Worshiper.hidden")}
 
     game.classList.remove("hidden")
 }

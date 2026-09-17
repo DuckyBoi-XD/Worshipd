@@ -31,6 +31,8 @@ nav{
     gap: clamp(40px, 1vw, 80px);
 
     z-index: 10;
+
+    user-select: none;
 }
 
 
@@ -208,6 +210,16 @@ a.github-logo:hover{
     pointer-events: none;
 }
 
+.game-space .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: clamp(300px, 50vw, 540px);
+
+}
+
 .game-space .box h2{
     color: #ffdb66; 
     font-family: "DM Serif Display", serif;
@@ -218,6 +230,19 @@ a.github-logo:hover{
 
     opacity: 0;
     transform: translateX(20vw);
+    animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.game-space .box p{
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(20px, 2.5vw, 35px);
+    font-weight: 500;
+    line-height: clamp(25px, 3vw, 40px);
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    opacity: 0;
+    transform: translateX(-20vw);
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -445,11 +470,11 @@ a.game-button3:hover{
 
     opacity: 0;
     transform: translateY(-75%);
-    animation: fade-in 50ms ease-out forwards;
+    animation: fade-in-up 50ms ease-out forwards;
     
     @for $i from 1 through 112{
         &:nth-of-type(#{$i}) {
-            animation-delay: calc(sin(45deg) * #{$i}ms * 50)
+            animation-delay: calc(sin(45deg) * #{$i}ms * 25)
         }
     }
 }
@@ -500,13 +525,6 @@ a.game-button3:hover{
     to {
         opacity: 1;
         transform: translate(0, 0);
-    }
-}
-
-@keyframes fade-in{
-    to {
-        opacity: 1;
-        transform: translateY(0)
     }
 }
 

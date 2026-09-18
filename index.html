@@ -25,20 +25,20 @@
             </div>
         </nav>
         <div class="alignment">
-            <div class="main-title">
+            <div class="main-title pageload">
                 <div class="box">
                     <h2>Worship'd</h2>
                     <p>Listen to a clip and guess the worship or praise song it is from</p>
                 </div>
                 <div class="game-buttons">
                     <div class="game-button1-wrapper">
-                        <a onclick="startgame(1)" class="game-button1">CASUAL</a>
+                        <button onclick="startgame(1)" class="game-button1">CASUAL</button>
                     </div>
                     <div class="game-button2-wrapper">
-                        <a onclick="startgame(2)" class="game-button2">FAITHFUL</a>
+                        <button onclick="startgame(2)" class="game-button2">FAITHFUL</button>
                     </div>
                     <div class="game-button3-wrapper">
-                        <a onclick="startgame(3)" class="game-button3">WORSHIPER</a>
+                        <button onclick="startgame(3)" class="game-button3">WORSHIPER</button>
                     </div>
                 </div>
                 <div class="game-info">
@@ -52,6 +52,9 @@
                 <div class="box">
                     <h2>Casual</h2>
                     <p>The song title is mentioned in the clip</p>
+                    <div class="startbutton">
+                        <a onclick="gamerun(1)">START</a>
+                    </div>
                 </div>
             </div>
 
@@ -59,6 +62,9 @@
                 <div class="box">
                     <h2>Faithful</h2>
                     <p>The lyrics from the song is heard in the clip</p>
+                    <div class="startbutton">
+                        <a onclick="gamerun(2)">START</a>
+                    </div>
                 </div>
             </div>
 
@@ -66,6 +72,9 @@
                 <div class="box">
                     <h2>Worshiper</h2>
                     <p>The intrumental part of the song is played</p>
+                    <div class="startbutton">
+                        <a onclick="gamerun(3)">START</a>
+                    </div>
                 </div>
             </div>
         </div>

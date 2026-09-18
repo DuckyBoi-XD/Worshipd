@@ -246,6 +246,32 @@ a.github-logo:hover{
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.startbutton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(10px, 2vw, 30px);
+    margin-top: clamp(15px, 1.5vw, 30px);
+
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(18px, 2vw, 28px);
+    font-weight: 600;
+}
+
+.startbutton a{
+    position: relative;
+    display: inline-block;
+
+    padding: 8px 10px 5px 10px;
+    border: 3px solid #ffb22d86;
+    border-radius: 10px;
+
+    transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
+    user-select: none;
+}
+
 .main-title{
     display: flex;
     flex-direction: column;
@@ -274,7 +300,6 @@ a.github-logo:hover{
     justify-content: center;
     text-align: center;
     width: clamp(300px, 40vw, 540px);
-
 }
 
 .main-title .box h2{
@@ -286,6 +311,9 @@ a.github-logo:hover{
     margin-bottom: -10px;
 
     opacity: 0;
+}
+
+.main-title.pageload .box h2{
     transform: translateX(20vw);
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -299,6 +327,9 @@ a.github-logo:hover{
     margin-bottom: 0px;
 
     opacity: 0;
+}
+
+.main-title.pageload .box p{
     transform: translateX(-20vw);
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -317,13 +348,18 @@ a.github-logo:hover{
     font-weight: 600;
 }
 
-.game-buttons a{
+.game-buttons button{
     position: relative;
     display: inline-block;
 
     padding: 8px 10px 5px 10px;
     border: 3px solid #ffb22d86;
     border-radius: 10px;
+
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    background: none;
 
     transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
     user-select: none;
@@ -386,22 +422,22 @@ a.github-logo:hover{
     animation-delay: 300ms;
 }
 
-a.game-button1:hover,a.game-button2:hover,a.game-button3:hover{
+button.game-button1:hover,button.game-button2:hover,button.game-button3:hover{
     border: 3px solid #ffffff86;
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: #003369;
     transform: translateY(1vw);
 }
 
-a.game-button1:hover{
+button.game-button1:hover{
     color: #52b7ff;
 }
 
-a.game-button2:hover{
+button.game-button2:hover{
     color: #2e85ff;
 }
 
-a.game-button3:hover{
+button.game-button3:hover{
     color: #1d4be1;
 }
 

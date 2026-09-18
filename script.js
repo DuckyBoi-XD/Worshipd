@@ -1,6 +1,8 @@
 function startgame(mode) {
 
-    document.querySelector(".main-title").classList.add("hidden");
+    maintitle = document.querySelector(".main-title");
+    maintitle.classList.remove("pageload");
+    maintitle.classList.add("hidden");
 
     if (mode == 1){
         game = document.querySelector(".game-space.Casual.hidden");}
@@ -24,8 +26,8 @@ function backbutton(){
 
     button = document.querySelector(".nav-button-base");
     button.textContent = "PLAY";
-    button.setAttribute("href", "index.html");
     button.removeAttribute("onclick");
+    button.setAttribute("href", "index.html");
     
 };
 

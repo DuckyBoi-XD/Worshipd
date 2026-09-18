@@ -13,21 +13,24 @@ function startgame(mode) {
 
     game.classList.remove("hidden");
     
-    button = document.querySelector(".nav-button-base");
-    button.textContent = "BACK";
-    button.removeAttribute("href");
-    button.setAttribute("onclick", "backbutton()");
+    oldbutton = document.querySelector(".nav-button-base")
+    newbutton = document.createElement("button");
+    
+    newbutton.className = oldbutton.className
+    newbutton.textContent ="BACK";
+    newbutton.type = "button";
+    newbutton.setAttribute("onclick", "backbutton()");
+
+    oldbutton.replaceWith(newbutton);
 
 };
 
 function backbutton(){
     game.classList.add("hidden");
+    maintitle.classList.remove("hidden");
     document.querySelector(".main-title").classList.remove("hidden");
 
-    button = document.querySelector(".nav-button-base");
-    button.textContent = "PLAY";
-    button.removeAttribute("onclick");
-    button.setAttribute("href", "index.html");
+    newbutton.replaceWith(oldbutton);
     
 };
 

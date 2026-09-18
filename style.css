@@ -99,6 +99,22 @@ a.nav-button{
     transition: color 0.5s ease;
 }
 
+button.nav-button-base{
+    text-decoration: none;
+    color: #ff9900;
+    position: relative;
+    transition: color 0.5s ease;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    padding: 0px;
+
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
 a.nav-button-base{
     text-decoration: none;
     color: #ff9900;
@@ -109,7 +125,7 @@ a.nav-button-base{
 
 }
 
-a.nav-button::after, a.nav-button-base::after{
+a.nav-button::after, a.nav-button-base::after, button.nav-button-base::after{
     content: "";
     position: absolute;
     left: 0;
@@ -123,7 +139,7 @@ a.nav-button::after, a.nav-button-base::after{
     transition: width 0.3s ease;
 }
 
-a.nav-button-base::after{
+a.nav-button-base::after, button.nav-button-base::after{
     content: "";
     position: absolute;
     left: 0;
@@ -136,15 +152,11 @@ a.nav-button-base::after{
     transition: width 0.3s ease;
 }
 
-a.nav-button:hover::after{
-    width: 100%;
-}
-
-a.nav-button-base:hover::after{
+a.nav-button-base:hover::after, button.nav-button-base:hover::after{
     width: 0%;
 }
 
-a.nav-button:hover, a.nav-button-base:hover{
+a.nav-button:hover, a.nav-button-base:hover, button.nav-button-base:hover{
     color: hsl(46, 100%, 82%);
 }
 
@@ -310,7 +322,7 @@ a.github-logo:hover{
     margin-top: -10px;
     margin-bottom: -10px;
 
-    opacity: 0;
+    opacity: 1;
 }
 
 .main-title.pageload .box h2{
@@ -326,7 +338,7 @@ a.github-logo:hover{
     margin-top: 0px;
     margin-bottom: 0px;
 
-    opacity: 0;
+    opacity: 1;
 }
 
 .main-title.pageload .box p{

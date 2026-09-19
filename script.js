@@ -1,3 +1,5 @@
+const songs = []
+
 function startgame(mode) {
 
     maintitle = document.querySelector(".main-title");

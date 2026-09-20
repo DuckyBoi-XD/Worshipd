@@ -330,6 +330,10 @@ a.github-logo:hover{
     margin-bottom: 20px;
 }
 
+.soundbutton{
+    position: relative;
+}
+
 .running-game .search-bar{
     box-sizing: border-box;
 
@@ -346,6 +350,8 @@ a.github-logo:hover{
     border: 1px solid #FFC300;
     border-radius: 5px;
 
+    width: 315px;
+
     color: #ffdb66;
 }
 
@@ -356,8 +362,12 @@ a.github-logo:hover{
 
 .running-game .search-bar:focus ~ .dropdownmenu{
     display: flex;
-    position: relative;
-}
+    flex-direction: column;
+    position: absolute;
+
+    width: 315px;
+    height: 300px;
+}   
 
 .dropdownmenu button{
     color: inherit;
@@ -374,13 +384,11 @@ a.github-logo:hover{
 }
 
 .dropdownmenu{
-    position: absolute;
-    flex-direction: column;
     display: none;
     background-color: #001327;
     max-height: 400px;
+    box-sizing: border-box;
     border: 1px solid #FFC300;
-    z-index: 1;
 
     overflow-y: auto;
 

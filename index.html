@@ -79,122 +79,124 @@
             </div>
             
             <div class="running-game hidden">
-                <button>▶</button>
-                <div class="dropdownmenu">
-                    <input type="text" placeholder="Search...">
-                    <button>A Thousand Hallelujahs</button>
-                    <button>AMAZING!</button>
-                    <button>All Hail King Jesus</button>
-                    <button>All In</button>
-                    <button>All To You</button>
-                    <button>Alleluia</button>
-                    <button>Amazing Grace</button>
-                    <button>At The Altar</button>
-                    <button>At The Foot Of The Cross</button>
-                    <button>Awesome God</button>
-                    <button>Bless God</button>
-                    <button>Break Every Chain</button>
-                    <button>Build My Life</button>
-                    <button>Center</button>
-                    <button>Demons</button>
-                    <button>Drenched in Love</button>
-                    <button>FATHER'S HOUSE</button>
-                    <button>FREE!</button>
-                    <button>Fire In My Bones</button>
-                    <button>Firm Foundation</button>
-                    <button>For Good</button>
-                    <button>Freedom</button>
-                    <button>Fresh Wind</button>
-                    <button>GOOD DAY</button>
-                    <button>GOODBYE YESTERDAY</button>
-                    <button>Give Me Jesus</button>
-                    <button>Glorious Day</button>
-                    <button>God I'm Just Grateful</button>
-                    <button>God Of Revival</button>
-                    <button>God Rest Ye Merry Gentlemen</button>
-                    <button>God So Loved</button>
-                    <button>Good Good Father</button>
-                    <button>Goodness of God</button>
-                    <button>Gratitude</button>
-                    <button>Great Are You Lord</button>
-                    <button>Great Is</button>
-                    <button>Hands High</button>
-                    <button>Hard Fought Hallelujah</button>
-                    <button>He Tapu Te Ariki</button>
-                    <button>Heart Of Worship</button>
-                    <button>Here &amp; Now</button>
-                    <button>Here I Am To Worship</button>
-                    <button>Holy Forever</button>
-                    <button>Holy Place</button>
-                    <button>Holy Spirit</button>
-                    <button>Hosanna</button>
-                    <button>House Of Miracles</button>
-                    <button>How Great Is Our God</button>
-                    <button>I Give You My Heart</button>
-                    <button>I Love You Lord</button>
-                    <button>I Speak Jesus</button>
-                    <button>I Surrender</button>
-                    <button>I Thank God</button>
-                    <button>I Will Exalt You</button>
-                    <button>In Christ Alone</button>
-                    <button>Is He Worthy</button>
-                    <button>Jesus At The Center</button>
-                    <button>Jesus Be The Name</button>
-                    <button>Jesus We Love You</button>
-                    <button>King Of Kings</button>
-                    <button>King of Glory</button>
-                    <button>LEMONADE</button>
-                    <button>Make Me New</button>
-                    <button>Make Me New 2</button>
-                    <button>Make Room</button>
-                    <button>Mighty Name Of Jesus</button>
-                    <button>My Redeemer Lives</button>
-                    <button>NEVER GET USED TO THIS</button>
-                    <button>Never Let You Go</button>
-                    <button>New Wine</button>
-                    <button>No Longer Slaves</button>
-                    <button>Nothing But The Blood</button>
-                    <button>Nothing Else</button>
-                    <button>O Come To The Altar</button>
-                    <button>On &amp; On</button>
-                    <button>One Way</button>
-                    <button>Only In Jesus</button>
-                    <button>Open</button>
-                    <button>Over &amp; Over</button>
-                    <button>Praise</button>
-                    <button>Prodigals</button>
-                    <button>Raise A Hallelujah</button>
-                    <button>Reckless Love</button>
-                    <button>Rest On Us</button>
-                    <button>Set A Fire</button>
-                    <button>Shout To The Lord</button>
-                    <button>State Of Mind</button>
-                    <button>Surrounded</button>
-                    <button>THANK GOD I'M FREE</button>
-                    <button>TRUTH</button>
-                    <button>Take You At Your Word</button>
-                    <button>Thank You Jesus For The Blood</button>
-                    <button>That's Who I Praise</button>
-                    <button>The Blood</button>
-                    <button>The Joy</button>
-                    <button>This Is Amazing Grace</button>
-                    <button>This Is Our God</button>
-                    <button>Trust In God</button>
-                    <button>Trust Song</button>
-                    <button>Tuhia</button>
-                    <button>Washed</button>
-                    <button>Waves</button>
-                    <button>Way Maker</button>
-                    <button>What A Beautiful Name</button>
-                    <button>What A God</button>
-                    <button>What An Awesome God</button>
-                    <button>Who Else</button>
-                    <button>Worthy</button>
-                    <button>Worthy Of It All</button>
-                    <button>You Are Good BM</button>
-                    <button>You Are Good IH</button>
-                    <button>Your Way</button>
-                    <button>Your Way's Better</button>
+                <button class="soundbutton">▶</button>
+                <div class="soundsearch">
+                    <input type="text" placeholder="Search Songs" onkeyup="filterFunction()" class="search-bar">
+                    <div class="dropdownmenu">
+                        <button>A Thousand Hallelujahs</button>
+                        <button>AMAZING!</button>
+                        <button>All Hail King Jesus</button>
+                        <button>All In</button>
+                        <button>All To You</button>
+                        <button>Alleluia</button>
+                        <button>Amazing Grace</button>
+                        <button>At The Altar</button>
+                        <button>At The Foot Of The Cross</button>
+                        <button>Awesome God</button>
+                        <button>Bless God</button>
+                        <button>Break Every Chain</button>
+                        <button>Build My Life</button>
+                        <button>Center</button>
+                        <button>Demons</button>
+                        <button>Drenched in Love</button>
+                        <button>FATHER'S HOUSE</button>
+                        <button>FREE!</button>
+                        <button>Fire In My Bones</button>
+                        <button>Firm Foundation</button>
+                        <button>For Good</button>
+                        <button>Freedom</button>
+                        <button>Fresh Wind</button>
+                        <button>GOOD DAY</button>
+                        <button>GOODBYE YESTERDAY</button>
+                        <button>Give Me Jesus</button>
+                        <button>Glorious Day</button>
+                        <button>God I'm Just Grateful</button>
+                        <button>God Of Revival</button>
+                        <button>God Rest Ye Merry Gentlemen</button>
+                        <button>God So Loved</button>
+                        <button>Good Good Father</button>
+                        <button>Goodness of God</button>
+                        <button>Gratitude</button>
+                        <button>Great Are You Lord</button>
+                        <button>Great Is</button>
+                        <button>Hands High</button>
+                        <button>Hard Fought Hallelujah</button>
+                        <button>He Tapu Te Ariki</button>
+                        <button>Heart Of Worship</button>
+                        <button>Here &amp; Now</button>
+                        <button>Here I Am To Worship</button>
+                        <button>Holy Forever</button>
+                        <button>Holy Place</button>
+                        <button>Holy Spirit</button>
+                        <button>Hosanna</button>
+                        <button>House Of Miracles</button>
+                        <button>How Great Is Our God</button>
+                        <button>I Give You My Heart</button>
+                        <button>I Love You Lord</button>
+                        <button>I Speak Jesus</button>
+                        <button>I Surrender</button>
+                        <button>I Thank God</button>
+                        <button>I Will Exalt You</button>
+                        <button>In Christ Alone</button>
+                        <button>Is He Worthy</button>
+                        <button>Jesus At The Center</button>
+                        <button>Jesus Be The Name</button>
+                        <button>Jesus We Love You</button>
+                        <button>King Of Kings</button>
+                        <button>King of Glory</button>
+                        <button>LEMONADE</button>
+                        <button>Make Me New</button>
+                        <button>Make Me New 2</button>
+                        <button>Make Room</button>
+                        <button>Mighty Name Of Jesus</button>
+                        <button>My Redeemer Lives</button>
+                        <button>NEVER GET USED TO THIS</button>
+                        <button>Never Let You Go</button>
+                        <button>New Wine</button>
+                        <button>No Longer Slaves</button>
+                        <button>Nothing But The Blood</button>
+                        <button>Nothing Else</button>
+                        <button>O Come To The Altar</button>
+                        <button>On &amp; On</button>
+                        <button>One Way</button>
+                        <button>Only In Jesus</button>
+                        <button>Open</button>
+                        <button>Over &amp; Over</button>
+                        <button>Praise</button>
+                        <button>Prodigals</button>
+                        <button>Raise A Hallelujah</button>
+                        <button>Reckless Love</button>
+                        <button>Rest On Us</button>
+                        <button>Set A Fire</button>
+                        <button>Shout To The Lord</button>
+                        <button>State Of Mind</button>
+                        <button>Surrounded</button>
+                        <button>THANK GOD I'M FREE</button>
+                        <button>TRUTH</button>
+                        <button>Take You At Your Word</button>
+                        <button>Thank You Jesus For The Blood</button>
+                        <button>That's Who I Praise</button>
+                        <button>The Blood</button>
+                        <button>The Joy</button>
+                        <button>This Is Amazing Grace</button>
+                        <button>This Is Our God</button>
+                        <button>Trust In God</button>
+                        <button>Trust Song</button>
+                        <button>Tuhia</button>
+                        <button>Washed</button>
+                        <button>Waves</button>
+                        <button>Way Maker</button>
+                        <button>What A Beautiful Name</button>
+                        <button>What A God</button>
+                        <button>What An Awesome God</button>
+                        <button>Who Else</button>
+                        <button>Worthy</button>
+                        <button>Worthy Of It All</button>
+                        <button>You Are Good BM</button>
+                        <button>You Are Good IH</button>
+                        <button>Your Way</button>
+                        <button>Your Way's Better</button>
+                    </div>
                 </div>
             </div>
         </div>

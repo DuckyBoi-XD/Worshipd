@@ -52,7 +52,22 @@ function gamerun(){
         songGameList.push(songGrab)
     };
     console.log(songGameList)
+}
 
+function filterFunction(){
+    var input, filter, ul, li, button, i;
+    input = document.querySelector(".search-bar");
+    filter = input.value.toUpperCase();
+    div = document.querySelector(".dropdownmenu")
+    button = div.getElementsByTagName("button")
+
+    for (i = 0; i < button.length; i++) {
+    txtValue = button[i].textContent || button[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      button[i].style.display = "";} 
+    else {
+      button[i].style.display = "none";}
+    }
 }
 
 function soundplay(){

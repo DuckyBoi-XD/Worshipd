@@ -81,121 +81,121 @@
             <div class="running-game hidden">
                 <button class="soundbutton">▶</button>
                 <div class="soundsearch">
-                    <input type="text" placeholder="Search Songs" onkeyup="filterFunction()" class="search-bar">
+                    <input type="text" placeholder="Search Songs" onkeyup="filterFunction()" onfocus="filterFunction(); this.setSelectionRange(this.value.length, this.value.length);" class="search-bar">
                     <div class="dropdownmenu">
-                        <button>A Thousand Hallelujahs</button>
-                        <button>AMAZING!</button>
-                        <button>All Hail King Jesus</button>
-                        <button>All In</button>
-                        <button>All To You</button>
-                        <button>Alleluia</button>
-                        <button>Amazing Grace</button>
-                        <button>At The Altar</button>
-                        <button>At The Foot Of The Cross</button>
-                        <button>Awesome God</button>
-                        <button>Bless God</button>
-                        <button>Break Every Chain</button>
-                        <button>Build My Life</button>
-                        <button>Center</button>
-                        <button>Demons</button>
-                        <button>Drenched in Love</button>
-                        <button>FATHER'S HOUSE</button>
-                        <button>FREE!</button>
-                        <button>Fire In My Bones</button>
-                        <button>Firm Foundation</button>
-                        <button>For Good</button>
-                        <button>Freedom</button>
-                        <button>Fresh Wind</button>
-                        <button>GOOD DAY</button>
-                        <button>GOODBYE YESTERDAY</button>
-                        <button>Give Me Jesus</button>
-                        <button>Glorious Day</button>
-                        <button>God I'm Just Grateful</button>
-                        <button>God Of Revival</button>
-                        <button>God Rest Ye Merry Gentlemen</button>
-                        <button>God So Loved</button>
-                        <button>Good Good Father</button>
-                        <button>Goodness of God</button>
-                        <button>Gratitude</button>
-                        <button>Great Are You Lord</button>
-                        <button>Great Is</button>
-                        <button>Hands High</button>
-                        <button>Hard Fought Hallelujah</button>
-                        <button>He Tapu Te Ariki</button>
-                        <button>Heart Of Worship</button>
-                        <button>Here & Now</button>
-                        <button>Here I Am To Worship</button>
-                        <button>Holy Forever</button>
-                        <button>Holy Place</button>
-                        <button>Holy Spirit</button>
-                        <button>Hosanna</button>
-                        <button>House Of Miracles</button>
-                        <button>How Great Is Our God</button>
-                        <button>I Give You My Heart</button>
-                        <button>I Love You Lord</button>
-                        <button>I Speak Jesus</button>
-                        <button>I Surrender</button>
-                        <button>I Thank God</button>
-                        <button>I Will Exalt You</button>
-                        <button>In Christ Alone</button>
-                        <button>Is He Worthy</button>
-                        <button>Jesus At The Center</button>
-                        <button>Jesus Be The Name</button>
-                        <button>Jesus We Love You</button>
-                        <button>King Of Kings</button>
-                        <button>King of Glory</button>
-                        <button>LEMONADE</button>
-                        <button>Make Me New</button>
-                        <button>Make Me New 2</button>
-                        <button>Make Room</button>
-                        <button>Mighty Name Of Jesus</button>
-                        <button>My Redeemer Lives</button>
-                        <button>NEVER GET USED TO THIS</button>
-                        <button>Never Let You Go</button>
-                        <button>New Wine</button>
-                        <button>No Longer Slaves</button>
-                        <button>Nothing But The Blood</button>
-                        <button>Nothing Else</button>
-                        <button>O Come To The Altar</button>
-                        <button>On & On</button>
-                        <button>One Way</button>
-                        <button>Only In Jesus</button>
-                        <button>Open</button>
-                        <button>Over & Over</button>
-                        <button>Praise</button>
-                        <button>Prodigals</button>
-                        <button>Raise A Hallelujah</button>
-                        <button>Reckless Love</button>
-                        <button>Rest On Us</button>
-                        <button>Set A Fire</button>
-                        <button>Shout To The Lord</button>
-                        <button>State Of Mind</button>
-                        <button>Surrounded</button>
-                        <button>THANK GOD I'M FREE</button>
-                        <button>TRUTH</button>
-                        <button>Take You At Your Word</button>
-                        <button>Thank You Jesus For The Blood</button>
-                        <button>That's Who I Praise</button>
-                        <button>The Blood</button>
-                        <button>The Joy</button>
-                        <button>This Is Amazing Grace</button>
-                        <button>This Is Our God</button>
-                        <button>Trust In God</button>
-                        <button>Trust Song</button>
-                        <button>Tuhia</button>
-                        <button>Washed</button>
-                        <button>Waves</button>
-                        <button>Way Maker</button>
-                        <button>What A Beautiful Name</button>
-                        <button>What A God</button>
-                        <button>What An Awesome God</button>
-                        <button>Who Else</button>
-                        <button>Worthy</button>
-                        <button>Worthy Of It All</button>
-                        <button>You Are Good BM</button>
-                        <button>You Are Good IH</button>
-                        <button>Your Way</button>
-                        <button>Your Way's Better</button>
+                        <button onclick="dropdownmenuClick(this)">A Thousand Hallelujahs</button>
+                        <button onclick="dropdownmenuClick(this)">AMAZING!</button>
+                        <button onclick="dropdownmenuClick(this)">All Hail King Jesus</button>
+                        <button onclick="dropdownmenuClick(this)">All In</button>
+                        <button onclick="dropdownmenuClick(this)">All To You</button>
+                        <button onclick="dropdownmenuClick(this)">Alleluia</button>
+                        <button onclick="dropdownmenuClick(this)">Amazing Grace</button>
+                        <button onclick="dropdownmenuClick(this)">At The Altar</button>
+                        <button onclick="dropdownmenuClick(this)">At The Foot Of The Cross</button>
+                        <button onclick="dropdownmenuClick(this)">Awesome God</button>
+                        <button onclick="dropdownmenuClick(this)">Bless God</button>
+                        <button onclick="dropdownmenuClick(this)">Break Every Chain</button>
+                        <button onclick="dropdownmenuClick(this)">Build My Life</button>
+                        <button onclick="dropdownmenuClick(this)">Center</button>
+                        <button onclick="dropdownmenuClick(this)">Demons</button>
+                        <button onclick="dropdownmenuClick(this)">Drenched in Love</button>
+                        <button onclick="dropdownmenuClick(this)">FATHER'S HOUSE</button>
+                        <button onclick="dropdownmenuClick(this)">FREE!</button>
+                        <button onclick="dropdownmenuClick(this)">Fire In My Bones</button>
+                        <button onclick="dropdownmenuClick(this)">Firm Foundation</button>
+                        <button onclick="dropdownmenuClick(this)">For Good</button>
+                        <button onclick="dropdownmenuClick(this)">Freedom</button>
+                        <button onclick="dropdownmenuClick(this)">Fresh Wind</button>
+                        <button onclick="dropdownmenuClick(this)">GOOD DAY</button>
+                        <button onclick="dropdownmenuClick(this)">GOODBYE YESTERDAY</button>
+                        <button onclick="dropdownmenuClick(this)">Give Me Jesus</button>
+                        <button onclick="dropdownmenuClick(this)">Glorious Day</button>
+                        <button onclick="dropdownmenuClick(this)">God I'm Just Grateful</button>
+                        <button onclick="dropdownmenuClick(this)">God Of Revival</button>
+                        <button onclick="dropdownmenuClick(this)">God Rest Ye Merry Gentlemen</button>
+                        <button onclick="dropdownmenuClick(this)">God So Loved</button>
+                        <button onclick="dropdownmenuClick(this)">Good Good Father</button>
+                        <button onclick="dropdownmenuClick(this)">Goodness of God</button>
+                        <button onclick="dropdownmenuClick(this)">Gratitude</button>
+                        <button onclick="dropdownmenuClick(this)">Great Are You Lord</button>
+                        <button onclick="dropdownmenuClick(this)">Great Is</button>
+                        <button onclick="dropdownmenuClick(this)">Hands High</button>
+                        <button onclick="dropdownmenuClick(this)">Hard Fought Hallelujah</button>
+                        <button onclick="dropdownmenuClick(this)">He Tapu Te Ariki</button>
+                        <button onclick="dropdownmenuClick(this)">Heart Of Worship</button>
+                        <button onclick="dropdownmenuClick(this)">Here & Now</button>
+                        <button onclick="dropdownmenuClick(this)">Here I Am To Worship</button>
+                        <button onclick="dropdownmenuClick(this)">Holy Forever</button>
+                        <button onclick="dropdownmenuClick(this)">Holy Place</button>
+                        <button onclick="dropdownmenuClick(this)">Holy Spirit</button>
+                        <button onclick="dropdownmenuClick(this)">Hosanna</button>
+                        <button onclick="dropdownmenuClick(this)">House Of Miracles</button>
+                        <button onclick="dropdownmenuClick(this)">How Great Is Our God</button>
+                        <button onclick="dropdownmenuClick(this)">I Give You My Heart</button>
+                        <button onclick="dropdownmenuClick(this)">I Love You Lord</button>
+                        <button onclick="dropdownmenuClick(this)">I Speak Jesus</button>
+                        <button onclick="dropdownmenuClick(this)">I Surrender</button>
+                        <button onclick="dropdownmenuClick(this)">I Thank God</button>
+                        <button onclick="dropdownmenuClick(this)">I Will Exalt You</button>
+                        <button onclick="dropdownmenuClick(this)">In Christ Alone</button>
+                        <button onclick="dropdownmenuClick(this)">Is He Worthy</button>
+                        <button onclick="dropdownmenuClick(this)">Jesus At The Center</button>
+                        <button onclick="dropdownmenuClick(this)">Jesus Be The Name</button>
+                        <button onclick="dropdownmenuClick(this)">Jesus We Love You</button>
+                        <button onclick="dropdownmenuClick(this)">King Of Kings</button>
+                        <button onclick="dropdownmenuClick(this)">King of Glory</button>
+                        <button onclick="dropdownmenuClick(this)">LEMONADE</button>
+                        <button onclick="dropdownmenuClick(this)">Make Me New</button>
+                        <button onclick="dropdownmenuClick(this)">Make Me New 2</button>
+                        <button onclick="dropdownmenuClick(this)">Make Room</button>
+                        <button onclick="dropdownmenuClick(this)">Mighty Name Of Jesus</button>
+                        <button onclick="dropdownmenuClick(this)">My Redeemer Lives</button>
+                        <button onclick="dropdownmenuClick(this)">NEVER GET USED TO THIS</button>
+                        <button onclick="dropdownmenuClick(this)">Never Let You Go</button>
+                        <button onclick="dropdownmenuClick(this)">New Wine</button>
+                        <button onclick="dropdownmenuClick(this)">No Longer Slaves</button>
+                        <button onclick="dropdownmenuClick(this)">Nothing But The Blood</button>
+                        <button onclick="dropdownmenuClick(this)">Nothing Else</button>
+                        <button onclick="dropdownmenuClick(this)">O Come To The Altar</button>
+                        <button onclick="dropdownmenuClick(this)">On & On</button>
+                        <button onclick="dropdownmenuClick(this)">One Way</button>
+                        <button onclick="dropdownmenuClick(this)">Only In Jesus</button>
+                        <button onclick="dropdownmenuClick(this)">Open</button>
+                        <button onclick="dropdownmenuClick(this)">Over & Over</button>
+                        <button onclick="dropdownmenuClick(this)">Praise</button>
+                        <button onclick="dropdownmenuClick(this)">Prodigals</button>
+                        <button onclick="dropdownmenuClick(this)">Raise A Hallelujah</button>
+                        <button onclick="dropdownmenuClick(this)">Reckless Love</button>
+                        <button onclick="dropdownmenuClick(this)">Rest On Us</button>
+                        <button onclick="dropdownmenuClick(this)">Set A Fire</button>
+                        <button onclick="dropdownmenuClick(this)">Shout To The Lord</button>
+                        <button onclick="dropdownmenuClick(this)">State Of Mind</button>
+                        <button onclick="dropdownmenuClick(this)">Surrounded</button>
+                        <button onclick="dropdownmenuClick(this)">THANK GOD I'M FREE</button>
+                        <button onclick="dropdownmenuClick(this)">TRUTH</button>
+                        <button onclick="dropdownmenuClick(this)">Take You At Your Word</button>
+                        <button onclick="dropdownmenuClick(this)">Thank You Jesus For The Blood</button>
+                        <button onclick="dropdownmenuClick(this)">That's Who I Praise</button>
+                        <button onclick="dropdownmenuClick(this)">The Blood</button>
+                        <button onclick="dropdownmenuClick(this)">The Joy</button>
+                        <button onclick="dropdownmenuClick(this)">This Is Amazing Grace</button>
+                        <button onclick="dropdownmenuClick(this)">This Is Our God</button>
+                        <button onclick="dropdownmenuClick(this)">Trust In God</button>
+                        <button onclick="dropdownmenuClick(this)">Trust Song</button>
+                        <button onclick="dropdownmenuClick(this)">Tuhia</button>
+                        <button onclick="dropdownmenuClick(this)">Washed</button>
+                        <button onclick="dropdownmenuClick(this)">Waves</button>
+                        <button onclick="dropdownmenuClick(this)">Way Maker</button>
+                        <button onclick="dropdownmenuClick(this)">What A Beautiful Name</button>
+                        <button onclick="dropdownmenuClick(this)">What A God</button>
+                        <button onclick="dropdownmenuClick(this)">What An Awesome God</button>
+                        <button onclick="dropdownmenuClick(this)">Who Else</button>
+                        <button onclick="dropdownmenuClick(this)">Worthy</button>
+                        <button onclick="dropdownmenuClick(this)">Worthy Of It All</button>
+                        <button onclick="dropdownmenuClick(this)">You Are Good BM</button>
+                        <button onclick="dropdownmenuClick(this)">You Are Good IH</button>
+                        <button onclick="dropdownmenuClick(this)">Your Way</button>
+                        <button onclick="dropdownmenuClick(this)">Your Way's Better</button>
                     </div>
                 </div>
             </div>

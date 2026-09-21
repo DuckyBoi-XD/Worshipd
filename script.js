@@ -69,6 +69,11 @@ function filterFunction(){
       button[i].style.display = "none";}
     }
 }
+function dropdownmenuClick(button){
+    const input = document.querySelector(".search-bar");
+    input.value = button.textContent;
+    button.blur()
+}
 
 function soundplay(){
 

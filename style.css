@@ -315,7 +315,7 @@ a.github-logo:hover{
     position: relative;
     display: inline-block;
 
-    padding: 8px 10px 5px 10px;
+    padding: 9px 9.5px 4px 10.5px;
     border: 2px solid #c69033;
     border-radius: 30px;
 
@@ -366,8 +366,23 @@ a.github-logo:hover{
     position: absolute;
 
     width: 315px;
-    height: 300px;
-}   
+
+    max-height: 300px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.soundsearch:focus-within .dropdownmenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    width: 315px;
+
+    max-height: 300px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 
 .dropdownmenu button{
     color: inherit;

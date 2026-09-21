@@ -315,9 +315,9 @@ a.github-logo:hover{
     position: relative;
     display: inline-block;
 
-    padding: 9px 9.5px 4px 10.5px;
+    padding: 11px 28px 5px 31px;
     border: 2px solid #c69033;
-    border-radius: 30px;
+    border-radius: 15px;
 
     transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
     user-select: none;
@@ -328,8 +328,9 @@ a.github-logo:hover{
     background: none;
 
     margin-bottom: 20px;
+    font-size: 30px;
 }
-
+    
 .soundbutton{
     position: relative;
 }
@@ -360,6 +361,36 @@ a.github-logo:hover{
     border-radius: 5px 5px 0px 0px;
 }
 
+.running-game .controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.running-game .submitButton{
+    position: relative;
+    display: inline-block;
+
+    border: 1px solid #FFC300;
+    border-radius: 5px;
+    padding: 6px 6px 4px 6px;
+    
+
+    transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
+    user-select: none;
+
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    font-weight: 700;
+
+    font-size: 20px;
+}
+
 .running-game .search-bar:focus ~ .dropdownmenu{
     display: flex;
     flex-direction: column;
@@ -376,9 +407,11 @@ a.github-logo:hover{
     display: flex;
     flex-direction: column;
     position: absolute;
+    outline: none;
 
     width: 315px;
 
+    height: 38vh;
     max-height: 300px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -389,6 +422,7 @@ a.github-logo:hover{
     font: inherit;
     cursor: pointer;
     background: none;
+    outline: none;
 
     font-size: 20px;
     padding: 6px 0px 2px 20px;

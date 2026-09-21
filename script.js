@@ -36,7 +36,7 @@ function backbutton(){
     
 };
 
-function gamerun(){
+function gamerun(difficulty){
     game.classList.add("hidden");
     document.querySelector(".running-game.hidden").classList.remove("hidden");
 
@@ -54,8 +54,13 @@ function gamerun(){
 
     songsoundlist = [];
     for (item of songGameList){
-        songsoundlist.push(`assets/audio-clips/${item}`);
+        songGroup = (`assets/audio-clips/${item}/${difficulty}/`)
+        console.log(songGroup)
+        audioGrab = songGroup[Math.floor(Math.random() * songGroup.length)];
+        songsoundlist.push(audioGrab)
     }
+
+    console.log(songsoundlist)
 }
 
 
@@ -75,7 +80,7 @@ function filterFunction(){
     }
 }
 function dropdownmenuClick(button){
-    const input = document.querySelector(".search-bar");
+    input = document.querySelector(".search-bar");
     input.value = button.textContent;
     button.blur();
 }

@@ -51,8 +51,13 @@ function gamerun(){
 
         songGameList.push(songGrab)
     };
-    console.log(songGameList)
+
+    songsoundlist = [];
+    for (item of songGameList){
+        songsoundlist.push(`assets/audio-clips/${item}`);
+    }
 }
+
 
 function filterFunction(){
     var input, filter, ul, li, button, i;
@@ -72,11 +77,12 @@ function filterFunction(){
 function dropdownmenuClick(button){
     const input = document.querySelector(".search-bar");
     input.value = button.textContent;
-    button.blur()
+    button.blur();
 }
 
-function soundplay(){
-
+function soundplay(step){
+    audio = new Audio(songsoundlist[(step-1)]);
+    audio.play();
 }
 
 document.querySelectorAll(".song-information ul li").forEach((item, index) => {

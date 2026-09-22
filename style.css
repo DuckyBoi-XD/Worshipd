@@ -411,8 +411,8 @@ a.github-logo:hover{
 
     width: 315px;
 
-    height: 38vh;
-    max-height: 300px;
+    height: fit-content;
+    max-height: 38vh;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }

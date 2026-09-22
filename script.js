@@ -203,7 +203,14 @@ function dropdownmenuClick(button){
 
 function soundplay(step){
     audio = new Audio(songsoundlist[(step-1)]);
+    audio.volume = 0
+
     audio.play();
+
+    fade = setInterval(() => {
+        audio.volume = Math.min(1, audio.volume + 0.12);
+        if (audio.volume >= 1) clearInterval(fade);
+    }, 100);
 }
 
 document.querySelectorAll(".song-information ul li").forEach((item, index) => {

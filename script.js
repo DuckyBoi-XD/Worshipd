@@ -160,7 +160,7 @@ function gamerun(difficulty){
     document.querySelector(".running-game.hidden").classList.remove("hidden");
 
     songTemplList = [...songlist];
-    songGameList = []
+    songNameGameList = []
 
     for (i = 0; i < 3; i++){
         songGrab = songTemplList[Math.floor(Math.random() * songTemplList.length)];
@@ -168,17 +168,15 @@ function gamerun(difficulty){
         index = songTemplList.indexOf(songGrab);
         songTemplList.splice(index, 1);
 
-        songGameList.push(songGrab)
+        songNameGameList.push(songGrab)
     };
 
     songsoundlist = [];
-    for (item of songGameList){
-        clips = songFiles[item][String(difficulty)];
-        clip = clips[Math.floor(Math.random() * clips.length)];
+    for (item of songNameGameList){
+        difficultyGroup = songFiles[item][String(difficulty)];
+        clip = difficultyGroup[Math.floor(Math.random() * difficultyGroup.length)];
         songsoundlist.push(encodeURI(`assets/audio-clips/${item}/${difficulty}/${clip}`));
     }
-
-    console.log(songsoundlist)
 }
 
 

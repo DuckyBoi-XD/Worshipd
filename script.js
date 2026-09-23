@@ -204,6 +204,8 @@ function dropdownmenuClick(button){
 soundPlayingCount = false
 
 function soundplay(step){
+    elem = document.querySelector(".progression");
+    elem.style.transition = "width 0.1s linear";
 
     if (soundPlayingCount){
         audio.pause()
@@ -231,15 +233,18 @@ function soundplay(step){
                 if (audio.volume <= 0){
                     clearInterval(fadeOut); 
                     audio.pause();
+                    soundPlayingCount = false
                 }
-            }, 50);
+            }, 100);
         }
     });
 
-    elem = document.querySelector(".progression");
         progressBar = setInterval(() =>{
         elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
-        if (audio.currentTime >= audio.duration) clearInterval(progressBar)
+        if (audio.currentTime >= audio.duration){
+            clearInterval(progressBar)
+            elem.style.transition = `width ${audio.duration/100}s linear`;
+        }
     }, 10)
 
 }

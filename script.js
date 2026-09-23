@@ -207,10 +207,37 @@ function soundplay(step){
 
     audio.play();
 
-    fade = setInterval(() => {
-        audio.volume = Math.min(1, audio.volume + 0.12);
-        if (audio.volume >= 1) clearInterval(fade);
+    fadeIn = setInterval(() => {
+        audio.volume = Math.min(1, audio.volume + 0.10);
+        if (audio.volume >= 1) clearInterval(fadeIn);
     }, 100);
+    
+    audio.addEventListener("loadedmetadata", () => {
+        remainingTime = audio.duration - audio.currentTime;
+        if (remainingTime <= 2 && aduio.volume > 0){
+            audio.volume = Math.min(1, audio.vomule - 0.10);
+            if (audio.volume <= 0) audio.pause();
+        }
+    })
+
+    elem = document.querySelector(".progression");
+
+
+
+    let prog = 0
+    if (prog == 0){
+        prog = 1;
+        elem = document.querySelector(".progression");
+        width = 1;
+        inv = setInterval(frame, 10);
+
+        function frame(){
+            if (width2)
+
+            elem.style.width = (audio.currentTime/audio.duration)*100 + "%"    
+        }
+    }
+
 }
 
 document.querySelectorAll(".song-information ul li").forEach((item, index) => {

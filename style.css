@@ -303,6 +303,7 @@ a.github-logo:hover{
     transition: opacity 200ms ease, transform 200ms ease;
 
     flex-direction: column;
+    gap: 20px
 }
 
 .running-game.hidden{
@@ -327,12 +328,7 @@ a.github-logo:hover{
     cursor: pointer;
     background: none;
 
-    margin-bottom: 20px;
     font-size: 30px;
-}
-    
-.soundbutton{
-    position: relative;
 }
 
 .running-game .search-bar{
@@ -446,6 +442,20 @@ a.github-logo:hover{
 .dropdownmenu button:hover{
     background-color: #003369;
     border: 0.5px solid #2e85ff;
+}
+
+.progress-bar{
+    width: 401.233px;
+    height: 20px;
+
+    border-radius: 3px;
+    border: 0.5px solid #ffdb66
+}
+
+.progression{
+    height: 20px;
+    width: 1%;
+    background-color: #FFC300;
 }
 
 .main-title{

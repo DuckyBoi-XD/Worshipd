@@ -80,6 +80,9 @@
             
             <div class="running-game hidden">
                 <button class="soundbutton" onclick="soundplay(1)">▶</button>
+                <div class="progress-bar">
+                    <div class="progression"></div>
+                </div>
                 <div class="soundsearch">
                     <div class="controls">
                         <input type="text" placeholder="Search Songs" onkeyup="filterFunction()" onfocus="filterFunction(); this.setSelectionRange(this.value.length, this.value.length);" class="search-bar">

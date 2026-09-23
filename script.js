@@ -201,8 +201,16 @@ function dropdownmenuClick(button){
     button.blur();
 }
 
+soundPlayingCount = false
+
 function soundplay(step){
+
+    if (soundPlayingCount){
+        audio.pause()
+    }
+
     audio = new Audio(songsoundlist[(step-1)]);
+    soundPlayingCount = true
     audio.volume = 0
 
     audio.play();
@@ -210,33 +218,29 @@ function soundplay(step){
     fadeIn = setInterval(() => {
         audio.volume = Math.min(1, audio.volume + 0.10);
         if (audio.volume >= 1) clearInterval(fadeIn);
-    }, 100);
+    }, 50);
+
+    fadingOut = false
     
-    audio.addEventListener("loadedmetadata", () => {
+    audio.addEventListener("timeupdate", () => {
         remainingTime = audio.duration - audio.currentTime;
-        if (remainingTime <= 2 && aduio.volume > 0){
-            audio.volume = Math.min(1, audio.vomule - 0.10);
-            if (audio.volume <= 0) audio.pause();
+        if (remainingTime <= 1 && !fadingOut){
+            fadingOut = true;
+            fadeOut = setInterval(() => {
+                audio.volume = Math.max(0, audio.volume - 0.10);
+                if (audio.volume <= 0){
+                    clearInterval(fadeOut); 
+                    audio.pause();
+                }
+            }, 50);
         }
-    })
+    });
 
     elem = document.querySelector(".progression");
-
-
-
-    let prog = 0
-    if (prog == 0){
-        prog = 1;
-        elem = document.querySelector(".progression");
-        width = 1;
-        inv = setInterval(frame, 10);
-
-        function frame(){
-            if (width2)
-
-            elem.style.width = (audio.currentTime/audio.duration)*100 + "%"    
-        }
-    }
+        progressBar = setInterval(() =>{
+        elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
+        if (audio.currentTime >= audio.duration) clearInterval(progressBar)
+    }, 10)
 
 }
 

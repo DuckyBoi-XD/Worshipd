@@ -331,6 +331,11 @@ a.github-logo:hover{
     font-size: 30px;
 }
 
+.running-game .soundbutton:hover{
+    background-color: #003369;
+}
+
+
 .running-game .search-bar{
     box-sizing: border-box;
 
@@ -347,7 +352,7 @@ a.github-logo:hover{
     border: 1px solid #FFC300;
     border-radius: 5px;
 
-    width: 315px;
+    width: 350px;
 
     color: #ffdb66;
 }
@@ -387,12 +392,16 @@ a.github-logo:hover{
     font-size: 20px;
 }
 
+.running-game .submitButton:hover{
+    background-color: #003369;
+}
+
 .running-game .search-bar:focus ~ .dropdownmenu{
     display: flex;
     flex-direction: column;
     position: absolute;
 
-    width: 315px;
+    width: 350px;
 
     max-height: 300px;
     border-bottom-left-radius: 5px;
@@ -405,7 +414,7 @@ a.github-logo:hover{
     position: absolute;
     outline: none;
 
-    width: 315px;
+    width: 350px;
 
     height: fit-content;
     max-height: 38vh;
@@ -418,13 +427,11 @@ a.github-logo:hover{
     font: inherit;
     cursor: pointer;
     background: none;
-    outline: none;
 
     font-size: 20px;
     padding: 6px 0px 2px 20px;
     text-align: left;
     font-weight: 700;
-
     border: none;
 }
 
@@ -444,8 +451,13 @@ a.github-logo:hover{
     border: 0.5px solid #2e85ff;
 }
 
+.dropdownmenu button:focus{
+    background-color: #003369;
+    outline: 0.5px solid #2e85ff;
+}
+
 .progress-bar{
-    width: 401.233px;
+    width: 436.233px;
     height: 20px;
 
     border-radius: 3px;

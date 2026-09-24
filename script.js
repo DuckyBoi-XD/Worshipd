@@ -148,6 +148,7 @@ function startgame(mode) {
 
 function backbutton(){
     game.classList.add("hidden");
+    document.querySelector(".running-game").classList.add("hidden");
     maintitle.classList.remove("hidden");
     document.querySelector(".main-title").classList.remove("hidden");
 
@@ -177,6 +178,51 @@ function gamerun(difficulty){
         clip = difficultyGroup[Math.floor(Math.random() * difficultyGroup.length)];
         songsoundlist.push(encodeURI(`assets/audio-clips/${item}/${difficulty}/${clip}`));
     }
+
+    /* sound play*/
+
+    elem = document.querySelector(".progression");
+    elem.style.transition = "width 0.1s linear";
+    
+    audio = new Audio(songsoundlist[(0)]);
+    soundPlayingCount = true
+    audio.volume = 0
+
+    audio.play();
+
+    fadeIn = setInterval(() => {
+        audio.volume = Math.min(1, audio.volume + 0.10);
+        if (audio.volume >= 1) clearInterval(fadeIn);
+    }, 50);
+
+    fadingOut = false
+    
+    audio.addEventListener("timeupdate", () => {
+        remainingTime = audio.duration - audio.currentTime;
+        if (remainingTime <= 1 && !fadingOut){
+            fadingOut = true;
+            fadeOut = setInterval(() => {
+                audio.volume = Math.max(0, audio.volume - 0.10);
+                if (audio.volume <= 0){
+                    clearInterval(fadeOut); 
+                    audio.pause();
+                    soundPlayingCount = false
+                }
+            }, 100);
+        }
+    });
+
+        progressBar = setInterval(() =>{
+        elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
+        if (audio.currentTime >= audio.duration){
+            clearInterval(progressBar)
+            elem.style.transition = `width ${audio.duration/100}s linear`;
+        }
+    }, 10)
+
+    /**/
+
+    console.log(songNameGameList)
 }
 
 
@@ -247,6 +293,10 @@ function soundplay(step){
         }
     }, 10)
 
+}
+
+function submitButton(){
+    
 }
 
 document.querySelectorAll(".song-information ul li").forEach((item, index) => {

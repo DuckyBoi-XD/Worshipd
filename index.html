@@ -79,16 +79,16 @@
             </div>
             
             <div class="running-game hidden">
-                <button class="soundbutton" onclick="soundplay(1)">▶</button>
+                <button class="soundbutton" tabindex="-1" onclick="soundplay(1)">▶</button>
                 <div class="progress-bar">
                     <div class="progression"></div>
                 </div>
                 <div class="soundsearch">
                     <div class="controls">
                         <input type="text" placeholder="Search Songs" onkeyup="filterFunction()" onfocus="filterFunction(); this.setSelectionRange(this.value.length, this.value.length);" class="search-bar">
-                        <button class="submitButton">Submit</button>
+                        <button class="submitButton" tabindex="-1" onclick="submitButton()">Submit</button>
                     </div>
-                    <div class="dropdownmenu">
+                    <div tabindex="-1" class="dropdownmenu">
                         <button onclick="dropdownmenuClick(this)">A Thousand Hallelujahs</button>
                         <button onclick="dropdownmenuClick(this)">AMAZING!</button>
                         <button onclick="dropdownmenuClick(this)">All Hail King Jesus</button>

@@ -370,6 +370,12 @@ a.github-logo:hover{
     gap: 10px;
 }
 
+.running-game .gamespace{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .running-game .submitButton{
     position: relative;
     display: inline-block;

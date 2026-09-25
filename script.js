@@ -183,7 +183,7 @@ function gamerun(difficulty){
 
     elem = document.querySelector(".progression");
     elem.style.transition = "width 0.1s linear";
-    
+
     audio = new Audio(songsoundlist[(0)]);
     soundPlayingCount = true
     audio.volume = 0
@@ -249,7 +249,7 @@ function dropdownmenuClick(button){
 
 soundPlayingCount = false
 
-function soundplay(step){
+function soundplay(run){
     elem = document.querySelector(".progression");
     elem.style.transition = "width 0.1s linear";
 
@@ -257,7 +257,7 @@ function soundplay(step){
         audio.pause()
     }
 
-    audio = new Audio(songsoundlist[(step-1)]);
+    audio = new Audio(songsoundlist[(run-1)]);
     soundPlayingCount = true
     audio.volume = 0
 
@@ -295,8 +295,17 @@ function soundplay(step){
 
 }
 
-function submitButton(){
-    
+function submitSong(run){
+    console.log("trigger")
+    input = document.querySelector(".search-bar");
+    console.log(input.value.toLowerCase())
+    console.log(songNameGameList[run-1].toLowerCase())
+    if (input.value.toLowerCase() == songNameGameList[run-1].toLowerCase()){
+        document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run++})`)
+        document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run++})`)
+        console.log("change")
+    }
+
 }
 
 document.querySelectorAll(".song-information ul li").forEach((item, index) => {

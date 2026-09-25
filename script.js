@@ -295,15 +295,21 @@ function soundplay(run){
 
 }
 
+boxes = ["first", "second", "third"]
+
 function submitSong(run){
-    console.log("trigger")
     input = document.querySelector(".search-bar");
-    console.log(input.value.toLowerCase())
-    console.log(songNameGameList[run-1].toLowerCase())
     if (input.value.toLowerCase() == songNameGameList[run-1].toLowerCase()){
-        document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run++})`)
-        document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run++})`)
-        console.log("change")
+        document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
+        document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run+1})`)
+        document.querySelector(`.gameProgress .box.${boxes[run-1]}`).style.backgroundColor = "#427175"
+
+        try{
+            document.querySelector(`.gameProgress .box.${boxes[run]}`).style.backgroundColor = "#295381"
+        } catch (error){
+            /* win */
+        }
+
     }
 
 }

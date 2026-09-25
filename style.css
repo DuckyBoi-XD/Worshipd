@@ -312,6 +312,39 @@ a.github-logo:hover{
     pointer-events: none;
 }
 
+.running-game .gameProgress{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.gameProgress .box{
+    border: 2px solid #ffae00;
+    justify-content: center;
+    align-items: center;
+    padding:3px 6px 3px 6px;
+    border-radius: 5px;
+    font-family: "DM Serif Display", serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.gameProgress .box.first{
+    background-color: #295381;
+    transition: background-colour 100ms ease;
+}
+
+.gameProgress .box.second{
+    background-color: none;
+    transition: background-colour 100ms ease;
+}
+
+.gameProgress .box.third{
+    background-color: none;
+    transition: background-colour 100ms ease;
+}
+
+
 .running-game .soundbutton{
     position: relative;
     display: inline-block;

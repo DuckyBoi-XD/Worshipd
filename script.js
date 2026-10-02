@@ -310,7 +310,7 @@ function submitSong(run){
             elem = document.querySelector(".progression");
             elem.style.transition = "width 0.1s linear";
 
-            audio = new Audio(songsoundlist[(0)]);
+            audio = new Audio(songsoundlist[(run)]);
             soundPlayingCount = true
             audio.volume = 0
 

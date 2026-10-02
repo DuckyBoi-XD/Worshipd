@@ -119,6 +119,8 @@ const songFiles = {
 const A_Thousand_Hallelujahs = [["Thousand Hallelujahs 1.1.m4a", "Thousand Hallelujahs 1.2.m4a"]]
 const songfiles = [A_Thousand_Hallelujahs]
 
+let fadeIn, fadeOut, progressBar
+
 function startgame(mode) {
 
     maintitle = document.querySelector(".main-title");
@@ -251,13 +253,19 @@ soundPlayingCount = false
 
 function soundplay(){
     if (audio.paused || audio.ended){
+        fadingOut = false
+        clearInterval(fadeOut)
+        clearInterval(fadeIn)
         audio.play()
+        audio.volume = 1
     }
-    else{
+    else if (!audio.paused){
+        clearInterval(fadeOut)
+        clearInterval(fadeIn)
         audio.pause()
     }
 }
-
+ 
 function soundrepeat(run){
     clearInterval(fadeIn)
     clearInterval(fadeOut)

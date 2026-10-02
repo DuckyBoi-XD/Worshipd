@@ -249,7 +249,20 @@ function dropdownmenuClick(button){
 
 soundPlayingCount = false
 
-function soundplay(run){
+function soundplay(){
+    if (audio.paused || audio.ended){
+        audio.play()
+    }
+    else{
+        audio.pause()
+    }
+}
+
+function soundrepeat(run){
+    clearInterval(fadeIn)
+    clearInterval(fadeOut)
+    clearInterval(progressBar)
+
     elem = document.querySelector(".progression");
     elem.style.transition = "width 0.1s linear";
 

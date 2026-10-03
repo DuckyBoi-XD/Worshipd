@@ -322,7 +322,9 @@ function submitSong(run){
     input = document.querySelector(".search-bar");
     if (input.value.toLowerCase() == songNameGameList[run-1].toLowerCase()){
         document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
+        document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${run+1})`)
         document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run+1})`)
+        input.value = ""
         document.querySelector(`.gameProgress .box.${boxes[run-1]}`).style.backgroundColor = "#427175"
 
         try{
@@ -371,7 +373,7 @@ function submitSong(run){
             confetti({
                 particleCount: 1000,
                 spread: 100,
-                origin: { y: .10 }
+                origin: { y: 0.8 }
             });
         }
 

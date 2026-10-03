@@ -368,7 +368,11 @@ function submitSong(run){
             }, 10)
 
         } catch (error){
-            /* win */
+            confetti({
+                particleCount: 1000,
+                spread: 100,
+                origin: { y: .10 }
+            });
         }
 
     }

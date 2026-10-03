@@ -317,6 +317,7 @@ function soundplay(run){
 }
 
 boxes = ["first", "second", "third"]
+strikes = 0
 
 function submitSong(run){
     input = document.querySelector(".search-bar");
@@ -377,6 +378,10 @@ function submitSong(run){
             });
         }
 
+    }
+    else if (input.value.toLowerCase() != songNameGameList[run-1].toLowerCase()){
+        document.querySelector(`.gameStrike .strike.${boxes[strikes]}`).style.backgroundColor = "#ba0c0c"
+        strikes++
     }
 
 }

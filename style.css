@@ -344,6 +344,39 @@ a.github-logo:hover{
     transition: background-colour 100ms ease;
 }
 
+.running-game .gameStrike{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.gameStrike .strike{
+    border: 2px solid #ffae00;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 27px 0px 27px;
+    margin-bottom: -10px;
+    border-radius: 5px;
+    font-family: "DM Serif Display", serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.gameStrike .strike.first{
+    background-color: none;
+    transition: background-colour 100ms ease;
+}
+
+.gameStrike .strike.second{
+    background-color: none;
+    transition: background-colour 100ms ease;
+}
+
+.gameStrike .strike.third{
+    background-color: none;
+    transition: background-colour 100ms ease;
+}
+
 
 .running-game .soundControls .soundbutton{
     position: relative;

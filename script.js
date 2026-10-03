@@ -250,21 +250,6 @@ function dropdownmenuClick(button){
 }
 
 soundPlayingCount = false
-
-function soundplay(){
-    if (audio.paused || audio.ended){
-        fadingOut = false
-        clearInterval(fadeOut)
-        clearInterval(fadeIn)
-        audio.play()
-        audio.volume = 1
-    }
-    else if (!audio.paused){
-        clearInterval(fadeOut)
-        clearInterval(fadeIn)
-        audio.pause()
-    }
-}
  
 function soundrepeat(run){
     clearInterval(fadeIn)
@@ -314,6 +299,21 @@ function soundrepeat(run){
         }
     }, 10)
 
+}
+
+function soundplay(run){
+    if (audio.paused){
+        fadingOut = false
+        clearInterval(fadeOut)
+        clearInterval(fadeIn)
+        audio.play()
+        audio.volume = 1
+    }
+    else if (!audio.paused){
+        clearInterval(fadeOut)
+        clearInterval(fadeIn)
+        audio.pause()
+    }
 }
 
 boxes = ["first", "second", "third"]

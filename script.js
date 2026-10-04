@@ -121,6 +121,9 @@ const songfiles = [A_Thousand_Hallelujahs]
 
 let fadeIn, fadeOut, progressBar
 
+strikeSFX = new Audio(encodeURI(`assets/sfx/strikeSFX.mp3`))
+confettiSFX = new Audio(encodeURI(`assets/sfx/confettiSFX.mp3`))
+
 function startgame(mode) {
 
     maintitle = document.querySelector(".main-title");
@@ -376,12 +379,15 @@ function submitSong(run){
                 spread: 100,
                 origin: { y: 0.8 }
             });
+
+            confettiSFX.play();
         }
 
     }
     else if (input.value.toLowerCase() != songNameGameList[run-1].toLowerCase()){
         document.querySelector(`.gameStrike .strike.${boxes[strikes]}`).style.backgroundColor = "#ba0c0c"
         strikes++
+        strikeSFX.play();
     }
 
 }

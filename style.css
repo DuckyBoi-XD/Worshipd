@@ -377,6 +377,52 @@ a.github-logo:hover{
     transition: background-colour 100ms ease;
 }
 
+.winSpace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+
+    position: fixed;    
+    inset: 0;
+
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms ease, transform 200ms ease;
+
+    flex-direction: column;
+    gap: 20px
+}
+
+.winSpace.hidden{
+    opacity: 0;
+    transform: translateY(20vw);
+    pointer-events: none;
+}
+
+.loseSpace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+
+    position: fixed;    
+    inset: 0;
+
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 200ms ease, transform 200ms ease;
+
+    flex-direction: column;
+    gap: 20px
+}
+
+.loseSpace.hidden{
+    opacity: 0;
+    transform: translateY(20vw);
+    pointer-events: none;
+}
+
 
 .running-game .soundControls .soundbutton{
     position: relative;

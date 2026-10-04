@@ -158,7 +158,10 @@ function backbutton(){
     document.querySelector(".main-title").classList.remove("hidden");
 
     newbutton.replaceWith(oldbutton);
-    
+
+    clearInterval(fadeOut)
+    clearInterval(fadeIn)
+    audio.pause()
 };
 
 function gamerun(difficulty){

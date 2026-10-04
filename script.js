@@ -165,6 +165,7 @@ function backbutton(){
 };
 
 function gamerun(difficulty){
+    document.querySelector(".search-bar").value = ""
     game.classList.add("hidden");
     document.querySelector(".running-game.hidden").classList.remove("hidden");
 
@@ -324,6 +325,7 @@ function soundplay(run){
 
 boxes = ["first", "second", "third"]
 strikes = 0
+gamesProgression = 1
 
 function submitSong(run){
     input = document.querySelector(".search-bar");
@@ -331,6 +333,7 @@ function submitSong(run){
         document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
         document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${run+1})`)
         document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run+1})`)
+        gamesProgression++
         input.value = ""
         document.querySelector(`.gameProgress .box.${boxes[run-1]}`).style.backgroundColor = "#427175"
 
@@ -394,6 +397,17 @@ function submitSong(run){
     }
 
 }
+
+document.addEventListener("keydown", (key) => {
+    if (key.code === "Space" && document.activeElement !== document.querySelector(".search-bar")){
+        key.preventDefault();
+        soundplay();
+    }
+    if (key.code === "Enter" && document.activeElement !== document.querySelector(".search-bar")){
+        key.preventDefault();
+        submitSong(gamesProgression);
+    }
+})
 
 document.querySelectorAll(".song-information ul li").forEach((item, index) => {
     item.style.animationDelay = `${Math.sin(45 * Math.PI / 180) * (index + 1) * 25}ms`;

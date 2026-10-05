@@ -403,7 +403,9 @@ document.addEventListener("keydown", (key) => {
         key.preventDefault();
         soundplay();
     }
-    if (key.code === "Enter" && document.activeElement !== document.querySelector(".search-bar")){
+    if (key.code === "Enter" && document.querySelector(".search-bar").value != ""){
+        if (document.activeElement.closest(".dropdownmenu")){
+            return;}
         key.preventDefault();
         submitSong(gamesProgression);
     }

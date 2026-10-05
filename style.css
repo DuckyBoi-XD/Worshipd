@@ -391,7 +391,21 @@ a.github-logo:hover{
     transition: opacity 200ms ease, transform 200ms ease;
 
     flex-direction: column;
-    gap: 20px
+    gap: 20px;
+}
+
+.endgame-songtitles{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.endgame-songtitles .song{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .winSpace.hidden{

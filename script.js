@@ -124,6 +124,7 @@ let fadeIn, fadeOut, progressBar
 strikeSFX = new Audio(encodeURI(`assets/sfx/strikeSFX.mp3`))
 confettiSFX = new Audio(encodeURI(`assets/sfx/confettiSFX.mp3`))
 correctSFX = new Audio(encodeURI(`assets/sfx/correctSFX.mp3`))
+wrongSFX = new Audio(encodeURI(`assets/sfx/wrongSFX.mp3`))
 
 strikeSFX.volume = 0.5;
 
@@ -391,6 +392,8 @@ function submitSong(run){
                 origin: { y: 0.8 }
             });
 
+            document.querySelector(".running-game").classList.add("hidden")
+            document.querySelector(".winSpace").classList.remove("hidden")
             confettiSFX.play();
         }
 
@@ -398,7 +401,12 @@ function submitSong(run){
     else if (input.value.toLowerCase() != songNameGameList[run-1].toLowerCase()){
         document.querySelector(`.gameStrike .strike.${boxes[strikes]}`).style.backgroundColor = "#ba0c0c"
         strikes++
-        strikeSFX.play();
+        if (strikes == 3){
+            wrongSFX.play();
+            document.querySelector(".running-game").classList.add("hidden")
+            document.querySelector(".loseSpace").classList.remove("hidden")
+        }
+        else {strikeSFX.play();}
     }
 
 }

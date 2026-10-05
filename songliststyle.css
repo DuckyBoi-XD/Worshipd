@@ -237,7 +237,7 @@
     background-size: cover;
 }
 
-.cover-artGD{
+.cover-artGDP{
     height: clamp(25px, 3vw, 35px);
     width: clamp(25px, 3vw, 35px);
     border: 1px solid rgba(255, 255, 255, 0.483);
@@ -297,7 +297,7 @@
     background-size: cover;
 }
 
-.cover-artGD{
+.cover-artGDFF{
     height: clamp(25px, 3vw, 35px);
     width: clamp(25px, 3vw, 35px);
     border: 1px solid rgba(255, 255, 255, 0.483);

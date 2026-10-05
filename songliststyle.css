@@ -4,7 +4,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationWorshipRed.jpg);
+    background-image: url("assets/cover-art/Alleluia.jpg");
     background-size: cover;
 }
 .cover-artBMC{
@@ -13,7 +13,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BethelMusicCity.jpg);
+    background-image: url("assets/cover-art/All Hail King Jesus.jpg");
     background-size: cover;
 }
 
@@ -23,7 +23,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/AlabasterWorshipCoverArtAllIn.jpg);
+    background-image: url("assets/cover-art/All In.jpg");
     background-size: cover;
 }
 
@@ -33,7 +33,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/EastgateCoverArtRegular.jpg);
+    background-image: url("assets/cover-art/All To You.jpg");
     background-size: cover;
 }
 
@@ -43,7 +43,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BrookeLigertwoodCoverArt1000.jpg);
+    background-image: url("assets/cover-art/A Thousand Hallelujahs.jpg");
     background-size: cover;
 }
 
@@ -53,7 +53,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationRhythmCoverArtAMAZING.jpg);
+    background-image: url("assets/cover-art/AMAZING!.jpg");
     background-size: cover;
 }
 
@@ -63,7 +63,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ForrestFrankCoverArtAG.jpg);
+    background-image: url("assets/cover-art/Amazing Grace.jpg");
     background-size: cover;
 }
 
@@ -73,7 +73,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationRhythmCoverArtATA.jpg);
+    background-image: url("assets/cover-art/At The Altar.jpg");
     background-size: cover;
 }
 
@@ -83,7 +83,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/SouvenirsWorshipCoverArtATFOTC.jpg);
+    background-image: url("assets/cover-art/At The Foot Of The Cross.jpg");
     background-size: cover;
 }
 
@@ -93,7 +93,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongUnitedCoverArtAG.jpg);
+    background-image: url("assets/cover-art/Awesome God.jpg");
     background-size: cover;
 }
 
@@ -103,7 +103,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BrookeLigertwoodCoverArtBG.jpg);
+    background-image: url("assets/cover-art/Bless God.jpg");
     background-size: cover;
 }
 
@@ -113,7 +113,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BethelMusicCoverArtBLOOD.jpg);
+    background-image: url("assets/cover-art/The Blood.jpg");
     background-size: cover;
 }
 
@@ -123,7 +123,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/JesusCultureCoverArtBEC.jpg);
+    background-image: url("assets/cover-art/Break Every Chain.jpg");
     background-size: cover;
 }
 
@@ -133,7 +133,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/PatBarrettCoverArtBML.jpg);
+    background-image: url("assets/cover-art/Build My Life.jpg");
     background-size: cover;
 }
 
@@ -143,7 +143,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BethelMusicCoverArtCenter.jpg);
+    background-image: url("assets/cover-art/Center.jpg");
     background-size: cover;
 }
 
@@ -153,7 +153,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/JosiahQueenCoverArtDemons.jpg);
+    background-image: url("assets/cover-art/Demons.jpg");
     background-size: cover;
 }
 
@@ -163,7 +163,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BethelMusicCoverArtVICTORY.jpg);
+    background-image: url("assets/cover-art/Drenched in Love.jpg");
     background-size: cover;
 }
 
@@ -173,7 +173,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationRhythmCoverArtFH.png);
+    background-image: url("assets/cover-art/FATHER'S HOUSE.png");
     background-size: cover;
 }
 
@@ -183,7 +183,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/TiffanyHudsonCoverArtFINB.png);
+    background-image: url("assets/cover-art/Fire In My Bones.png");
     background-size: cover;
 }
 
@@ -193,7 +193,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/CodyCarnesCoverArtFF.jpg);
+    background-image: url("assets/cover-art/Firm Foundation.jpg");
     background-size: cover;
 }
 
@@ -203,7 +203,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/SouvenirsWorshipCoverArtFG.jpg);
+    background-image: url("assets/cover-art/For Good.jpg");
     background-size: cover;
 }
 
@@ -213,7 +213,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/SEUWorshipCoverArtFREE.jpg);
+    background-image: url("assets/cover-art/FREE!.jpg");
     background-size: cover;
 }
 
@@ -223,7 +223,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/JesusCultureCoverArtFreedom.jpg);
+    background-image: url("assets/cover-art/Freedom.jpg");
     background-size: cover;
 }
 
@@ -233,7 +233,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongWorshipCoverArtFW.jpg);
+    background-image: url("assets/cover-art/Fresh Wind.jpg");
     background-size: cover;
 }
 
@@ -243,7 +243,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/UPPERROOMCoverArtGMJ.jpg);
+    background-image: url("assets/cover-art/Give Me Jesus.jpg");
     background-size: cover;
 }
 
@@ -253,7 +253,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/PassionCoverArtGD.jpg);
+    background-image: url("assets/cover-art/Glorious Day.jpg");
     background-size: cover;
 }
 
@@ -263,7 +263,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationWorshipRed.jpg);
+    background-image: url("assets/cover-art/God I'm Just Grateful.jpg");
     background-size: cover;
 }
 
@@ -273,7 +273,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BethelMusicCoverArtGOR.jpg);
+    background-image: url("assets/cover-art/God of Revival.jpg");
     background-size: cover;
 }
 
@@ -283,7 +283,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/PentatonixCoverArtGRYMG.jpg);
+    background-image: url("assets/cover-art/God Rest Ye Merry Gentlemen.jpg");
     background-size: cover;
 }
 
@@ -293,7 +293,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/WeTheKingdomCoverArtGSL.jpg);
+    background-image: url("assets/cover-art/God So Loved.jpg");
     background-size: cover;
 }
 
@@ -303,7 +303,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationRhythmCoverArtGY.jpg);
+    background-image: url("assets/cover-art/GOODBYE YESTERDAY.jpg");
     background-size: cover;
 }
 
@@ -313,7 +313,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ForrestFrankCoverArtGD.jpg);
+    background-image: url("assets/cover-art/GOOD DAY.jpg");
     background-size: cover;
 }
 
@@ -323,7 +323,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HousefiresCoverArtGGF.jpg);
+    background-image: url("assets/cover-art/Good Good Father.jpg");
     background-size: cover;
 }
 
@@ -333,7 +333,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BethelMusicCoverArtVICTORY.jpg);
+    background-image: url("assets/cover-art/Goodness of God.jpg");
     background-size: cover;
 }
 
@@ -343,7 +343,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BrandonLakeCoverArtGraditude.jpg);
+    background-image: url("assets/cover-art/Gratitude.jpg");
     background-size: cover;
 }
 
@@ -353,7 +353,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/AllSons&DaughtersCoverArtGAYL.jpg);
+    background-image: url("assets/cover-art/Great Are You Lord.jpg");
     background-size: cover;
 }
 
@@ -363,7 +363,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/EastgateCoverArtRegular.jpg);
+    background-image: url("assets/cover-art/Great Is.jpg");
     background-size: cover;
 }
 
@@ -373,7 +373,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/EquippersRevolutionCoverArtHH.jpg);
+    background-image: url("assets/cover-art/Hands High.jpg");
     background-size: cover;
 }
 
@@ -383,7 +383,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BrandonLakeCoverArtHFH.jpg);
+    background-image: url("assets/cover-art/Hard Fought Hallelujah.jpg");
     background-size: cover;
 }
 
@@ -393,7 +393,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/MattRedmanCoverArtTHOW.jpg);
+    background-image: url("assets/cover-art/Heart Of Worship.jpg");
     background-size: cover;
 }
 
@@ -403,7 +403,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongWorshipCoverArtHIATW.jpg);
+    background-image: url("assets/cover-art/Here I Am To Worship.jpg");
     background-size: cover;
 }
 
@@ -413,7 +413,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/SouvenirsWorshipCoverArtH&N.jpg);
+    background-image: url("assets/cover-art/Here & Now.jpg");
     background-size: cover;
 }
 
@@ -423,7 +423,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BlueprintChurchCoverArtHTTA.jpg);
+    background-image: url("assets/cover-art/He Tapu Te Ariki.jpg");
     background-size: cover;
 }
 
@@ -433,7 +433,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ChrisTomlinCoverArtHF.jpg);
+    background-image: url("assets/cover-art/Holy Forever.jpg");
     background-size: cover;
 }
 
@@ -443,7 +443,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/AbundantWorshipCoverArtHP.jpg);
+    background-image: url("assets/cover-art/Holy Place.jpg");
     background-size: cover;
 }
 
@@ -453,7 +453,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/JesusCultureCoverArtHS.jpg);
+    background-image: url("assets/cover-art/Holy Spirit.jpg");
     background-size: cover;
 }
 
@@ -463,7 +463,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongWorshipCoverArtHosanna.jpg);
+    background-image: url("assets/cover-art/Hosanna.jpg");
     background-size: cover;
 }
 
@@ -473,7 +473,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BrandonLakeCoverArtHOM.jpg);
+    background-image: url("assets/cover-art/House of Miracles.jpg");
     background-size: cover;
 }
 
@@ -483,7 +483,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ChrisTomlinCoverArtHGIOG.jpg);
+    background-image: url("assets/cover-art/How Great Is Our God.jpg");
     background-size: cover;
 }
 
@@ -493,7 +493,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/Shane&ShaneCoverArtHGTA.jpg);
+    background-image: url("assets/cover-art/How Great Thou Art.jpg");
     background-size: cover;
 }
 
@@ -503,7 +503,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongWorshipCoverArtIGYMH.jpg);
+    background-image: url("assets/cover-art/I Give You My Heart.jpg");
     background-size: cover;
 }
 
@@ -513,7 +513,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationWorshipCoverArtILYL.jpg);
+    background-image: url("assets/cover-art/I Love You Lord.jpg");
     background-size: cover;
 }
 
@@ -523,7 +523,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/PassionCoverArtICA.jpg);
+    background-image: url("assets/cover-art/In Christ Alone.jpg");
     background-size: cover;
 }
 
@@ -533,7 +533,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ChrisTomlinCoverArtIHW.jpg);
+    background-image: url("assets/cover-art/Is He Worthy.jpg");
     background-size: cover;
 }
 
@@ -543,7 +543,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/CharityGayleCoverArtISJ.jpg);
+    background-image: url("assets/cover-art/I Speak Jesus.jpg");
     background-size: cover;
 }
 
@@ -553,7 +553,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongWorshipCoverArtIS.jpg);
+    background-image: url("assets/cover-art/I Surrender.jpg");
     background-size: cover;
 }
 
@@ -563,7 +563,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/MaverickCityMusicCoverArtITG.jpg);
+    background-image: url("assets/cover-art/I Thank God.jpg");
     background-size: cover;
 }
 
@@ -573,7 +573,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BrookeLigertwoodCoverArtIWEY.jpg);
+    background-image: url("assets/cover-art/I Will Exalt You.jpg");
     background-size: cover;
 }
 
@@ -583,7 +583,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/IsraelHoughtonCoverArtJATC.jpg);
+    background-image: url("assets/cover-art/Jesus At The Center.jpg");
     background-size: cover;
 }
 
@@ -593,7 +593,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationWorshipCoverArtJBTN.jpg);
+    background-image: url("assets/cover-art/Jesus Be The Name.jpg");
     background-size: cover;
 }
 
@@ -603,7 +603,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/MBLWorshipCoverArtJWLY.jpg);
+    background-image: url("assets/cover-art/Jesus We Love You.jpg");
     background-size: cover;
 }
 
@@ -613,7 +613,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/TheBelongingCoCoverArtTJ.jpg);
+    background-image: url("assets/cover-art/The Joy.jpg");
     background-size: cover;
 }
 
@@ -623,7 +623,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/PassionCoverArtKOG.jpg);
+    background-image: url("assets/cover-art/King Of Glory.jpg");
     background-size: cover;
 }
 
@@ -633,7 +633,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongWorshipBrookeLigertwoodCoverArtKOK.jpg);
+    background-image: url("assets/cover-art/King of Kings.jpg");
     background-size: cover;
 }
 
@@ -643,7 +643,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ForrestFrankCoverArtLEMONADE.jpg);
+    background-image: url("assets/cover-art/LEMONADE.jpg");
     background-size: cover;
 }
 
@@ -653,7 +653,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/NewPathWorshipCoverArtMMN.jpg);
+    background-image: url("assets/cover-art/Make Me New - New Path Worship.jpg");
     background-size: cover;
 }
 
@@ -663,7 +663,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/InfluenceMusicCoverArtMMN.png);
+    background-image: url("assets/cover-art/Make Me New - Influence Music.png");
     background-size: cover;
 }
 
@@ -673,7 +673,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/TheChurchWillSingCoverArtMR.jpg);
+    background-image: url("assets/cover-art/Make Room.jpg");
     background-size: cover;
 }
 
@@ -683,7 +683,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/TheBelongingCoCoverArtMNOJ.jpeg);
+    background-image: url("assets/cover-art/Mighty Name of Jesus.jpeg");
     background-size: cover;
 }
 
@@ -693,7 +693,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongWorshipCoverArtMRL.jpg);
+    background-image: url("assets/cover-art/My Redeemer Lives.jpg");
     background-size: cover;
 }
 
@@ -703,7 +703,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ForrestFrankCoverArtNGUTT.jpg);
+    background-image: url("assets/cover-art/NEVER GET USED TO THIS.jpg");
     background-size: cover;
 }
 
@@ -713,7 +713,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/EquippersRevolutionCoverArtNLYG.jpg);
+    background-image: url("assets/cover-art/Never Let You Go.jpg");
     background-size: cover;
 }
 
@@ -723,7 +723,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongWorshipCoverArtNW.jpg);
+    background-image: url("assets/cover-art/New Wine.jpg");
     background-size: cover;
 }
 
@@ -733,7 +733,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BethelMusicCoverArtNLS.jpg);
+    background-image: url("assets/cover-art/No Longer Slaves.jpg");
     background-size: cover;
 }
 
@@ -743,7 +743,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/CharityGayleCoverArtNBTB.jpg);
+    background-image: url("assets/cover-art/Nothing But The Blood.jpg");
     background-size: cover;
 }
 
@@ -753,7 +753,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/CodyCarnesCoverArtNE.jpg);
+    background-image: url("assets/cover-art/Nothing Else.jpg");
     background-size: cover;
 }
 
@@ -763,7 +763,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationWorshipCoverArtOCTTA.jpg);
+    background-image: url("assets/cover-art/O Come To The Altar.jpg");
     background-size: cover;
 }
 
@@ -773,7 +773,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongWorshipCoverArtOW.jpg);
+    background-image: url("assets/cover-art/One Way.jpg");
     background-size: cover;
 }
 
@@ -783,7 +783,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/EastgateWorshipCoverArtOIJ.jpg);
+    background-image: url("assets/cover-art/Only In Jesus.jpg");
     background-size: cover;
 }
 
@@ -793,7 +793,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/GatewayALLINCoverArtOO.jpg);
+    background-image: url("assets/cover-art/On & On.jpg");
     background-size: cover;
 }
 
@@ -803,7 +803,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/LOWorshipCoverArtOpen.png);
+    background-image: url("assets/cover-art/Open.png");
     background-size: cover;
 }
 
@@ -813,7 +813,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationRhythmCoverArtOO.jpg);
+    background-image: url("assets/cover-art/Over & Over.jpg");
     background-size: cover;
 }
 
@@ -823,7 +823,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationWorshipCoverArtPraise.jpg);
+    background-image: url("assets/cover-art/Praise.jpg");
     background-size: cover;
 }
 
@@ -833,7 +833,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/NorthPointWorshipCoverArtProdigals.jpg);
+    background-image: url("assets/cover-art/Prodigals.jpg");
     background-size: cover;
 }
 
@@ -843,7 +843,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BethelMusicCoverArtRAH.jpg);
+    background-image: url("assets/cover-art/Raise A Hallelujah.jpg");
     background-size: cover;
 }
 
@@ -853,7 +853,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/CoryAsburyCoverArtRL.jpg);
+    background-image: url("assets/cover-art/Reckless Love.jpg");
     background-size: cover;
 }
 
@@ -863,7 +863,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/MaverickCityMusicCoverArtROU.jpg);
+    background-image: url("assets/cover-art/Rest on Us.jpg");
     background-size: cover;
 }
 
@@ -873,7 +873,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/JesusCultureCoverArtSAF.jpg);
+    background-image: url("assets/cover-art/Set A Fire.jpg");
     background-size: cover;
 }
 
@@ -883,7 +883,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/GatewayWorshipCoverArtSTTL.jpg);
+    background-image: url("assets/cover-art/Shout To The Lord.jpg");
     background-size: cover;
 }
 
@@ -893,7 +893,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/EquippersRevolutionCoverArtSOM.jpg);
+    background-image: url("assets/cover-art/State of Mind.jpg");
     background-size: cover;
 }
 
@@ -903,7 +903,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/UPPERROOMCoverArtSurrounded.jpg);
+    background-image: url("assets/cover-art/Surrounded.jpg");
     background-size: cover;
 }
 
@@ -913,7 +913,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/CodyCarnesCoverArtTYAYW.jpg);
+    background-image: url("assets/cover-art/Take You At Your Word.jpg");
     background-size: cover;
 }
 
@@ -923,7 +923,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationRhythmCoverArtTGIF.jpg);
+    background-image: url("assets/cover-art/THANK GOD I'M FREE.jpg");
     background-size: cover;
 }
 
@@ -933,7 +933,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/CharityGayleCoverArtTYJFTB.jpg);
+    background-image: url("assets/cover-art/Thank You Jesus For The Blood.jpg");
     background-size: cover;
 }
 
@@ -943,7 +943,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BrandonLakeCoverArtTWIP.jpg);
+    background-image: url("assets/cover-art/That's Who I Praise.jpg");
     background-size: cover;
 }
 
@@ -953,7 +953,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/PhilWickhamCoverArtTIAG.jpg);
+    background-image: url("assets/cover-art/This Is Amazing Grace.jpg");
     background-size: cover;
 }
 
@@ -963,7 +963,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/PhilWickhamCoverArtTIOG.jpg);
+    background-image: url("assets/cover-art/This Is Our God.jpg");
     background-size: cover;
 }
 
@@ -973,7 +973,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationWorshipCoverArtTIG.jpg);
+    background-image: url("assets/cover-art/Trust in God.jpg");
     background-size: cover;
 }
 
@@ -983,7 +983,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/JeremyKeysCoverArtTS.jpg);
+    background-image: url("assets/cover-art/Trust Song.jpg");
     background-size: cover;
 }
 
@@ -993,7 +993,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/AlabasterCoverArtTruth.jpg);
+    background-image: url("assets/cover-art/TRUTH.jpg");
     background-size: cover;
 }
 
@@ -1003,7 +1003,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/TeRautiniCoverArtTuhia.jpg);
+    background-image: url("assets/cover-art/Tuhia.jpg");
     background-size: cover;
 }
 
@@ -1013,7 +1013,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationRhythmCoverArtWashed.jpg);
+    background-image: url("assets/cover-art/WASHED.jpg");
     background-size: cover;
 }
 
@@ -1023,7 +1023,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/RooseveltStewartCoverArtWaves.jpg);
+    background-image: url("assets/cover-art/Waves.jpg");
     background-size: cover;
 }
 
@@ -1033,7 +1033,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/LeelandCoverArtWM.jpg);
+    background-image: url("assets/cover-art/Way Maker.jpg");
     background-size: cover;
 }
 
@@ -1043,7 +1043,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/HillsongWorshipCoverArtWABN.jpg);
+    background-image: url("assets/cover-art/What a Beautiful Name.jpg");
     background-size: cover;
 }
 
@@ -1053,7 +1053,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/SEUWorshipCoverArtWAG.jpeg);
+    background-image: url("assets/cover-art/What A God.jpeg");
     background-size: cover;
 }
 
@@ -1063,7 +1063,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/PhilWickhamCoverArtWAAG.jpg);
+    background-image: url("assets/cover-art/What An Awesome God.jpg");
     background-size: cover;
 }
 
@@ -1073,7 +1073,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/GatewayWorshipCoverArtWE.jpg);
+    background-image: url("assets/cover-art/Who Else.jpg");
     background-size: cover;
 }
 
@@ -1083,7 +1083,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ElevationWorshipCoverArtWorthy.jpg);
+    background-image: url("assets/cover-art/Worthy.jpg");
     background-size: cover;
 }
 
@@ -1093,7 +1093,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/CeCeWinansCoverArtWOIA.jpg);
+    background-image: url("assets/cover-art/Worthy Of It All.jpg");
     background-size: cover;
 }
 
@@ -1103,7 +1103,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/IsraelHoughtonCoverArtYAG.jpg);
+    background-image: url("assets/cover-art/You Are Good - Israel Houghton.jpg");
     background-size: cover;
 }
 
@@ -1113,7 +1113,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/BethelMusicYAG.jpg);
+    background-image: url("assets/cover-art/You Are Good - Bethel Music.jpg");
     background-size: cover;
 }
 
@@ -1123,7 +1123,7 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/AlabasterWorshipCoverArtYW.jpg);
+    background-image: url("assets/cover-art/YOUR WAY.jpg");
     background-size: cover;
 }
 
@@ -1133,6 +1133,6 @@
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url(assets/cover-art/ForrestFrankCoverArtYWB.jpg);
+    background-image: url("assets/cover-art/Your Way's Better.jpg");
     background-size: cover;
 }

@@ -123,6 +123,9 @@ let fadeIn, fadeOut, progressBar
 
 strikeSFX = new Audio(encodeURI(`assets/sfx/strikeSFX.mp3`))
 confettiSFX = new Audio(encodeURI(`assets/sfx/confettiSFX.mp3`))
+correctSFX = new Audio(encodeURI(`assets/sfx/correctSFX.mp3`))
+
+strikeSFX.volume = 0.5;
 
 function startgame(mode) {
 
@@ -339,6 +342,8 @@ function submitSong(run){
 
         try{
             audio.pause()
+
+            correctSFX.play()
             document.querySelector(`.gameProgress .box.${boxes[run]}`).style.backgroundColor = "#295381"
             elem = document.querySelector(".progression");
             elem.style.transition = "width 0.1s linear";

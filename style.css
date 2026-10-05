@@ -209,7 +209,6 @@ a.github-logo:hover{
     pointer-events: auto;
 
     position: fixed;
-    inset: 0;
 
     opacity: 1;
     transform: translateY(0);
@@ -297,6 +296,7 @@ a.github-logo:hover{
 
     position: fixed;    
     inset: 0;
+    bottom: 100px;
 
     opacity: 1;
     transform: translateY(0);
@@ -558,7 +558,7 @@ a.github-logo:hover{
 
     width: 350px;
 
-    max-height: 300px;
+    max-height: 200px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -582,9 +582,31 @@ a.github-logo:hover{
     font: inherit;
     cursor: pointer;
     background: none;
+    border: none;
 
-    font-size: 20px;
-    padding: 6px 0px 2px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dropdownmenu .words{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0.6;
+}
+
+.dropdownmenu .words .title{
+    font-size: 17px;
+    padding: 6px 0px 2px 10px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.dropdownmenu .words .artist{
+    font-size: 10px;
+    color: #ffeaa6;
+    padding: 6px 0px 2px 15px;
     text-align: left;
     font-weight: 700;
     border: none;

@@ -7,6 +7,7 @@
         <title>Worshipd</title>
         <link rel="icon" type="image/x-icon" href="assets/logos/logo.svg">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="gamecoverart.css">
         <script src="script.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@4.4.0/tsparticles.confetti.bundle.min.js"></script>
     </head>
@@ -103,7 +104,13 @@
                             <input type="text" placeholder="Search Songs" onkeyup="filterFunction()" onfocus="filterFunction(); this.setSelectionRange(this.value.length, this.value.length);" class="search-bar">
                         </div>
                         <div tabindex="-1" class="dropdownmenu">
-                            <button onclick="dropdownmenuClick(this)">A Thousand Hallelujahs</button>
+                            <button onclick="dropdownmenuClick(this)">
+                                <div class="cover-artATH"></div>
+                                <div class="words">
+                                    <div class="title">A Thousand Hallelujahs</div>
+                                    <div class="artist">Brooke Ligertwood</div>
+                                </div>
+                            </button>
                             <button onclick="dropdownmenuClick(this)">AMAZING!</button>
                             <button onclick="dropdownmenuClick(this)">All Hail King Jesus</button>
                             <button onclick="dropdownmenuClick(this)">All In</button>

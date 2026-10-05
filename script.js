@@ -313,7 +313,7 @@ function soundrepeat(run){
 }
 
 function soundplay(run){
-    if (audio.paused){
+    if (audio.paused && !audio.ended){
         fadingOut = false
         clearInterval(fadeOut)
         clearInterval(fadeIn)

@@ -147,6 +147,16 @@
     background-size: cover;
 }
 
+.cover-artDemons{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/JosiahQueenCoverArtDemons.jpg);
+    background-size: cover;
+}
+
 .cover-artDIL{
     height: clamp(25px, 3vw, 35px);
     width: clamp(25px, 3vw, 35px);
@@ -1004,6 +1014,16 @@
     border-radius: clamp(5px, 1vw, 10px);
 
     background-image: url(assets/cover-art/ElevationRhythmCoverArtWashed.jpg);
+    background-size: cover;
+}
+
+.cover-artWaves{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url(assets/cover-art/RooseveltStewartCoverArtWaves.jpg);
     background-size: cover;
 }
 

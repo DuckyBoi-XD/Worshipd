@@ -241,9 +241,9 @@ function gamerun(difficulty){
     for (item of songNameGameList){
         coverarts_endgame.push(`assets/cover-art/${item}.jpg`)
     }   
-    document.querySelector(".endgame-songtitles .songone .songimage").style.backgroundImage = "url(" + `assets/cover-art/Washed.jpg?v=2` + ")"
-    document.querySelector(".endgame-songtitles .songtwo .songimage").style.backgroundImage = "url(" + `assets/cover-art/Tuhia.jpg?v=2` + ")"
-    document.querySelector(".endgame-songtitles .songthree .songimage").style.backgroundImage = "url(" + `assets/cover-art/What A God.jpg?v=2` + ")"
+    document.querySelector(".endgame-songtitles .songone .songimage").style.backgroundImage = "url(" + `assets/cover-art/Washed.jpg` + ")"
+    document.querySelector(".endgame-songtitles .songtwo .songimage").style.backgroundImage = "url(" + `assets/cover-art/Tuhia.jpg` + ")"
+    document.querySelector(".endgame-songtitles .songthree .songimage").style.backgroundImage = "url(" + `assets/cover-art/WhatAGod.jpg` + ")"
 
     console.log(songNameGameList)
 }

@@ -138,7 +138,7 @@ function startgame(mode) {
     if (mode == 1){
         game = document.querySelector(".game-space.Casual.hidden");}
     else if (mode == 2){
-        game = document.querySelector(".game-space.Faithful.hidden");}
+        game = document.querySelector(".game-space.Familiar.hidden");}
     else if (mode == 3){
             game = document.querySelector(".game-space.Worshiper.hidden");}
 
@@ -235,6 +235,15 @@ function gamerun(difficulty){
     }, 10)
 
     /**/
+
+    coverarts_endgame = []
+
+    for (item of songNameGameList){
+        coverarts_endgame.push(`assets/cover-art/${item}.jpg`)
+    }   
+    document.querySelector(".endgame-songtitles .songone .songimage").style.backgroundImage = "url(" + `assets/cover-art/Washed.jpg?v=2` + ")"
+    document.querySelector(".endgame-songtitles .songtwo .songimage").style.backgroundImage = "url(" + `assets/cover-art/Tuhia.jpg?v=2` + ")"
+    document.querySelector(".endgame-songtitles .songthree .songimage").style.backgroundImage = "url(" + `assets/cover-art/What A God.jpg?v=2` + ")"
 
     console.log(songNameGameList)
 }

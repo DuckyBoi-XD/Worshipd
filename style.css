@@ -377,7 +377,7 @@ a.github-logo:hover{
     transition: background-colour 100ms ease;
 }
 
-.winSpace{
+.endSpace{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -440,7 +440,7 @@ a.github-logo:hover{
     align-items: center;
 }
 
-.winSpace.hidden{
+.endSpace.hidden{
     opacity: 0;
     transform: translateY(20vw);
     pointer-events: none;
@@ -469,30 +469,49 @@ a.github-logo:hover{
     pointer-events: none;
 }
 
-.endgame-songtitles .songone .songimage{
-    height: clamp(40px, 5vw, 60px);
-    width: clamp(40px, 5vw, 60px);
-    border: 1px solid rgba(255, 255, 255, 0.483);
+.endgame-songtitles{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.endgame-songtitles .songtitle{
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(10px, 1.5vw, 20px);
+    font-weight: 700;
+    color: #FFC300;
+}
+
+.endgame-songtitles .song{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.endgame-songtitles .song.one .songimage{
+    height: clamp(60px, 8vw, 80px);
+    width: clamp(60px, 8vw, 80px);
+    border: 3px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(10px, 2vw, 15px);
 
     background-image: none;
     background-size: cover;
 }
 
-.endgame-songtitles .songtwo .songimage{
-    height: clamp(40px, 5vw, 60px);
-    width: clamp(40px, 5vw, 60px);
-    border: 1px solid rgba(255, 255, 255, 0.483);
+.endgame-songtitles .song.two .songimage{
+    height: clamp(60px, 8vw, 80px);
+    width: clamp(60px, 8vw, 80px);
+    border: 3px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(10px, 2vw, 15px);
 
     background-image: none;
     background-size: cover;
 }
 
-.endgame-songtitles .songthree .songimage{
-    height: clamp(40px, 5vw, 60px);
-    width: clamp(40px, 5vw, 60px);
-    border: 1px solid rgba(255, 255, 255, 0.483);
+.endgame-songtitles .song.three .songimage{
+    height: clamp(60px, 8vw, 80px);
+    width: clamp(60px, 8vw, 80px);
+    border: 3px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(10px, 2vw, 15px);
 
     background-image: none;

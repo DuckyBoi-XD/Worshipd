@@ -238,12 +238,17 @@ function gamerun(difficulty){
 
     coverarts_endgame = []
 
+    document.querySelector(".endgame-songtitles .song.one .songtitle").textContent = songNameGameList[0]
+    document.querySelector(".endgame-songtitles .song.two .songtitle").textContent = songNameGameList[1]
+    document.querySelector(".endgame-songtitles .song.three .songtitle").textContent = songNameGameList[2]
+
     for (item of songNameGameList){
         coverarts_endgame.push(`assets/cover-art/${item.replaceAll(" ","")}.jpg`)
-    }   
-    document.querySelector(".endgame-songtitles .songone .songimage").style.backgroundImage = "url(" + coverarts_endgame[0] + ")"
-    document.querySelector(".endgame-songtitles .songtwo .songimage").style.backgroundImage = "url(" + coverarts_endgame[1] + ")"
-    document.querySelector(".endgame-songtitles .songthree .songimage").style.backgroundImage = "url(" + coverarts_endgame[2] + ")"
+    }
+
+    document.querySelector(".endgame-songtitles .song.one .songimage").style.backgroundImage = "url(" + coverarts_endgame[0] + ")"
+    document.querySelector(".endgame-songtitles .song.two .songimage").style.backgroundImage = "url(" + coverarts_endgame[1] + ")"
+    document.querySelector(".endgame-songtitles .song.three .songimage").style.backgroundImage = "url(" + coverarts_endgame[2] + ")"
 
     console.log(songNameGameList)
 }

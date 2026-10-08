@@ -236,6 +236,8 @@ const songArtists = {
     "Your Way's Better" : "Forrest Frank"
 }
 
+difficultyMode = 0
+
 let fadeIn, fadeOut, progressBar
 
 strikeSFX = new Audio(encodeURI(`assets/sfx/strikeSFX.mp3`))
@@ -275,7 +277,6 @@ function startgame(mode) {
 function backbutton(){
     game.classList.add("hidden");
     document.querySelector(".running-game").classList.add("hidden");
-    maintitle.classList.remove("hidden");
     document.querySelector(".main-title").classList.remove("hidden");
 
     newbutton.replaceWith(oldbutton);
@@ -285,7 +286,25 @@ function backbutton(){
     audio.pause()
 };
 
+function menubutton(){
+    game.classList.add("hidden");
+    document.querySelector(".endSpace").classList.add("hidden")
+    document.querySelector(".main-title").classList.remove("hidden");
+
+    newbutton.replaceWith(oldbutton);
+}
+
 function gamerun(difficulty){
+    if (difficulty == 4){
+        difficulty = difficultyMode
+        document.querySelector(".endSpace").classList.add("hidden")
+    }
+    else{
+        difficultyMode = difficulty
+    }
+
+    strikes = 0
+    gamesProgression = 1
     document.querySelector(".search-bar").value = ""
     game.classList.add("hidden");
     document.querySelector(".running-game.hidden").classList.remove("hidden");
@@ -471,6 +490,8 @@ function soundplay(run){
 boxes = ["first", "second", "third"]
 strikes = 0
 gamesProgression = 1
+songGuessState = [1, 0, 0] /* 0 = none, 1 = focused, 2 = correct, 3 = skip, 4 = wrong*/
+
 
 function submitSong(run){
     input = document.querySelector(".search-bar");
@@ -478,6 +499,7 @@ function submitSong(run){
         document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
         document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${run+1})`)
         document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run+1})`)
+        songGuessState[gamesProgression-1] = 2
         gamesProgression++
         input.value = ""
         document.querySelector(`.gameProgress .box.${boxes[run-1]}`).style.backgroundColor = "#427175"

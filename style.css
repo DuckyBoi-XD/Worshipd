@@ -410,20 +410,26 @@ a.github-logo:hover{
 
     background: none;
 
-    padding: 8px 12px 8px 12px;
+    padding: 7px 9px 7px 9px;
     border: 3px solid #ffb22d86;
     border-radius: 10px;
 
     font-family: "DM Serif Display", serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     color: #FFC300;
+
+    transition: background-color 0.5s ease;
+}
+
+.endgame-controls button:hover{
+    background-color:#194c92;
 }
 
 .endgame-controls .restart{
-    font-size: 50px;
+    font-size: 40px;
     line-height: 0.8;
-    padding-top: 0px;
+    padding: 0px 9px 9px 9px;
 }
 
 .endgame-songtitles{
@@ -441,29 +447,6 @@ a.github-logo:hover{
 }
 
 .endSpace.hidden{
-    opacity: 0;
-    transform: translateY(20vw);
-    pointer-events: none;
-}
-
-.loseSpace{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: auto;
-
-    position: fixed;    
-    inset: 0;
-
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 200ms ease, transform 200ms ease;
-
-    flex-direction: column;
-    gap: 20px
-}
-
-.loseSpace.hidden{
     opacity: 0;
     transform: translateY(20vw);
     pointer-events: none;

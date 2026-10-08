@@ -472,14 +472,22 @@ a.github-logo:hover{
 .endgame-songtitles{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 20px;
 }
 
-.endgame-songtitles .songtitle{
+.endgame-songtitles .songname{
     font-family: "DM Serif Display", serif;
-    font-size: clamp(10px, 1.5vw, 20px);
+    font-size: clamp(15px, 3vw, 20px);
     font-weight: 700;
     color: #FFC300;
+}
+
+.endgame-songtitles .songartist{
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(10px, 2vw, 15px);
+    font-weight: 600;
+    color: #ffe590;
 }
 
 .endgame-songtitles .song{
@@ -488,31 +496,14 @@ a.github-logo:hover{
     gap: 20px;
 }
 
-.endgame-songtitles .song.one .songimage{
-    height: clamp(60px, 8vw, 80px);
-    width: clamp(60px, 8vw, 80px);
+.endgame-songtitles .songimage{
+    height: clamp(40px, 7vw, 60px);
+    width: clamp(40px, 7vw, 60px);
+
     border: 3px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(10px, 2vw, 15px);
-
-    background-image: none;
-    background-size: cover;
-}
-
-.endgame-songtitles .song.two .songimage{
-    height: clamp(60px, 8vw, 80px);
-    width: clamp(60px, 8vw, 80px);
-    border: 3px solid rgba(255, 255, 255, 0.483);
-    border-radius: clamp(10px, 2vw, 15px);
-
-    background-image: none;
-    background-size: cover;
-}
-
-.endgame-songtitles .song.three .songimage{
-    height: clamp(60px, 8vw, 80px);
-    width: clamp(60px, 8vw, 80px);
-    border: 3px solid rgba(255, 255, 255, 0.483);
-    border-radius: clamp(10px, 2vw, 15px);
+    box-sizing: border-box;
+    background-clip: padding-box;
 
     background-image: none;
     background-size: cover;

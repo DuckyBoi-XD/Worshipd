@@ -354,9 +354,13 @@ function gamerun(difficulty){
 
     coverarts_endgame = []
 
-    document.querySelector(".endgame-songtitles .song.one .songtitle").textContent = songNameGameList[0]
-    document.querySelector(".endgame-songtitles .song.two .songtitle").textContent = songNameGameList[1]
-    document.querySelector(".endgame-songtitles .song.three .songtitle").textContent = songNameGameList[2]
+    document.querySelector(".endgame-songtitles .song.one .songname").textContent = songNameGameList[0]
+    document.querySelector(".endgame-songtitles .song.two .songname").textContent = songNameGameList[1]
+    document.querySelector(".endgame-songtitles .song.three .songname").textContent = songNameGameList[2]
+
+    document.querySelector(".endgame-songtitles .song.one .songartist").textContent = songArtists[songNameGameList[0]]
+    document.querySelector(".endgame-songtitles .song.two .songartist").textContent = songArtists[songNameGameList[1]]
+    document.querySelector(".endgame-songtitles .song.three .songartist").textContent = songArtists[songNameGameList[2]]
 
     for (item of songNameGameList){
         coverarts_endgame.push(`assets/cover-art/${item.replace(/[^a-zA-Z0-9]/g, "")}.jpg`)

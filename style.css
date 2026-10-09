@@ -319,7 +319,7 @@ a.github-logo:hover{
 }
 
 .gameProgress .box{
-    border: 2px solid #ffae00;
+    border: 1.5px solid #ffae0097;
     justify-content: center;
     align-items: center;
     padding:3px 6px 3px 6px;
@@ -327,6 +327,7 @@ a.github-logo:hover{
     font-family: "DM Serif Display", serif;
     font-size: 18px;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .gameProgress .box.first{
@@ -351,7 +352,7 @@ a.github-logo:hover{
 }
 
 .gameStrike .strike{
-    border: 2px solid #ffae00;
+    border: 1.5px solid #ffae0097;
     justify-content: center;
     align-items: center;
     padding: 0px 27px 0px 27px;
@@ -492,6 +493,54 @@ a.github-logo:hover{
     background-size: cover;
 }
 
+.running-game .soundControls{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
+    user-select: none;
+
+    gap: 10px;
+}
+
+.running-game .soundControls .gameControls{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px
+}
+
+.running-game .soundControls .gameControls button{
+    position: relative;
+    display: inline-block;
+
+    border: 1.5px solid #c69033;
+    border-radius: 7px;
+    padding: 5px 10px 3px 10px;
+    
+
+    transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
+    user-select: none;
+
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    font-weight: 700;
+
+    font-size: 16px;
+}
+
+.running-game .soundControls .gameControls .submitButton:hover{
+    background-color: #003369;
+}
+
+.running-game .soundControls .gameControls .skipButton:hover{
+    background-color: #003369;
+}
+
 .running-game .soundControls .soundbutton{
     position: relative;
     display: inline-block;
@@ -538,6 +587,10 @@ a.github-logo:hover{
     background-color: #003369;
 }
 
+.running-game .soundrepeat:hover{
+    background-color: #003369;
+}
+
 
 .running-game .search-bar{
     box-sizing: border-box;
@@ -555,7 +608,7 @@ a.github-logo:hover{
     border: 1px solid #FFC300;
     border-radius: 5px;
 
-    width: 350px;
+    width: 450px;
 
     color: #ffdb66;
 }
@@ -579,38 +632,13 @@ a.github-logo:hover{
     gap: 10px;
 }
 
-.running-game .submitButton{
-    position: relative;
-    display: inline-block;
-
-    border: 1px solid #FFC300;
-    border-radius: 5px;
-    padding: 6px 6px 4px 6px;
-    
-
-    transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
-    user-select: none;
-
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-    background: none;
-    outline: none;
-    font-weight: 700;
-
-    font-size: 20px;
-}
-
-.running-game .submitButton:hover{
-    background-color: #003369;
-}
 
 .running-game .search-bar:focus ~ .dropdownmenu{
     display: flex;
     flex-direction: column;
     position: absolute;
 
-    width: 350px;
+    width: 450px;
 
     max-height: 200px;
     border-bottom-left-radius: 5px;
@@ -623,10 +651,10 @@ a.github-logo:hover{
     position: absolute;
     outline: none;
 
-    width: 350px;
+    width: 450px;
 
     height: fit-content;
-    max-height: 38vh;
+    max-height: 36vh;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -688,7 +716,7 @@ a.github-logo:hover{
 }
 
 .progress-bar{
-    width: 436.233px;
+    width: 450px;
     height: 20px;
 
     border-radius: 3px;

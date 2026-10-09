@@ -27,7 +27,7 @@
             </div>
         </nav>
         <div class="alignment">
-            <div class="main-title pageload hidden">
+            <div class="main-title pageload">
                 <div class="box">
                     <h2>Worship'd</h2>
                     <p>Listen to a clip and guess the worship or praise song it is from</p>
@@ -94,6 +94,10 @@
                 <div class="soundControls">
                     <button class="soundbutton" tabindex="-1" onclick="soundplay(1)">▶</button>
                     <button class="soundrepeat" tabindex="-1" onclick="soundrepeat(1)">↻</button>
+                    <div class="gameControls">
+                        <button class="submitButton" tabindex="-1" onclick="submitSong(1)">Submit</button>
+                        <button class="skipButton" tabindex="-1" onclick="skipSong()">Skip</button>
+                    </div>
                 </div>
                 <div class="progress-bar">
                     <div class="progression"></div>
@@ -897,10 +901,9 @@
                             </button>
                         </div>
                     </div>
-                    <button class="submitButton" tabindex="-1" onclick="submitSong(1)">Submit</button>
                 </div>
             </div>
-            <div class="endSpace">
+            <div class="endSpace hidden">
                 <div class="title"></div>
                 <div class="endgame-songtitles">
                     <div class="song one">

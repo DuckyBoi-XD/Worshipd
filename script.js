@@ -237,6 +237,19 @@ const songArtists = {
 }
 
 difficultyMode = 0
+quantitySongs = 0
+
+boxesS = ["first"]
+boxesM = ["first", "second", "third"]
+boxesL = ["first", "second", "third", "forth", "fifth"]
+
+strikes = 0
+gamesProgression = 1
+
+/* 0 = none, 1 = focused, 2 = correct, 3 = skip, 4 = wrong*/
+songGuessStateS = [1]
+songGuessStateM = [1, 0, 0]
+songGuessStateL = [1, 0, 0, 0, 0]
 
 let fadeIn, fadeOut, progressBar
 
@@ -294,7 +307,8 @@ function menubutton(){
     newbutton.replaceWith(oldbutton);
 }
 
-function gamerun(difficulty){
+function gamerun(difficulty, quantity){
+    quantitySongs = quantity
     if (difficulty == 4){
         difficulty = difficultyMode
         document.querySelector(".endSpace").classList.add("hidden")
@@ -312,7 +326,7 @@ function gamerun(difficulty){
     songTemplList = [...songlist];
     songNameGameList = []
 
-    for (i = 0; i < 3; i++){
+    for (i = 0; i < quantity; i++){
         songGrab = songTemplList[Math.floor(Math.random() * songTemplList.length)];
 
         index = songTemplList.indexOf(songGrab);
@@ -487,11 +501,12 @@ function soundplay(run){
     }
 }
 
-boxes = ["first", "second", "third"]
-strikes = 0
-gamesProgression = 1
-songGuessState = [1, 0, 0] /* 0 = none, 1 = focused, 2 = correct, 3 = skip, 4 = wrong*/
-
+function skipSong(run){
+    if (gamesProgression == songGuessState.length){
+        for (i = 0; i > 0; i++)
+            pass
+    }
+}
 
 function submitSong(run){
     input = document.querySelector(".search-bar");
@@ -499,6 +514,7 @@ function submitSong(run){
         document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
         document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${run+1})`)
         document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run+1})`)
+        document.querySelector(".skipButton").setAttribute("onclick", `skipSong(${run+1})`)
         songGuessState[gamesProgression-1] = 2
         gamesProgression++
         input.value = ""

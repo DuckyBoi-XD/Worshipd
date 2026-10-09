@@ -247,9 +247,9 @@ strikes = 0
 gamesProgression = 1
 
 /* 0 = none, 1 = focused, 2 = correct, 3 = skip, 4 = wrong*/
-songGuessStateS = [1]
-songGuessStateM = [1, 0, 0]
-songGuessStateL = [1, 0, 0, 0, 0]
+songGuessStatements = [[1], [1, 0, 0], [1, 0, 0, 0, 0]]
+
+songGuessState = null
 
 let fadeIn, fadeOut, progressBar
 
@@ -313,8 +313,17 @@ function gamerun(difficulty, quantity){
         difficulty = difficultyMode
         document.querySelector(".endSpace").classList.add("hidden")
     }
-    else{
-        difficultyMode = difficulty
+    else{difficultyMode = difficulty}
+
+
+    if (quantity == 1){
+        songGuessState = [...songGuessStatements[1]];
+    }
+    else if (quantity == 3){
+        songGuessState = [...songGuessStatements[2]];
+    }
+    else if (quantity == 5){
+        songGuessState = [...songGuessStatements[3]];
     }
 
     strikes = 0
@@ -502,9 +511,24 @@ function soundplay(run){
 }
 
 function skipSong(run){
-    if (gamesProgression == songGuessState.length){
-        for (i = 0; i > 0; i++)
-            pass
+    if (gamesProgression == quantitySongs){
+        for (i = 0; i > quantitySongs; i++)
+            if (songGuessState[i] != 2){
+                gamesProgression = i;
+                document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${i})`)
+                document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${i})`)
+                document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${i})`)
+            }
+    }
+    else{
+        for (i = gamesProgression+1; i > quantitySongs; i++){
+            if (songGuessState[gamesProgression] != 2){
+                gamesProgression = i;
+                    document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${i})`)
+                    document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${i})`)
+                    document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${i})`)
+            }
+        }
     }
 }
 
@@ -514,7 +538,6 @@ function submitSong(run){
         document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
         document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${run+1})`)
         document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run+1})`)
-        document.querySelector(".skipButton").setAttribute("onclick", `skipSong(${run+1})`)
         songGuessState[gamesProgression-1] = 2
         gamesProgression++
         input.value = ""

@@ -257,6 +257,19 @@ a.github-logo:hover{
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.game-space .box p2{
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(10px, 1.5vw, 20px);
+    font-weight: 200;
+    line-height: clamp(20px, 2vw, 30px);
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    opacity: 0;
+    transform: translateX(-20vw);
+    animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 .startbutton{
     display: flex;
     flex-direction: row;
@@ -286,6 +299,21 @@ a.github-logo:hover{
     font: inherit;
     cursor: pointer;
     background: none;
+}
+
+.startbutton.one button:hover{
+    color: #52b7ff;
+    transform: translateY(1vw);
+}
+
+.startbutton.two button:hover{
+    color: #2e85ff;
+    transform: translateY(1vw);
+}
+
+.startbutton.three button:hover{
+    color: #1d4be1;
+    transform: translateY(1vw);
 }
 
 .running-game{
@@ -608,7 +636,7 @@ a.github-logo:hover{
     border: 1px solid #FFC300;
     border-radius: 5px;
 
-    width: 450px;
+    width: clamp(400px, 40vw, 450px);
 
     color: #ffdb66;
 }
@@ -638,7 +666,7 @@ a.github-logo:hover{
     flex-direction: column;
     position: absolute;
 
-    width: 450px;
+    width: clamp(400px, 40vw, 450px);
 
     max-height: 200px;
     border-bottom-left-radius: 5px;
@@ -651,7 +679,7 @@ a.github-logo:hover{
     position: absolute;
     outline: none;
 
-    width: 450px;
+    width: clamp(400px, 40vw, 450px);
 
     height: fit-content;
     max-height: 36vh;
@@ -716,7 +744,7 @@ a.github-logo:hover{
 }
 
 .progress-bar{
-    width: 450px;
+    width: clamp(400px, 40vw, 450px);
     height: 20px;
 
     border-radius: 3px;
@@ -888,15 +916,15 @@ button.game-button1:hover,button.game-button2:hover,button.game-button3:hover,.s
 
 
 
-button.game-button1:hover,.startbutton.one:hover{
+button.game-button1:hover{
     color: #52b7ff;
 }
 
-button.game-button2:hover,.startbutton.two:hover{
+button.game-button2:hover{
     color: #2e85ff;
 }
 
-button.game-button3:hover,.startbutton.three:hover{
+button.game-button3:hover{
     color: #1d4be1;
 }
 

@@ -239,9 +239,9 @@ const songArtists = {
 difficultyMode = 0
 quantitySongs = 0
 
-boxesS = ["first"]
-boxesM = ["first", "second", "third"]
-boxesL = ["first", "second", "third", "forth", "fifth"]
+gamestate = false
+
+boxes = ["first", "second", "third"]
 
 strikes = 0
 gamesProgression = 1
@@ -308,7 +308,13 @@ function menubutton(){
 }
 
 function gamerun(difficulty, quantity){
+    gamestate = true
     quantitySongs = quantity
+
+    for (i = 0; i < 2; i++){
+        document.querySelector(`.gameStrike .strike.${boxes[i]}`).style.backgroundColor = "none"
+    }
+
     if (difficulty == 4){
         difficulty = difficultyMode
         document.querySelector(".endSpace").classList.add("hidden")
@@ -317,13 +323,24 @@ function gamerun(difficulty, quantity){
 
 
     if (quantity == 1){
-        songGuessState = [...songGuessStatements[1]];
+        document.querySelector(".gameProgress .box.second").classList.add("hidden")
+        document.querySelector(".gameProgress .box.third").classList.add("hidden")
+        document.querySelector(".gameProgress .box.forth").classList.add("hidden")
+        document.querySelector(".gameProgress .box.fifth").classList.add("hidden")
     }
     else if (quantity == 3){
-        songGuessState = [...songGuessStatements[2]];
+        songGuessState = [...songGuessStatements[1]];
+        document.querySelector(".gameProgress .box.second").classList.remove("hidden")
+        document.querySelector(".gameProgress .box.third").classList.remove("hidden")
+        document.querySelector(".gameProgress .box.forth").classList.add("hidden")
+        document.querySelector(".gameProgress .box.fifth").classList.add("hidden")
     }
     else if (quantity == 5){
-        songGuessState = [...songGuessStatements[3]];
+        songGuessState = [...songGuessStatements[2]];
+        document.querySelector(".gameProgress .box.second").classList.remove("hidden")
+        document.querySelector(".gameProgress .box.third").classList.remove("hidden")
+        document.querySelector(".gameProgress .box.forth").classList.remove("hidden")
+        document.querySelector(".gameProgress .box.fifth").classList.remove("hidden")
     }
 
     strikes = 0
@@ -535,59 +552,8 @@ function skipSong(run){
 function submitSong(run){
     input = document.querySelector(".search-bar");
     if (input.value.toLowerCase() == songNameGameList[run-1].toLowerCase()){
-        document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
-        document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${run+1})`)
-        document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run+1})`)
-        songGuessState[gamesProgression-1] = 2
-        gamesProgression++
-        input.value = ""
-        document.querySelector(`.gameProgress .box.${boxes[run-1]}`).style.backgroundColor = "#427175"
-
-        try{
-            audio.pause()
-
-            correctSFX.play()
-            document.querySelector(`.gameProgress .box.${boxes[run]}`).style.backgroundColor = "#295381"
-            elem = document.querySelector(".progression");
-            elem.style.transition = "width 0.1s linear";
-
-            audio = new Audio(songsoundlist[(run)]);
-            soundPlayingCount = true
-            audio.volume = 0
-
-            audio.play();
-
-            fadeIn = setInterval(() => {
-                audio.volume = Math.min(1, audio.volume + 0.10);
-                if (audio.volume >= 1) clearInterval(fadeIn);
-            }, 50);
-
-            fadingOut = false
-            
-            audio.addEventListener("timeupdate", () => {
-                remainingTime = audio.duration - audio.currentTime;
-                if (remainingTime <= 1 && !fadingOut){
-                    fadingOut = true;
-                    fadeOut = setInterval(() => {
-                        audio.volume = Math.max(0, audio.volume - 0.10);
-                        if (audio.volume <= 0){
-                            clearInterval(fadeOut); 
-                            audio.pause();
-                            soundPlayingCount = false
-                        }
-                    }, 100);
-                }
-            });
-
-                progressBar = setInterval(() =>{
-                elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
-                if (audio.currentTime >= audio.duration){
-                    clearInterval(progressBar)
-                    elem.style.transition = `width ${audio.duration/100}s linear`;
-                }
-            }, 10)
-
-        } catch (error){
+        if (quantitySongs == 1){
+            gamestate = false
             confetti({
                 particleCount: 1000,
                 spread: 100,
@@ -598,15 +564,86 @@ function submitSong(run){
             document.querySelector(".endSpace").classList.remove("hidden")
             confettiSFX.play();
         }
+        else{
+            document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
+            document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${run+1})`)
+            document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run+1})`)
+            songGuessState[gamesProgression-1] = 2
+            gamesProgression++
+            input.value = ""
 
+            songGuessState[run-1] = 2
+            songGuessState[run] = 1
+
+            document.querySelector(`.gameProgress .box.${boxes[run-1]}`).style.backgroundColor = "#427175"
+            try{
+                audio.pause()
+
+                correctSFX.play()
+                document.querySelector(`.gameProgress .box.${boxes[run]}`).style.backgroundColor = "#295381"
+                elem = document.querySelector(".progression");
+                elem.style.transition = "width 0.1s linear";
+
+                audio = new Audio(songsoundlist[(run)]);
+                soundPlayingCount = true
+                audio.volume = 0
+
+                audio.play();
+
+                fadeIn = setInterval(() => {
+                    audio.volume = Math.min(1, audio.volume + 0.10);
+                    if (audio.volume >= 1) clearInterval(fadeIn);
+                }, 50);
+
+                fadingOut = false
+                
+                audio.addEventListener("timeupdate", () => {
+                    remainingTime = audio.duration - audio.currentTime;
+                    if (remainingTime <= 1 && !fadingOut){
+                        fadingOut = true;
+                        fadeOut = setInterval(() => {
+                            audio.volume = Math.max(0, audio.volume - 0.10);
+                            if (audio.volume <= 0){
+                                clearInterval(fadeOut); 
+                                audio.pause();
+                                soundPlayingCount = false
+                            }
+                        }, 100);
+                    }
+                });
+
+                    progressBar = setInterval(() =>{
+                    elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
+                    if (audio.currentTime >= audio.duration){
+                        clearInterval(progressBar)
+                        elem.style.transition = `width ${audio.duration/100}s linear`;
+                    }
+                }, 10)
+
+            } catch (error){
+                gamestate = false
+                confetti({
+                    particleCount: 1000,
+                    spread: 100,
+                    origin: { y: 0.8 }
+                });
+
+                document.querySelector(".running-game").classList.add("hidden")
+                document.querySelector(".endSpace").classList.remove("hidden")
+                confettiSFX.play();
+            }
+        }
     }
     else if (input.value.toLowerCase() != songNameGameList[run-1].toLowerCase()){
         document.querySelector(`.gameStrike .strike.${boxes[strikes]}`).style.backgroundColor = "#ba0c0c"
         strikes++
         if (strikes == 3){
+            gamestate = false
             wrongSFX.play();
             document.querySelector(".running-game").classList.add("hidden")
             document.querySelector(".endSpace").classList.remove("hidden")
+
+            audio.pause()
         }
         else {strikeSFX.play();}
     }
@@ -614,15 +651,17 @@ function submitSong(run){
 }
 
 document.addEventListener("keydown", (key) => {
-    if (key.code === "Space" && document.activeElement !== document.querySelector(".search-bar")){
-        key.preventDefault();
-        soundplay();
-    }
-    if (key.code === "Enter" && document.querySelector(".search-bar").value != ""){
-        if (document.activeElement.closest(".dropdownmenu")){
-            return;}
-        key.preventDefault();
-        submitSong(gamesProgression);
+    if (gamestate){
+        if (key.code === "Space" && document.activeElement !== document.querySelector(".search-bar")){
+            key.preventDefault();
+            soundplay();
+        }
+        if (key.code === "Enter" && document.querySelector(".search-bar").value != ""){
+            if (document.activeElement.closest(".dropdownmenu")){
+                return;}
+            key.preventDefault();
+            submitSong(gamesProgression);
+        }
     }
 })
 

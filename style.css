@@ -341,21 +341,24 @@ a.github-logo:hover{
 }
 
 .running-game .gameProgress{
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     gap: 10px;
 }
 
 .gameProgress .box{
     border: 1.5px solid #ffae0097;
-    justify-content: center;
-    align-items: center;
     padding:3px 6px 3px 6px;
     border-radius: 5px;
     font-family: "DM Serif Display", serif;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+ .gameProgress .box.hidden{
+    display: none;
+    pointer-events: none;
 }
 
 .gameProgress .box.first{
@@ -374,36 +377,21 @@ a.github-logo:hover{
 }
 
 .running-game .gameStrike{
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     gap: 10px;
 }
 
 .gameStrike .strike{
     border: 1.5px solid #ffae0097;
-    justify-content: center;
-    align-items: center;
     padding: 0px 27px 0px 27px;
     margin-bottom: -10px;
     border-radius: 5px;
     font-family: "DM Serif Display", serif;
     font-size: 18px;
     font-weight: 700;
-}
-
-.gameStrike .strike.first{
     background-color: none;
-    transition: background-colour 100ms ease;
-}
-
-.gameStrike .strike.second{
-    background-color: none;
-    transition: background-colour 100ms ease;
-}
-
-.gameStrike .strike.third{
-    background-color: none;
-    transition: background-colour 100ms ease;
+    transition: background-color 100ms ease;
 }
 
 .endSpace{

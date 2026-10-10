@@ -449,13 +449,6 @@ a.github-logo:hover{
     padding: 0px 9px 9px 9px;
 }
 
-.endgame-songtitles{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
 .endgame-songtitles .song{
     display: flex;
     flex-direction: column;

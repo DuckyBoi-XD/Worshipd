@@ -291,6 +291,7 @@ function backbutton(){
     game.classList.add("hidden");
     document.querySelector(".running-game").classList.add("hidden");
     document.querySelector(".main-title").classList.remove("hidden");
+    document.querySelector(".endSpace").classList.add("hidden")
 
     newbutton.replaceWith(oldbutton);
 
@@ -309,20 +310,17 @@ function menubutton(){
 
 function gamerun(difficulty, quantity){
     gamestate = true
-    quantitySongs = quantity
-
-    for (i = 0; i < 2; i++){
-        document.querySelector(`.gameStrike .strike.${boxes[i]}`).style.backgroundColor = "none"
-    }
 
     if (difficulty == 4){
         difficulty = difficultyMode
+        quantity = quantitySongs
         document.querySelector(".endSpace").classList.add("hidden")
     }
-    else{difficultyMode = difficulty}
+    else{difficultyMode = difficulty; quantitySongs = quantity;}
 
 
     if (quantity == 1){
+        songGuessState = [...songGuessStatements[0]];
         document.querySelector(".gameProgress .box.second").classList.add("hidden")
         document.querySelector(".gameProgress .box.third").classList.add("hidden")
         document.querySelector(".gameProgress .box.forth").classList.add("hidden")
@@ -342,6 +340,11 @@ function gamerun(difficulty, quantity){
         document.querySelector(".gameProgress .box.forth").classList.remove("hidden")
         document.querySelector(".gameProgress .box.fifth").classList.remove("hidden")
     }
+
+    for (i = 0; i < 3; i++){
+        document.querySelector(`.gameStrike .strike.${boxes[i]}`).style.backgroundColor = "transparent"}
+    for (i = 0; i < songGuessState.length; i++){
+        document.querySelector(`.gameProgress .box.${boxes[i]}`).style.backgroundColor = "transparent"}
 
     strikes = 0
     gamesProgression = 1
@@ -412,22 +415,17 @@ function gamerun(difficulty, quantity){
     /**/
 
     coverarts_endgame = []
-
-    document.querySelector(".endgame-songtitles .song.one .songname").textContent = songNameGameList[0]
-    document.querySelector(".endgame-songtitles .song.two .songname").textContent = songNameGameList[1]
-    document.querySelector(".endgame-songtitles .song.three .songname").textContent = songNameGameList[2]
-
-    document.querySelector(".endgame-songtitles .song.one .songartist").textContent = songArtists[songNameGameList[0]]
-    document.querySelector(".endgame-songtitles .song.two .songartist").textContent = songArtists[songNameGameList[1]]
-    document.querySelector(".endgame-songtitles .song.three .songartist").textContent = songArtists[songNameGameList[2]]
+    coverart_count = ["one", "two", "three", "four", "five"]
 
     for (item of songNameGameList){
         coverarts_endgame.push(`assets/cover-art/${item.replace(/[^a-zA-Z0-9]/g, "")}.jpg`)
     }
 
-    document.querySelector(".endgame-songtitles .song.one .songimage").style.backgroundImage = "url(" + coverarts_endgame[0] + ")"
-    document.querySelector(".endgame-songtitles .song.two .songimage").style.backgroundImage = "url(" + coverarts_endgame[1] + ")"
-    document.querySelector(".endgame-songtitles .song.three .songimage").style.backgroundImage = "url(" + coverarts_endgame[2] + ")"
+    for (i = 0; i < songNameGameList.length; i++){
+        document.querySelector(`.endgame-songtitles .song.${coverart_count[i]} .songname`).textContent = songNameGameList[i]
+        document.querySelector(`.endgame-songtitles .song.${coverart_count[i]} .songartist`).textContent = songArtists[songNameGameList[i]]
+        document.querySelector(`.endgame-songtitles .song.${coverart_count[i]} .songimage`).style.backgroundImage = "url(" + coverarts_endgame[i] + ")"
+    }
 
     console.log(songNameGameList)
 }
@@ -563,6 +561,7 @@ function submitSong(run){
             document.querySelector(".running-game").classList.add("hidden")
             document.querySelector(".endSpace").classList.remove("hidden")
             confettiSFX.play();
+            audio.pause()
         }
         else{
             document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
@@ -631,6 +630,7 @@ function submitSong(run){
                 document.querySelector(".running-game").classList.add("hidden")
                 document.querySelector(".endSpace").classList.remove("hidden")
                 confettiSFX.play();
+                audio.pause()
             }
         }
     }

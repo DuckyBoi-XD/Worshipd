@@ -241,7 +241,7 @@ quantitySongs = 0
 
 gamestate = false
 
-boxes = ["first", "second", "third"]
+boxes = ["first", "second", "third", "forth", "fifth"]
 
 strikes = 0
 gamesProgression = 1
@@ -257,6 +257,7 @@ strikeSFX = new Audio(encodeURI(`assets/sfx/strikeSFX.mp3`))
 confettiSFX = new Audio(encodeURI(`assets/sfx/confettiSFX.mp3`))
 correctSFX = new Audio(encodeURI(`assets/sfx/correctSFX.mp3`))
 wrongSFX = new Audio(encodeURI(`assets/sfx/wrongSFX.mp3`))
+skipSFX = new Audio(encodeURI(`assets/sfx/skipSFX.mp3`))
 
 strikeSFX.volume = 0.5;
 
@@ -525,25 +526,63 @@ function soundplay(run){
     }
 }
 
-function skipSong(run){
-    if (gamesProgression == quantitySongs){
-        for (i = 0; i > quantitySongs; i++)
-            if (songGuessState[i] != 2){
-                gamesProgression = i;
-                document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${i})`)
-                document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${i})`)
-                document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${i})`)
-            }
-    }
-    else{
-        for (i = gamesProgression+1; i > quantitySongs; i++){
-            if (songGuessState[gamesProgression] != 2){
-                gamesProgression = i;
-                    document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${i})`)
-                    document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${i})`)
-                    document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${i})`)
-            }
+function skipSong(){
+    skipSFX.play()
+    audio.pause()
+    tempVar = gamesProgression+1
+    satisfied = false
+    while (satisfied != true){
+        if (tempVar >= 6){
+            tempVar -= 5;
         }
+        if (songGuessState[tempVar] != 2){
+            gamesProgression = tempVar;
+            document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${tempVar})`)
+            document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${tempVar})`)
+            document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${tempVar})`)
+            satisfied = true
+
+            document.querySelector(`.gameProgress .box.${boxes[gamesProgression-2]}`).style.backgroundColor = "#816429"
+            elem = document.querySelector(".progression");
+            elem.style.transition = "width 0.1s linear";
+
+            audio = new Audio(songsoundlist[(gamesProgression)]);
+            soundPlayingCount = true    
+            audio.volume = 0
+
+            audio.play();
+
+            fadeIn = setInterval(() => {
+                audio.volume = Math.min(1, audio.volume + 0.10);
+                if (audio.volume >= 1) clearInterval(fadeIn);
+            }, 50);
+
+            fadingOut = false
+            
+            audio.addEventListener("timeupdate", () => {
+                remainingTime = audio.duration - audio.currentTime;
+                if (remainingTime <= 1 && !fadingOut){
+                    fadingOut = true;
+                    fadeOut = setInterval(() => {
+                        audio.volume = Math.max(0, audio.volume - 0.10);
+                        if (audio.volume <= 0){
+                            clearInterval(fadeOut); 
+                            audio.pause();
+                            soundPlayingCount = false
+                        }
+                    }, 100);
+                }
+            });
+
+                progressBar = setInterval(() =>{
+                elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
+                if (audio.currentTime >= audio.duration){
+                    clearInterval(progressBar)
+                    elem.style.transition = `width ${audio.duration/100}s linear`;
+                }
+            }, 10)
+        }
+        else{tempVar++}
     }
 }
 
@@ -551,6 +590,8 @@ function submitSong(run){
     input = document.querySelector(".search-bar");
     if (input.value.toLowerCase() == songNameGameList[run-1].toLowerCase()){
         if (quantitySongs == 1){
+            confettiSFX.play();
+            audio.pause()
             gamestate = false
             confetti({
                 particleCount: 1000,
@@ -560,8 +601,6 @@ function submitSong(run){
 
             document.querySelector(".running-game").classList.add("hidden")
             document.querySelector(".endSpace").classList.remove("hidden")
-            confettiSFX.play();
-            audio.pause()
         }
         else{
             document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
@@ -576,9 +615,8 @@ function submitSong(run){
 
             document.querySelector(`.gameProgress .box.${boxes[run-1]}`).style.backgroundColor = "#427175"
             try{
-                audio.pause()
-
                 correctSFX.play()
+                audio.pause()
                 document.querySelector(`.gameProgress .box.${boxes[run]}`).style.backgroundColor = "#295381"
                 elem = document.querySelector(".progression");
                 elem.style.transition = "width 0.1s linear";
@@ -620,6 +658,8 @@ function submitSong(run){
                 }, 10)
 
             } catch (error){
+                confettiSFX.play();
+                audio.pause()
                 gamestate = false
                 confetti({
                     particleCount: 1000,
@@ -629,8 +669,6 @@ function submitSong(run){
 
                 document.querySelector(".running-game").classList.add("hidden")
                 document.querySelector(".endSpace").classList.remove("hidden")
-                confettiSFX.play();
-                audio.pause()
             }
         }
     }
@@ -638,8 +676,8 @@ function submitSong(run){
         document.querySelector(`.gameStrike .strike.${boxes[strikes]}`).style.backgroundColor = "#ba0c0c"
         strikes++
         if (strikes == 3){
-            gamestate = false
             wrongSFX.play();
+            gamestate = false
             document.querySelector(".running-game").classList.add("hidden")
             document.querySelector(".endSpace").classList.remove("hidden")
 

@@ -464,7 +464,7 @@ function dropdownmenuClickPlus(button){
 
 soundPlayingCount = false
  
-function soundrepeat(run){
+function soundrepeat(){
     clearInterval(fadeIn)
     clearInterval(fadeOut)
     clearInterval(progressBar)
@@ -476,7 +476,7 @@ function soundrepeat(run){
         audio.pause()
     }
 
-    audio = new Audio(songsoundlist[(run-1)]);
+    audio = new Audio(songsoundlist[(gamesProgression-1)]);
     soundPlayingCount = true
     audio.volume = 0
 
@@ -514,7 +514,7 @@ function soundrepeat(run){
 
 }
 
-function soundplay(run){
+function soundplay(){
     if (audio.paused && !audio.ended){
         fadingOut = false
         clearInterval(fadeOut)
@@ -620,7 +620,7 @@ function skipSong(){
 function submitSong(){
     input = document.querySelector(".search-bar");
     if (input.value.toLowerCase() == songNameGameList[gamesProgression-1].toLowerCase()){
-        songGuessState[gamesProgression] = 2
+        songGuessState[gamesProgression-1] = 2
         if (songGuessState.every(entry => entry == 2)){
             confettiSFX.play();
             audio.pause()
@@ -636,26 +636,30 @@ function submitSong(){
         }
 
         else{
-            tempVar = gamesProgression
+            tempVar = gamesProgression-1
             satisfied = false
             while (satisfied != true){
+                tempVar++
+                console.log(tempVar)
                 if (tempVar >= songGuessState.length){
                     tempVar -= songGuessState.length;}
-
+                
                 if (songGuessState[tempVar] != 2){
                     satisfied = true
                     document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${tempVar})`)
                     document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${tempVar})`)
                     input.value = ""
 
-                    document.querySelector(`.gameProgress .box.${boxes[gamesProgression]}`).style.backgroundColor = "#427175"
+                    document.querySelector(`.gameProgress .box.${boxes[gamesProgression-1]}`).style.backgroundColor = "#427175"
                     correctSFX.play()
                     audio.pause()
+
+                    console.log(tempVar)
                     document.querySelector(`.gameProgress .box.${boxes[tempVar]}`).style.backgroundColor = "#295381"
                     elem = document.querySelector(".progression");
                     elem.style.transition = "width 0.1s linear";
 
-                    gamesProgression = tempVar
+                    gamesProgression = tempVar+1
 
                     audio = new Audio(songsoundlist[(tempVar)]);
                     soundPlayingCount = true
@@ -696,7 +700,7 @@ function submitSong(){
             }
         }
     }
-    else if (input.value.toLowerCase() != songNameGameList[run-1].toLowerCase()){
+    else if (input.value.toLowerCase() != songNameGameList[gamesProgression-1].toLowerCase()){
         document.querySelector(`.gameStrike .strike.${boxes[strikes]}`).style.backgroundColor = "#ba0c0c"
         strikes++
         if (strikes == 3){

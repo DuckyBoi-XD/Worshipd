@@ -617,10 +617,11 @@ function skipSong(){
     }
 }
 
-function submitSong(run){
+function submitSong(){
     input = document.querySelector(".search-bar");
-    if (input.value.toLowerCase() == songNameGameList[run-1].toLowerCase()){
-        if (quantitySongs == 1){
+    if (input.value.toLowerCase() == songNameGameList[gamesProgression-1].toLowerCase()){
+        songGuessState[gamesProgression] = 2
+        if (songGuessState.every(entry => entry == 2)){
             confettiSFX.play();
             audio.pause()
             gamestate = false
@@ -633,73 +634,65 @@ function submitSong(run){
             document.querySelector(".running-game").classList.add("hidden")
             document.querySelector(".endSpace").classList.remove("hidden")
         }
+
         else{
-            document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${run+1})`)
-            document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${run+1})`)
-            document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${run+1})`)
-            songGuessState[gamesProgression-1] = 2
-            gamesProgression++
-            input.value = ""
+            tempVar = gamesProgression
+            satisfied = false
+            while (satisfied != true){
+                if (tempVar >= songGuessState.length){
+                    tempVar -= songGuessState.length;}
 
-            songGuessState[run-1] = 2
-            songGuessState[run] = 1
+                if (songGuessState[tempVar] != 2){
+                    satisfied = true
+                    document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${tempVar})`)
+                    document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${tempVar})`)
+                    input.value = ""
 
-            document.querySelector(`.gameProgress .box.${boxes[run-1]}`).style.backgroundColor = "#427175"
-            try{
-                correctSFX.play()
-                audio.pause()
-                document.querySelector(`.gameProgress .box.${boxes[run]}`).style.backgroundColor = "#295381"
-                elem = document.querySelector(".progression");
-                elem.style.transition = "width 0.1s linear";
+                    document.querySelector(`.gameProgress .box.${boxes[gamesProgression]}`).style.backgroundColor = "#427175"
+                    correctSFX.play()
+                    audio.pause()
+                    document.querySelector(`.gameProgress .box.${boxes[tempVar]}`).style.backgroundColor = "#295381"
+                    elem = document.querySelector(".progression");
+                    elem.style.transition = "width 0.1s linear";
 
-                audio = new Audio(songsoundlist[(run)]);
-                soundPlayingCount = true
-                audio.volume = 0
+                    gamesProgression = tempVar
 
-                audio.play();
+                    audio = new Audio(songsoundlist[(tempVar)]);
+                    soundPlayingCount = true
+                    audio.volume = 0
 
-                fadeIn = setInterval(() => {
-                    audio.volume = Math.min(1, audio.volume + 0.10);
-                    if (audio.volume >= 1) clearInterval(fadeIn);
-                }, 50);
+                    audio.play();
 
-                fadingOut = false
-                
-                audio.addEventListener("timeupdate", () => {
-                    remainingTime = audio.duration - audio.currentTime;
-                    if (remainingTime <= 1 && !fadingOut){
-                        fadingOut = true;
-                        fadeOut = setInterval(() => {
-                            audio.volume = Math.max(0, audio.volume - 0.10);
-                            if (audio.volume <= 0){
-                                clearInterval(fadeOut); 
-                                audio.pause();
-                                soundPlayingCount = false
-                            }
-                        }, 100);
-                    }
-                });
+                    fadeIn = setInterval(() => {
+                        audio.volume = Math.min(1, audio.volume + 0.10);
+                        if (audio.volume >= 1) clearInterval(fadeIn);
+                    }, 50);
 
-                    progressBar = setInterval(() =>{
-                    elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
-                    if (audio.currentTime >= audio.duration){
-                        clearInterval(progressBar)
-                        elem.style.transition = `width ${audio.duration/100}s linear`;
-                    }
-                }, 10)
+                    fadingOut = false
+                    
+                    audio.addEventListener("timeupdate", () => {
+                        remainingTime = audio.duration - audio.currentTime;
+                        if (remainingTime <= 1 && !fadingOut){
+                            fadingOut = true;
+                            fadeOut = setInterval(() => {
+                                audio.volume = Math.max(0, audio.volume - 0.10);
+                                if (audio.volume <= 0){
+                                    clearInterval(fadeOut); 
+                                    audio.pause();
+                                    soundPlayingCount = false
+                                }
+                            }, 100);
+                        }
+                    });
 
-            } catch (error){
-                confettiSFX.play();
-                audio.pause()
-                gamestate = false
-                confetti({
-                    particleCount: 1000,
-                    spread: 100,
-                    origin: { y: 0.8 }
-                });
-
-                document.querySelector(".running-game").classList.add("hidden")
-                document.querySelector(".endSpace").classList.remove("hidden")
+                        progressBar = setInterval(() =>{
+                        elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
+                        if (audio.currentTime >= audio.duration){
+                            clearInterval(progressBar)
+                            elem.style.transition = `width ${audio.duration/100}s linear`;
+                        }
+                    }, 10)
+                }
             }
         }
     }

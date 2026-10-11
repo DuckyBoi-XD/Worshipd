@@ -362,7 +362,7 @@ a.github-logo:hover{
 }
 
 .gameProgress .box.first{
-    background-color: #295381;
+    background-color: none;
     transition: background-colour 100ms ease;
 }
 

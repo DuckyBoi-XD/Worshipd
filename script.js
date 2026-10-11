@@ -344,8 +344,11 @@ function gamerun(difficulty, quantity){
 
     for (i = 0; i < 3; i++){
         document.querySelector(`.gameStrike .strike.${boxes[i]}`).style.backgroundColor = "transparent"}
-    for (i = 0; i < songGuessState.length; i++){
-        document.querySelector(`.gameProgress .box.${boxes[i]}`).style.backgroundColor = "transparent"}
+
+    if (songGuessState.length != 1){
+        for (i = 1; i < songGuessState.length; i++){
+            document.querySelector(`.gameProgress .box.${boxes[i]}`).style.backgroundColor = "transparent"}}
+    document.querySelector(`.gameProgress .box.${boxes[0]}`).style.backgroundColor = "#295381"
 
     strikes = 0
     gamesProgression = 1
@@ -527,26 +530,55 @@ function soundplay(run){
 }
 
 function skipSong(){
+    skipleftoverCount = 0
+    for (item of songGuessState){
+        if (item == 2){
+            skipleftoverCount++}}
+    if (skipleftoverCount == songGuessState.length-1){
+        return}
+
     skipSFX.play()
     audio.pause()
-    tempVar = gamesProgression+1
+    
+    tempVar = gamesProgression -1
+    songGuessState[tempVar] = 3
     satisfied = false
+    tempCurrentValue = gamesProgression -1
     while (satisfied != true){
-        if (tempVar >= 6){
-            tempVar -= 5;
+        tempVar++
+        if (tempVar >= songGuessState.length){
+            tempVar -= songGuessState.length;
         }
         if (songGuessState[tempVar] != 2){
-            gamesProgression = tempVar;
             document.querySelector(".soundbutton").setAttribute("onclick", `soundplay(${tempVar})`)
             document.querySelector(".soundrepeat").setAttribute("onclick", `soundrepeat(${tempVar})`)
             document.querySelector(".submitButton").setAttribute("onclick", `submitSong(${tempVar})`)
             satisfied = true
 
-            document.querySelector(`.gameProgress .box.${boxes[gamesProgression-2]}`).style.backgroundColor = "#816429"
+            gamesProgression = tempVar+1;
+            console.log(songGuessState)
+
+            if (songGuessState.every(entry => entry != 0)){
+                console.log("trigger", songGuessState.length)
+                for (i = 0; i < songGuessState.length; i++){
+                    if (songGuessState[i] != 2){
+                        document.querySelector(`.gameProgress .box.${boxes[i]}`).style.backgroundColor = "#816429"}}
+                document.querySelector(`.gameProgress .box.${boxes[tempVar]}`).style.backgroundColor = "#295381"
+                songGuessState[tempVar] = 1
+                }
+
+            else{
+                console.log("trigger 1")
+                if (songGuessState[tempVar-1] != 2){
+                    document.querySelector(`.gameProgress .box.${boxes[tempVar-1]}`).style.backgroundColor = "#816429"}
+
+                document.querySelector(`.gameProgress .box.${boxes[tempVar]}`).style.backgroundColor = "#295381"
+                songGuessState[tempVar] = 1
+            }
             elem = document.querySelector(".progression");
             elem.style.transition = "width 0.1s linear";
 
-            audio = new Audio(songsoundlist[(gamesProgression)]);
+            audio = new Audio(songsoundlist[(tempVar)]);
             soundPlayingCount = true    
             audio.volume = 0
 
@@ -582,7 +614,6 @@ function skipSong(){
                 }
             }, 10)
         }
-        else{tempVar++}
     }
 }
 

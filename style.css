@@ -292,7 +292,7 @@ a.github-logo:hover{
     border: 3px solid #ffb22d86;
     border-radius: 10px;
 
-    transition: transform 0.5s ease, background-color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease, color 0.5s ease, border 0.5s ease, border-radius 0.5s ease;
     user-select: none;
 
     color: inherit;
@@ -450,10 +450,15 @@ a.github-logo:hover{
 }
 
 .endgame-songtitles .song{
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.endgame-songtitles .song.hidden{
+    display: none;
+    pointer-events: none;
 }
 
 .endSpace.hidden{

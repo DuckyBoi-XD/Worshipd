@@ -242,6 +242,7 @@ quantitySongs = 0
 gamestate = false
 
 boxes = ["first", "second", "third", "forth", "fifth"]
+endgameSongs = ["one", "two", "three", "four", "five"]
 
 strikes = 0
 gamesProgression = 1
@@ -373,6 +374,15 @@ function gamerun(difficulty, quantity){
         difficultyGroup = songFiles[item][String(difficulty)];
         clip = difficultyGroup[Math.floor(Math.random() * difficultyGroup.length)];
         songsoundlist.push(encodeURI(`assets/audio-clips/${item}/${difficulty}/${clip}`));
+    }
+
+    for (i = 0; i < 5; i++){
+        document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]}`).classList.add("hidden")
+    }
+
+    for (i = 0; i < songGuessState.length; i++){
+        endgameSongs[i]
+        document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]}`).classList.remove("hidden")
     }
 
     /* sound play*/

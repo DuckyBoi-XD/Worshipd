@@ -551,9 +551,12 @@ function skipSong(){
     audio.pause()
     
     tempVar = gamesProgression -1
-    songGuessState[tempVar] = 3
+    if (songGuessState[tempVar] != 4){
+        songGuessState[tempVar] = 3
+    }
     satisfied = false
     tempCurrentValue = gamesProgression -1
+    document.querySelector(".search-bar").value = ""
     while (satisfied != true){
         tempVar++
         if (tempVar >= songGuessState.length){
@@ -566,21 +569,31 @@ function skipSong(){
             satisfied = true
 
             gamesProgression = tempVar+1;
-            console.log(songGuessState)
 
             if (songGuessState.every(entry => entry != 0)){
-                console.log("trigger", songGuessState.length)
                 for (i = 0; i < songGuessState.length; i++){
                     if (songGuessState[i] != 2){
-                        document.querySelector(`.gameProgress .box.${boxes[i]}`).style.backgroundColor = "#816429"}}
+                        if (songGuessState[i] == 4){
+                            document.querySelector(`.gameProgress .box.${boxes[i]}`).style.backgroundColor = "#ba0c0c"
+                        }
+                        else{
+                            document.querySelector(`.gameProgress .box.${boxes[i]}`).style.backgroundColor = "#816429"
+                        }
+                    }
+                }
                 document.querySelector(`.gameProgress .box.${boxes[tempVar]}`).style.backgroundColor = "#295381"
                 songGuessState[tempVar] = 1
                 }
 
             else{
-                console.log("trigger 1")
                 if (songGuessState[tempVar-1] != 2){
-                    document.querySelector(`.gameProgress .box.${boxes[tempVar-1]}`).style.backgroundColor = "#816429"}
+                    if (songGuessState[tempVar-1] == 4){
+                        document.querySelector(`.gameProgress .box.${boxes[tempVar-1]}`).style.backgroundColor = "#ba0c0c"
+                    }
+                    else{
+                        document.querySelector(`.gameProgress .box.${boxes[tempVar-1]}`).style.backgroundColor = "#816429"
+                    }
+                }
 
                 document.querySelector(`.gameProgress .box.${boxes[tempVar]}`).style.backgroundColor = "#295381"
                 songGuessState[tempVar] = 1
@@ -641,6 +654,21 @@ function submitSong(){
                 origin: { y: 0.8 }
             });
 
+            for (i=0; i < songGuessState.length; i++){
+                if (songGuessState[i] == 2){
+                    document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]} .songimage`).style.border = "3px solid rgba(40, 255, 76, 0.50)"
+                }
+                else if (songGuessState[i] == 4){
+                    document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]} .songimage`).style.border = "3px solid rgba(255, 47, 0, 0.50)"
+                }
+                else if (songGuessState[i] == 3){
+                    document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]} .songimage`).style.border = "3px solid rgba(255, 123, 0, 0.5)"
+                }
+                else if (songGuessState[i] == 0){
+                    document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]} .songimage`).style.border = "3px solid rgba(152, 152, 152, 0.5)"
+                }
+            }
+
             document.querySelector(".running-game").classList.add("hidden")
             document.querySelector(".endSpace").classList.remove("hidden")
         }
@@ -650,7 +678,6 @@ function submitSong(){
             satisfied = false
             while (satisfied != true){
                 tempVar++
-                console.log(tempVar)
                 if (tempVar >= songGuessState.length){
                     tempVar -= songGuessState.length;}
                 
@@ -664,7 +691,6 @@ function submitSong(){
                     correctSFX.play()
                     audio.pause()
 
-                    console.log(tempVar)
                     document.querySelector(`.gameProgress .box.${boxes[tempVar]}`).style.backgroundColor = "#295381"
                     elem = document.querySelector(".progression");
                     elem.style.transition = "width 0.1s linear";
@@ -712,10 +738,26 @@ function submitSong(){
     }
     else if (input.value.toLowerCase() != songNameGameList[gamesProgression-1].toLowerCase()){
         document.querySelector(`.gameStrike .strike.${boxes[strikes]}`).style.backgroundColor = "#ba0c0c"
+        songGuessState[gamesProgression-1] = 4
         strikes++
         if (strikes == 3){
             wrongSFX.play();
             gamestate = false
+            songGuessState[gamesProgression-1] = 4
+            for (i=0; i < songGuessState.length; i++){
+                if (songGuessState[i] == 2){
+                    document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]} .songimage`).style.border = "3px solid rgba(40, 255, 76, 0.50)"
+                }
+                else if (songGuessState[i] == 4){
+                    document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]} .songimage`).style.border = "3px solid rgba(255, 47, 0, 0.50)"
+                }
+                else if (songGuessState[i] == 3){
+                    document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]} .songimage`).style.border = "3px solid rgba(255, 123, 0, 0.5)"
+                }
+                else if (songGuessState[i] == 0){
+                    document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]} .songimage`).style.border = "3px solid rgba(152, 152, 152, 0.5)"
+                }
+            }
             document.querySelector(".running-game").classList.add("hidden")
             document.querySelector(".endSpace").classList.remove("hidden")
 

@@ -498,13 +498,32 @@ a.github-logo:hover{
     height: clamp(40px, 7vw, 60px);
     width: clamp(40px, 7vw, 60px);
 
-    border: 3px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(10px, 2vw, 15px);
     box-sizing: border-box;
     background-clip: padding-box;
 
     background-image: none;
     background-size: cover;
+}
+
+.endgame-songtitles .song.one .songimage{
+    border: 3px solid rgba(255, 255, 255, 0.483);
+}
+
+.endgame-songtitles .song.two .songimage{
+    border: 3px solid rgba(255, 255, 255, 0.483);
+}
+
+.endgame-songtitles .song.three .songimage{
+    border: 3px solid rgba(255, 255, 255, 0.483);
+}
+
+.endgame-songtitles .song.four .songimage{
+    border: 3px solid rgba(255, 255, 255, 0.483);
+}
+
+.endgame-songtitles .song.five .songimage{
+    border: 3px solid rgba(255, 255, 255, 0.483);
 }
 
 .running-game .soundControls{

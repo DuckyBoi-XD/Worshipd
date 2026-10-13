@@ -135,7 +135,7 @@ const songArtists = {
     "Break Every Chain" : "Jesus Culture",
     "Build My Life" : "Pat Barrett",
     "Center" : "Bethel Music",
-    "Demons" : "Josiah Queen",
+    "Demons" : "Josiah Queen & Julia Poe",
     "Drenched in Love" : "Bethel Music",
     "FATHER'S HOUSE" : "Elevation Rhythm",
     "FREE!" : "SEU Worship",

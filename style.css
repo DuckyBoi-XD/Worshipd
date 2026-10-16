@@ -195,7 +195,7 @@ a.github-logo:hover{
 .alignment{
     display: flex;
     position: relative;
-    padding-top: clamp(0px, 15vh, 120px);
+    padding-top: clamp(0px, 20vh, 200px);
     box-sizing: border-box;
 
     margin: 0px auto auto auto;

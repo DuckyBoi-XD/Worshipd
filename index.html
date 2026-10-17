@@ -27,69 +27,72 @@
             </div>
         </nav>
         <div class="alignment">
-            <div class="main-title pageload">
-                <div class="box">
-                    <h2>Worship'd</h2>
-                    <p>Listen to a clip and guess the worship or praise song it is from</p>
-                </div>
-                <div class="game-buttons">
-                    <div class="game-button1-wrapper">
-                        <button onclick="startgame(1)" class="game-button1">CASUAL</button>
+            <div class="main-title-box">
+                <div class="main-title pageload">
+                    <div class="box">
+                        <h2>Worship'd</h2>
+                        <p>Listen to a clip and guess the worship or praise song it is from</p>
                     </div>
-                    <div class="game-button2-wrapper">
-                        <button onclick="startgame(2)" class="game-button2">FAMILIAR</button>
+                    <div class="game-buttons">
+                        <div class="game-button1-wrapper">
+                            <button onclick="startgame(1)" class="game-button1">CASUAL</button>
+                        </div>
+                        <div class="game-button2-wrapper">
+                            <button onclick="startgame(2)" class="game-button2">FAMILIAR</button>
+                        </div>
+                        <div class="game-button3-wrapper">
+                            <button onclick="startgame(3)" class="game-button3">WORSHIPER</button>
+                        </div>
                     </div>
-                    <div class="game-button3-wrapper">
-                        <button onclick="startgame(3)" class="game-button3">WORSHIPER</button>
+                    <div class="game-info">
+                        <p class="popout-info1">The song title is mentioned in the clip</p>
+                        <p class="popout-info2">The lyrics from the song is heard in the clip</p>
+                        <p class="popout-info3">The intrumental part of the song is played</p>
                     </div>
                 </div>
-                <div class="game-info">
-                    <p class="popout-info1">The song title is mentioned in the clip</p>
-                    <p class="popout-info2">The lyrics from the song is heard in the clip</p>
-                    <p class="popout-info3">The intrumental part of the song is played</p>
-                </div>
-            </div>
 
-            <div class="game-space Casual hidden">
-                <div class="box">
-                    <h2>Casual</h2>
-                    <p>The song title is mentioned in the clip</p>
-                    <p2>Choose how many songs to guess</p>
-                    <div class="startbutton one">
-                        <button onclick="gamerun(1, 1)"> Singularity </button>
-                        <button onclick="gamerun(1, 3)"> Trinity </button>
-                        <button onclick="gamerun(1, 5)"> Quintessence </button>
+                <div class="game-space Casual hidden">
+                    <div class="box">
+                        <h2>Casual</h2>
+                        <p>The song title is mentioned in the clip</p>
+                        <p2>Choose how many songs to guess</p>
+                        <div class="startbutton one">
+                            <button onclick="gamerun(1, 1)"> Singularity </button>
+                            <button onclick="gamerun(1, 3)"> Trinity </button>
+                            <button onclick="gamerun(1, 5)"> Quintessence </button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="game-space Familiar hidden">
-                <div class="box">
-                    <h2>Familiar</h2>
-                    <p>The lyrics from the song is heard in the clip</p>
-                    <p2>Choose how many songs to guess</p>
-                    <div class="startbutton two">
-                        <button onclick="gamerun(2, 1)"> Singularity </button>
-                        <button onclick="gamerun(2, 3)"> Trinity </button>
-                        <button onclick="gamerun(2, 5)"> Quintessence </button>
+                <div class="game-space Familiar hidden">
+                    <div class="box">
+                        <h2>Familiar</h2>
+                        <p>The lyrics from the song is heard in the clip</p>
+                        <p2>Choose how many songs to guess</p>
+                        <div class="startbutton two">
+                            <button onclick="gamerun(2, 1)"> Singularity </button>
+                            <button onclick="gamerun(2, 3)"> Trinity </button>
+                            <button onclick="gamerun(2, 5)"> Quintessence </button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="game-space Worshiper hidden">
-                <div class="box">
-                    <h2>Worshiper</h2>
-                    <p>The intrumental part of the song is played</p>
-                    <p2>Choose how many songs to guess</p>
-                    <div class="startbutton three">
-                        <button onclick="gamerun(3, 1)"> Singularity </button>
-                        <button onclick="gamerun(3, 3)"> Trinity </button>
-                        <button onclick="gamerun(3, 5)"> Quintessence </button>
+                <div class="game-space Worshiper hidden">
+                    <div class="box">
+                        <h2>Worshiper</h2>
+                        <p>The intrumental part of the song is played</p>
+                        <p2>Choose how many songs to guess</p>
+                        <div class="startbutton three">
+                            <button onclick="gamerun(3, 1)"> Singularity </button>
+                            <button onclick="gamerun(3, 3)"> Trinity </button>
+                            <button onclick="gamerun(3, 5)"> Quintessence </button>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="running-game hidden">
+                <div class="difficultytitle"></div>
                 <div class="gameStrike">
                     <div class="strike first">X</div>
                     <div class="strike second">X</div>

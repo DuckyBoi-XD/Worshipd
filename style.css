@@ -195,19 +195,14 @@ a.github-logo:hover{
 .alignment{
     display: flex;
     position: relative;
-    padding-top: clamp(0px, 20vh, 200px);
     box-sizing: border-box;
-
-    margin: 0px auto auto auto;
-
-    width: fit-content;
-    height: fit-content;
-    justify-content: center;
-    align-items: center;
     pointer-events: none;
 
-    z-index: 1;
+    flex: 1;
+    width: 100%;
+    height: auto;
 
+    z-index: 1;
 }
 
 .game-space{
@@ -216,7 +211,7 @@ a.github-logo:hover{
     align-items: center;
     pointer-events: auto;
 
-    position: fixed;
+    position: absolute;
 
     opacity: 1;
     transform: translateY(0);
@@ -330,9 +325,14 @@ a.github-logo:hover{
     align-items: center;
     pointer-events: auto;
 
+    width: fit-content;
+    height: fit-content;
+
+    margin: auto;
+    margin-top: clamp(0px, 18vh, 200px);
+
     position: fixed;    
     inset: 0;
-    bottom: 100px;
 
     opacity: 1;
     transform: translateY(0);
@@ -352,6 +352,17 @@ a.github-logo:hover{
     display: inline-flex;
     flex-direction: row;
     gap: 10px;
+}
+
+.difficultytitle{
+    color: #FFC300; 
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(50px, 6vw, 90px);
+    font-weight: 800;
+
+    opacity: 0;
+    transform: translateX(20vw);
+    animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .gameProgress .box{
@@ -484,14 +495,14 @@ a.github-logo:hover{
 
 .endgame-songtitles .songname{
     font-family: "DM Serif Display", serif;
-    font-size: clamp(15px, 3vw, 20px);
+    font-size: clamp(10px, 2vw, 30px);
     font-weight: 700;
     color: #FFC300;
 }
 
 .endgame-songtitles .songartist{
     font-family: "DM Serif Display", serif;
-    font-size: clamp(10px, 2vw, 15px);
+    font-size: clamp(10px, 1.5vw, 30px);
     font-weight: 600;
     color: #ffe590;
 }
@@ -503,10 +514,10 @@ a.github-logo:hover{
 }
 
 .endgame-songtitles .songimage{
-    height: clamp(40px, 7vw, 60px);
-    width: clamp(40px, 7vw, 60px);
+    height: clamp(60px, 12vw, 100px);
+    width: clamp(60px, 12vw, 100px);
 
-    border-radius: clamp(10px, 2vw, 15px);
+    border-radius: clamp(10px, 3vw, 20px);
     box-sizing: border-box;
     background-clip: padding-box;
 
@@ -695,7 +706,7 @@ a.github-logo:hover{
     width: clamp(400px, 40vw, 450px);
 
     height: fit-content;
-    max-height: 36vh;
+    max-height: 30vh;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -770,6 +781,16 @@ a.github-logo:hover{
     background-color: #FFC300;
 }
 
+.main-title-box{
+    display: flex;
+    width: 100%;
+    height: auto;
+
+    justify-content: center;
+    margin-top: clamp(0px, 18vh, 200px);
+    
+}
+
 .main-title{
     display: flex;
     flex-direction: column;
@@ -784,7 +805,6 @@ a.github-logo:hover{
     height: fit-content;
 
     opacity: 1;
-    transform: translateY(0);
     transition: opacity 200ms ease, transform 200ms ease;
 }
 

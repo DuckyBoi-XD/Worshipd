@@ -310,7 +310,10 @@ function menubutton(){
     newbutton.replaceWith(oldbutton);
 }
 
+gameDifficultyText = ["Casual", "Familiar", "Worshiper"]
 function gamerun(difficulty, quantity){
+    document.querySelector(".difficultytitle").textContent = gameDifficultyText[difficulty-1]
+
     gamestate = true
 
     if (difficulty == 4){
@@ -436,8 +439,17 @@ function gamerun(difficulty, quantity){
     }
 
     for (i = 0; i < songNameGameList.length; i++){
-        document.querySelector(`.endgame-songtitles .song.${coverart_count[i]} .songname`).textContent = songNameGameList[i]
         document.querySelector(`.endgame-songtitles .song.${coverart_count[i]} .songartist`).textContent = songArtists[songNameGameList[i]]
+        if (songNameGameList[i].includes("You Are Good")){
+            document.querySelector(`.endgame-songtitles .song.${coverart_count[i]} .songname`).textContent = "You Are Good"
+        }
+        else if (songNameGameList[i].includes("Make Me New")){
+            document.querySelector(`.endgame-songtitles .song.${coverart_count[i]} .songname`).textContent = "Make Me New"
+        }
+        else{
+            document.querySelector(`.endgame-songtitles .song.${coverart_count[i]} .songname`).textContent = songNameGameList[i]
+        }
+        
         document.querySelector(`.endgame-songtitles .song.${coverart_count[i]} .songimage`).style.backgroundImage = "url(" + coverarts_endgame[i] + ")"
     }
 

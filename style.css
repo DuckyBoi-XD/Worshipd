@@ -344,6 +344,7 @@ a.github-logo:hover{
 
 .running-game.hidden{
     opacity: 0;
+    display: none;
     transform: translateY(20vw);
     pointer-events: none;
 }
@@ -419,8 +420,15 @@ a.github-logo:hover{
     align-items: center;
     pointer-events: auto;
 
-    position: fixed;    
-    inset: 0;
+    position: relative;    
+    inset: auto;
+
+    width: 100%;
+    height: auto;
+
+    box-sizing: border-box;
+    margin: auto;
+    overflow-y: scroll;
 
     opacity: 1;
     transform: translateY(0);
@@ -428,6 +436,21 @@ a.github-logo:hover{
 
     flex-direction: column;
     gap: 20px;
+}
+
+.endspace-boxing{
+    display: flex;
+    width: 100%;
+    height: auto;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.endspace-boxing.hidden{
+    display: none;
+    pointer-events: none;
+    opacity: 0;
 }
 
 .endgame-controls{
@@ -486,6 +509,13 @@ a.github-logo:hover{
     pointer-events: none;
 }
 
+.endSpace .title{
+    color: #FFC300; 
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(30px, 4vw, 60px);
+    font-weight: 800;
+}
+
 .endgame-songtitles{
     display: flex;
     flex-direction: column;
@@ -495,14 +525,14 @@ a.github-logo:hover{
 
 .endgame-songtitles .songname{
     font-family: "DM Serif Display", serif;
-    font-size: clamp(10px, 2vw, 30px);
+    font-size: clamp(20px, 2vw, 30px);
     font-weight: 700;
     color: #FFC300;
 }
 
 .endgame-songtitles .songartist{
     font-family: "DM Serif Display", serif;
-    font-size: clamp(10px, 1.5vw, 30px);
+    font-size: clamp(15px, 1.5vw, 30px);
     font-weight: 600;
     color: #ffe590;
 }
@@ -514,10 +544,10 @@ a.github-logo:hover{
 }
 
 .endgame-songtitles .songimage{
-    height: clamp(60px, 12vw, 100px);
-    width: clamp(60px, 12vw, 100px);
+    height: clamp(60px, 8vw, 90px);
+    width: clamp(60px, 8vw, 90px);
 
-    border-radius: clamp(10px, 3vw, 20px);
+    border-radius: clamp(5px, 3vw, 20px);
     box-sizing: border-box;
     background-clip: padding-box;
 
@@ -526,23 +556,23 @@ a.github-logo:hover{
 }
 
 .endgame-songtitles .song.one .songimage{
-    border: 3px solid rgba(255, 255, 255, 0.483);
+    border: 5px solid rgba(255, 255, 255, 0.483);
 }
 
 .endgame-songtitles .song.two .songimage{
-    border: 3px solid rgba(255, 255, 255, 0.483);
+    border: 5px solid rgba(255, 255, 255, 0.483);
 }
 
 .endgame-songtitles .song.three .songimage{
-    border: 3px solid rgba(255, 255, 255, 0.483);
+    border: 5px solid rgba(255, 255, 255, 0.483);
 }
 
 .endgame-songtitles .song.four .songimage{
-    border: 3px solid rgba(255, 255, 255, 0.483);
+    border: 5px solid rgba(255, 255, 255, 0.483);
 }
 
 .endgame-songtitles .song.five .songimage{
-    border: 3px solid rgba(255, 255, 255, 0.483);
+    border: 5px solid rgba(255, 255, 255, 0.483);
 }
 
 .running-game .soundControls{
@@ -788,7 +818,12 @@ a.github-logo:hover{
 
     justify-content: center;
     margin-top: clamp(0px, 18vh, 200px);
-    
+}
+
+.main-title-box.hidden{
+    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .main-title{

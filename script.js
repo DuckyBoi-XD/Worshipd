@@ -265,7 +265,6 @@ strikeSFX.volume = 0.5;
 function startgame(mode) {
 
     maintitle = document.querySelector(".main-title");
-    maintitle.classList.remove("pageload");
     maintitle.classList.add("hidden");
 
     if (mode == 1){
@@ -293,7 +292,9 @@ function backbutton(){
     game.classList.add("hidden");
     document.querySelector(".running-game").classList.add("hidden");
     document.querySelector(".main-title").classList.remove("hidden");
+    document.querySelector(".main-title-box").classList.remove("hidden")
     document.querySelector(".endSpace").classList.add("hidden")
+    document.querySelector(".endspace-boxing").classList.add("hidden")
 
     newbutton.replaceWith(oldbutton);
 
@@ -305,13 +306,16 @@ function backbutton(){
 function menubutton(){
     game.classList.add("hidden");
     document.querySelector(".endSpace").classList.add("hidden")
+    document.querySelector(".endspace-boxing").classList.add("hidden")
     document.querySelector(".main-title").classList.remove("hidden");
+    document.querySelector(".main-title-box").classList.remove("hidden")
 
     newbutton.replaceWith(oldbutton);
 }
 
 gameDifficultyText = ["Casual", "Familiar", "Worshiper"]
 function gamerun(difficulty, quantity){
+    document.querySelector(".main-title-box").classList.add("hidden")
     document.querySelector(".difficultytitle").textContent = gameDifficultyText[difficulty-1]
 
     gamestate = true
@@ -320,6 +324,7 @@ function gamerun(difficulty, quantity){
         difficulty = difficultyMode
         quantity = quantitySongs
         document.querySelector(".endSpace").classList.add("hidden")
+        document.querySelector(".endspace-boxing").classList.add("hidden")
     }
     else{difficultyMode = difficulty; quantitySongs = quantity;}
 
@@ -683,6 +688,7 @@ function submitSong(){
 
             document.querySelector(".running-game").classList.add("hidden")
             document.querySelector(".endSpace").classList.remove("hidden")
+            document.querySelector(".endspace-boxing").classList.remove("hidden")
         }
 
         else{
@@ -772,6 +778,7 @@ function submitSong(){
             }
             document.querySelector(".running-game").classList.add("hidden")
             document.querySelector(".endSpace").classList.remove("hidden")
+            document.querySelector(".endspace-boxing").classList.remove("hidden")
 
             audio.pause()
         }

@@ -802,6 +802,9 @@ document.addEventListener("keydown", (key) => {
     }
 })
 
+searchbar = document.querySelector(".search-bar");
+dropdownmenu = document.querySelector(".dropdownmenu");
+
 document.querySelectorAll(".song-information ul li").forEach((item, index) => {
     item.style.animationDelay = `${Math.sin(45 * Math.PI / 180) * (index + 1) * 25}ms`;
 });

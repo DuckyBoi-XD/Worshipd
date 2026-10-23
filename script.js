@@ -788,6 +788,7 @@ function submitSong(){
 }
 
 document.addEventListener("keydown", (key) => {
+    console.log(document.activeElement)
     if (gamestate){
         if (key.code === "Space" && document.activeElement !== document.querySelector(".search-bar")){
             key.preventDefault();
@@ -798,6 +799,35 @@ document.addEventListener("keydown", (key) => {
                 return;}
             key.preventDefault();
             submitSong(gamesProgression);
+        }
+        if (document.activeElement === document.querySelector(".search-bar")){
+            visiblebuttons = [...document.querySelectorAll(".dropdownmenu button")]
+            .filter(b => b.style.display != "none")
+
+            buttonposition = visiblebuttons.indexOf(document.activeElement)
+
+            console.log(buttonposition, visiblebuttons)
+            if(key.code === "ArrowUp"){
+
+            }
+            else if (key.code === "ArrowDown"){
+                
+            }
+        }
+        if (document.querySelector(".dropdownmenu").contains(document.activeElement)){
+            visiblebuttons = [...document.querySelectorAll(".dropdownmenu button")]
+            .filter(b => b.style.display != "none")
+            vblength = visiblebuttons.length
+
+            buttonposition = visiblebuttons.indexOf(document.activeElement)
+
+            console.log(buttonposition, vblength)
+            if(key.code === "ArrowUp"){
+
+            }
+            else if (key.code === "ArrowDown"){
+                
+            }
         }
     }
 })

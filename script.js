@@ -813,7 +813,7 @@ document.addEventListener("keydown", (key) => {
                 buttonTracking = vblength
                 visiblebuttons[buttonTracking].focus()
             }
-            else if (key.code === "ArrowDown" || key.code === "ArrowRight"){
+            else if (key.code === "ArrowDown" || key.code === "ArrowRight" || key.code === "Tab"){
                 key.preventDefault()
                 buttonTracking = 0
                 visiblebuttons[buttonTracking].focus()
@@ -837,7 +837,7 @@ document.addEventListener("keydown", (key) => {
                 }
                 visiblebuttons[buttonTracking].focus()
             }
-            else if (key.code === "ArrowDown" || key.code === "ArrowRight"){
+            else if (key.code === "ArrowDown" || key.code === "ArrowRight" || key.code === "Tab"){
                 key.preventDefault()
                 if (buttonTracking == vblength){
                     buttonTracking = 0

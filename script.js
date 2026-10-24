@@ -492,6 +492,7 @@ function dropdownmenuClickPlus(button){
 soundPlayingCount = false
  
 function soundrepeat(){
+    document.querySelector(".soundbutton span").textContent = "▶"
     clearInterval(fadeIn)
     clearInterval(fadeOut)
     clearInterval(progressBar)
@@ -548,11 +549,13 @@ function soundplay(){
         clearInterval(fadeIn)
         audio.play()
         audio.volume = 1
+        document.querySelector(".soundbutton span").textContent = "▶"
     }
     else if (!audio.paused){
         clearInterval(fadeOut)
         clearInterval(fadeIn)
         audio.pause()
+        document.querySelector(".soundbutton span").textContent = "⏸"
     }
 }
 

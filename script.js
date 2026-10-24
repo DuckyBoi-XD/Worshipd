@@ -794,39 +794,58 @@ document.addEventListener("keydown", (key) => {
             key.preventDefault();
             soundplay();
         }
-        if (key.code === "Enter" && document.querySelector(".search-bar").value != ""){
+        else if (key.code === "Enter" && document.querySelector(".search-bar").value != ""){
             if (document.activeElement.closest(".dropdownmenu")){
                 return;}
             key.preventDefault();
             submitSong(gamesProgression);
         }
-        if (document.activeElement === document.querySelector(".search-bar")){
+        else if (document.activeElement === document.querySelector(".search-bar")){
             visiblebuttons = [...document.querySelectorAll(".dropdownmenu button")]
             .filter(b => b.style.display != "none")
+            vblength = visiblebuttons.length - 1
 
             buttonposition = visiblebuttons.indexOf(document.activeElement)
 
             console.log(buttonposition, visiblebuttons)
-            if(key.code === "ArrowUp"){
-
+            if(key.code === "ArrowUp" || key.code === "ArrowLeft"){
+                key.preventDefault()
+                buttonTracking = vblength
+                visiblebuttons[buttonTracking].focus()
             }
-            else if (key.code === "ArrowDown"){
-                
+            else if (key.code === "ArrowDown" || key.code === "ArrowRight"){
+                key.preventDefault()
+                buttonTracking = 0
+                visiblebuttons[buttonTracking].focus()
             }
         }
-        if (document.querySelector(".dropdownmenu").contains(document.activeElement)){
+        else if (document.querySelector(".dropdownmenu").contains(document.activeElement)){
             visiblebuttons = [...document.querySelectorAll(".dropdownmenu button")]
             .filter(b => b.style.display != "none")
-            vblength = visiblebuttons.length
+            vblength = visiblebuttons.length - 1
 
             buttonposition = visiblebuttons.indexOf(document.activeElement)
 
             console.log(buttonposition, vblength)
-            if(key.code === "ArrowUp"){
-
+            if(key.code === "ArrowUp" || key.code === "ArrowLeft"){
+                key.preventDefault()
+                if (buttonTracking == 0){
+                    buttonTracking = vblength
+                }
+                else{
+                    buttonTracking -= 1
+                }
+                visiblebuttons[buttonTracking].focus()
             }
-            else if (key.code === "ArrowDown"){
-                
+            else if (key.code === "ArrowDown" || key.code === "ArrowRight"){
+                key.preventDefault()
+                if (buttonTracking == vblength){
+                    buttonTracking = 0
+                }
+                else{
+                    buttonTracking += 1
+                }
+                visiblebuttons[buttonTracking].focus()
             }
         }
     }

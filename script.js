@@ -492,7 +492,9 @@ function dropdownmenuClickPlus(button){
 soundPlayingCount = false
  
 function soundrepeat(){
-    document.querySelector(".soundbutton span").textContent = "▶"
+    document.querySelector(".soundbutton span").textContent = "⏸"
+    document.querySelector(".soundbutton span").style.fontSize = "50px";
+    document.querySelector(".soundbutton span").style.transform = "translate(0px, 4.5px)";
     clearInterval(fadeIn)
     clearInterval(fadeOut)
     clearInterval(progressBar)
@@ -532,6 +534,12 @@ function soundrepeat(){
         }
     });
 
+    audio.addEventListener("ended", () => {
+        document.querySelector(".soundbutton span").textContent = "▶"
+        document.querySelector(".soundbutton span").style.fontSize = "30px";
+        document.querySelector(".soundbutton span").style.transform = "translate(2px, 4.5px)";
+    })
+
         progressBar = setInterval(() =>{
         elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
         if (audio.currentTime >= audio.duration){
@@ -549,13 +557,23 @@ function soundplay(){
         clearInterval(fadeIn)
         audio.play()
         audio.volume = 1
-        document.querySelector(".soundbutton span").textContent = "▶"
+        document.querySelector(".soundbutton span").textContent = "⏸"
+        document.querySelector(".soundbutton span").style.fontSize = "40px";
+        document.querySelector(".soundbutton span").style.transform = "translate(0px, 4.5px)";
+    }
+    else if (audio.ended){
+        soundrepeat()
+        document.querySelector(".soundbutton span").textContent = "⏸"
+        document.querySelector(".soundbutton span").style.fontSize = "40px";
+        document.querySelector(".soundbutton span").style.transform = "translate(0px, 4.5px)";
     }
     else if (!audio.paused){
         clearInterval(fadeOut)
         clearInterval(fadeIn)
         audio.pause()
-        document.querySelector(".soundbutton span").textContent = "⏸"
+        document.querySelector(".soundbutton span").textContent = "▶"
+        document.querySelector(".soundbutton span").style.fontSize = "30px";
+        document.querySelector(".soundbutton span").style.transform = "translate(2px, 4.5px)";
     }
 }
 

@@ -645,7 +645,8 @@ a.github-logo:hover{
 }
 .running-game .soundControls .soundbutton span{
     display: inline-block;
-    transform: translate(1px, 2px);
+    transform: translate(0px, 4.5px);
+    font-size: 40px;
 }
 
 
@@ -670,7 +671,7 @@ a.github-logo:hover{
     cursor: pointer;
     background: none;
 
-    font-size: 50px;
+    font-size: 60px;
     line-height: 1;
 }
 

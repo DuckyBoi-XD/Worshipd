@@ -425,6 +425,11 @@ function gamerun(difficulty, quantity){
             }, 100);
         }
     });
+    audio.addEventListener("ended", () => {
+        document.querySelector(".soundbutton span").textContent = "▶"
+        document.querySelector(".soundbutton span").style.fontSize = "30px";
+        document.querySelector(".soundbutton span").style.transform = "translate(2px, 4.5px)";
+    })
 
         progressBar = setInterval(() =>{
         elem.style.width = (audio.currentTime/audio.duration)*100 + "%";

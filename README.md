@@ -44,4 +44,4 @@ After choosing both the difficulty and song quantity, you can finally start play
 - Song Progress: Indicates the length and audio left of the song's audio
 - Search Bar/Drop Down Menu: Search bar and drop down menu to find the song
 
-The audio should play instantly, so to 
+The audio should play instantly. In case it doesn't, press either the repeat button or the play button.

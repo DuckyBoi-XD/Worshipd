@@ -260,7 +260,7 @@ a.github-logo:hover{
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.game-space .box p2{
+.game-space .box .small{
     font-family: "DM Serif Display", serif;
     font-size: clamp(10px, 1.5vw, 20px);
     font-weight: 200;
@@ -1122,6 +1122,41 @@ button.game-button3:hover{
 
 .Youtube-logo:hover{
     transform:scale(1.1);
+}
+
+.info-box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    pointer-events: none;
+    height: auto;
+
+    align-items: center;
+    padding: 40px 0px 40px 0px;
+    gap: 40px
+}
+
+.info-box div h1{
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(10px, 5vw, 30px);
+    font-weight: 800;
+    margin: 0px 0px 10px 5px;
+}
+
+.info-box div p{
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(10px, 3vw, 20px);
+    font-weight: 400;
+    color: #ffe590;
+    margin: 0px;
+}
+
+.info-box div .text-box{
+    padding: 10px;
+    border: solid 1px #FFC300;
+    border-radius: 10px;
+    width: 90vw;
 }
 
 @keyframes fade-in-up {

@@ -496,7 +496,6 @@
     background-image: url("assets/cover-art/HowGreatThouArt.jpg");
     background-size: cover;
 }
-
 .cover-artIGYMH{
     height: clamp(25px, 3vw, 35px);
     width: clamp(25px, 3vw, 35px);

@@ -544,8 +544,8 @@ a.github-logo:hover{
 }
 
 .endgame-songtitles .songimage{
-    height: clamp(60px, 8vw, 90px);
-    width: clamp(60px, 8vw, 90px);
+    height: clamp(60px, 7vw, 70px);
+    width: clamp(60px, 7vw, 70px);
 
     border-radius: clamp(5px, 3vw, 20px);
     box-sizing: border-box;
@@ -1153,9 +1153,10 @@ button.game-button3:hover{
 }
 
 .info-box div .text-box{
-    padding: 10px;
+    padding: 10px 15px 10px 15px;
     border: solid 1px #FFC300;
     border-radius: 10px;
+    background-color: #002750;
     width: 90vw;
 }
 

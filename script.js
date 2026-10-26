@@ -210,7 +210,7 @@ const songArtists = {
     "State Of Mind" : "Equippers Revolution",
     "Surrounded" : "UPPERROOM",
     "THANK GOD I'M FREE" : "Elevation Rhythm",
-    "TRUTH" : "Alabaster",
+    "TRUTH" : "Alabaster Worship",
     "Take You At Your Word" : "Cody Carnes",
     "Thank You Jesus For The Blood" : "Charity Gayle",
     "That's Who I Praise" : "Brandon Lake",

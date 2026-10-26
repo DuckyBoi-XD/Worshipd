@@ -861,24 +861,26 @@ document.addEventListener("keydown", (key) => {
 
             buttonposition = visiblebuttons.indexOf(document.activeElement)
 
+            if (buttonposition == -1){return}
+
             console.log(buttonposition, vblength)
             if(key.code === "ArrowUp" || key.code === "ArrowLeft"){
                 key.preventDefault()
-                if (buttonTracking == 0){
+                if (buttonposition == 0){
                     buttonTracking = vblength
                 }
                 else{
-                    buttonTracking -= 1
+                    buttonTracking = buttonposition - 1
                 }
                 visiblebuttons[buttonTracking].focus()
             }
             else if (key.code === "ArrowDown" || key.code === "ArrowRight" || key.code === "Tab"){
                 key.preventDefault()
-                if (buttonTracking == vblength){
+                if (buttonposition == vblength){
                     buttonTracking = 0
                 }
                 else{
-                    buttonTracking += 1
+                    buttonTracking = buttonposition + 1
                 }
                 visiblebuttons[buttonTracking].focus()
             }

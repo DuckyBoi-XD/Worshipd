@@ -1136,3 +1136,42 @@
     background-image: url("assets/cover-art/YourWaysBetter.jpg");
     background-size: cover;
 }
+.cover-artIKTIK{
+    height: 25px;
+    width: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: 7px;
+
+    background-image: url("assets/cover-art/IKnowThatIKnow.jpg");
+    background-size: cover;
+}
+
+.cover-artKK{
+    height: 25px;
+    width: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: 7px;
+
+    background-image: url("assets/cover-art/KiaKaha.jpg");
+    background-size: cover;
+}
+
+.cover-artTO{
+    height: 25px;
+    width: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: 7px;
+
+    background-image: url("assets/cover-art/TAKEOVER.jpg");
+    background-size: cover;
+}
+
+.cover-artTMS{
+    height: 25px;
+    width: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: 7px;
+
+    background-image: url("assets/cover-art/TradingMySorrows.jpg");
+    background-size: cover;
+}

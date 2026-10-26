@@ -822,7 +822,6 @@ function submitSong(){
 }
 
 document.addEventListener("keydown", (key) => {
-    console.log(document.activeElement)
     if (gamestate){
         if (key.code === "Space" && document.activeElement !== document.querySelector(".search-bar")){
             key.preventDefault();
@@ -838,6 +837,8 @@ document.addEventListener("keydown", (key) => {
             visiblebuttons = [...document.querySelectorAll(".dropdownmenu button")]
             .filter(b => b.style.display != "none")
             vblength = visiblebuttons.length - 1
+
+            if (!visiblebuttons.length) return;
 
             buttonposition = visiblebuttons.indexOf(document.activeElement)
 

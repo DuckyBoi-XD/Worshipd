@@ -506,6 +506,16 @@
     background-size: cover;
 }
 
+.cover-artIKTIK{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url("assets/cover-art/IKnowThatIKnow.jpg");
+    background-size: cover;
+}
+
 .cover-artILYL{
     height: clamp(25px, 3vw, 35px);
     width: clamp(25px, 3vw, 35px);
@@ -613,6 +623,16 @@
     border-radius: clamp(5px, 1vw, 10px);
 
     background-image: url("assets/cover-art/TheJoy.jpg");
+    background-size: cover;
+}
+
+.cover-artKK{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url("assets/cover-art/KiaKaha.jpg");
     background-size: cover;
 }
 
@@ -906,6 +926,16 @@
     background-size: cover;
 }
 
+.cover-artTO{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url("assets/cover-art/TAKEOVER.jpg");
+    background-size: cover;
+}
+
 .cover-artTYAYW{
     height: clamp(25px, 3vw, 35px);
     width: clamp(25px, 3vw, 35px);
@@ -963,6 +993,16 @@
     border-radius: clamp(5px, 1vw, 10px);
 
     background-image: url("assets/cover-art/ThisIsOurGod.jpg");
+    background-size: cover;
+}
+
+.cover-artTMS{
+    height: clamp(25px, 3vw, 35px);
+    width: clamp(25px, 3vw, 35px);
+    border: 1px solid rgba(255, 255, 255, 0.483);
+    border-radius: clamp(5px, 1vw, 10px);
+
+    background-image: url("assets/cover-art/TradingMySorrows.jpg");
     background-size: cover;
 }
 

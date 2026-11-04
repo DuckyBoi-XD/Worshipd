@@ -248,6 +248,7 @@ difficultyMode = 0
 quantitySongs = 0
 
 gamestate = false
+cooldown = false
 
 boxes = ["first", "second", "third", "forth", "fifth"]
 endgameSongs = ["one", "two", "three", "four", "five"]
@@ -692,6 +693,9 @@ function skipSong(){
 }
 
 function submitSong(){
+    if (cooldown == true){
+        return
+    }
     input = document.querySelector(".search-bar");
     if (input.value.toLowerCase() == songNameGameList[gamesProgression-1].toLowerCase()){
         songGuessState[gamesProgression-1] = 2
@@ -818,7 +822,10 @@ function submitSong(){
         }
         else {strikeSFX.play();}
     }
-
+    cooldown = true
+    setTimeout(() => {
+        cooldown = false;
+    }, 1000);
 }
 
 document.addEventListener("keydown", (key) => {

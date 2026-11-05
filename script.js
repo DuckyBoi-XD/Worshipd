@@ -249,6 +249,7 @@ quantitySongs = 0
 
 gamestate = false
 cooldown = false
+skipCooldown = false
 
 boxes = ["first", "second", "third", "forth", "fifth"]
 endgameSongs = ["one", "two", "three", "four", "five"]
@@ -270,6 +271,16 @@ wrongSFX = new Audio(encodeURI(`assets/sfx/wrongSFX.mp3`))
 skipSFX = new Audio(encodeURI(`assets/sfx/skipSFX.mp3`))
 
 strikeSFX.volume = 0.5;
+
+function playAudio(audioElement) {
+    audioElement.play().catch(() => {});
+}
+
+function restartSFX(effect) {
+    effect.pause();
+    effect.currentTime = 0;
+    playAudio(effect);
+}
 
 function startgame(mode) {
 
@@ -411,7 +422,7 @@ function gamerun(difficulty, quantity){
     soundPlayingCount = true
     audio.volume = 0
 
-    audio.play();
+    playAudio(audio);
 
     fadeIn = setInterval(() => {
         audio.volume = Math.min(1, audio.volume + 0.10);
@@ -524,7 +535,7 @@ function soundrepeat(){
     soundPlayingCount = true
     audio.volume = 0
 
-    audio.play();
+    playAudio(audio);
 
     fadeIn = setInterval(() => {
         audio.volume = Math.min(1, audio.volume + 0.10);
@@ -569,7 +580,7 @@ function soundplay(){
         fadingOut = false
         clearInterval(fadeOut)
         clearInterval(fadeIn)
-        audio.play()
+        playAudio(audio)
         audio.volume = 1
         document.querySelector(".soundbutton span").textContent = "⏸"
         document.querySelector(".soundbutton span").style.fontSize = "40px";
@@ -592,6 +603,10 @@ function soundplay(){
 }
 
 function skipSong(){
+    if (skipCooldown) return;
+    skipCooldown = true;
+    setTimeout(() => { skipCooldown = false; }, 250);
+
     skipleftoverCount = 0
     for (item of songGuessState){
         if (item == 2){
@@ -599,7 +614,10 @@ function skipSong(){
     if (skipleftoverCount == songGuessState.length-1){
         return}
 
-    skipSFX.play()
+    restartSFX(skipSFX)
+    clearInterval(fadeIn)
+    clearInterval(fadeOut)
+    clearInterval(progressBar)
     audio.pause()
     
     tempVar = gamesProgression -1
@@ -657,7 +675,7 @@ function skipSong(){
             soundPlayingCount = true    
             audio.volume = 0
 
-            audio.play();
+            playAudio(audio);
 
             fadeIn = setInterval(() => {
                 audio.volume = Math.min(1, audio.volume + 0.10);
@@ -700,7 +718,7 @@ function submitSong(){
     if (input.value.toLowerCase() == songNameGameList[gamesProgression-1].toLowerCase()){
         songGuessState[gamesProgression-1] = 2
         if (songGuessState.every(entry => entry == 2)){
-            confettiSFX.play();
+            restartSFX(confettiSFX);
             audio.pause()
             gamestate = false
             confetti({
@@ -744,7 +762,10 @@ function submitSong(){
                     input.value = ""
 
                     document.querySelector(`.gameProgress .box.${boxes[gamesProgression-1]}`).style.backgroundColor = "#427175"
-                    correctSFX.play()
+                    restartSFX(correctSFX)
+                    clearInterval(fadeIn)
+                    clearInterval(fadeOut)
+                    clearInterval(progressBar)
                     audio.pause()
 
                     document.querySelector(`.gameProgress .box.${boxes[tempVar]}`).style.backgroundColor = "#295381"
@@ -757,7 +778,7 @@ function submitSong(){
                     soundPlayingCount = true
                     audio.volume = 0
 
-                    audio.play();
+                    playAudio(audio);
 
                     fadeIn = setInterval(() => {
                         audio.volume = Math.min(1, audio.volume + 0.10);
@@ -797,7 +818,7 @@ function submitSong(){
         songGuessState[gamesProgression-1] = 4
         strikes++
         if (strikes == 3){
-            wrongSFX.play();
+            restartSFX(wrongSFX);
             gamestate = false
             songGuessState[gamesProgression-1] = 4
             for (i=0; i < songGuessState.length; i++){
@@ -820,7 +841,7 @@ function submitSong(){
 
             audio.pause()
         }
-        else {strikeSFX.play();}
+        else {restartSFX(strikeSFX);}
     }
     cooldown = true
     setTimeout(() => {

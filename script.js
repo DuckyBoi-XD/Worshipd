@@ -263,6 +263,7 @@ songGuessStatements = [[1], [1, 0, 0], [1, 0, 0, 0, 0]]
 songGuessState = null
 
 let fadeIn, fadeOut, progressBar
+songClips = []
 
 strikeSFX = new Audio(encodeURI(`assets/sfx/strikeSFX.mp3`))
 confettiSFX = new Audio(encodeURI(`assets/sfx/confettiSFX.mp3`))

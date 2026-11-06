@@ -926,13 +926,13 @@
     background-size: cover;
 }
 
-.cover-artTO{
+.cover-artTO2{
     height: clamp(25px, 3vw, 35px);
     width: clamp(25px, 3vw, 35px);
     border: 1px solid rgba(255, 255, 255, 0.483);
     border-radius: clamp(5px, 1vw, 10px);
 
-    background-image: url("assets/cover-art/TAKEOVER.jpg");
+    background-image: url("assets/cover-art/TAKEOVERPT.2.jpg");
     background-size: cover;
 }
 

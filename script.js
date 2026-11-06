@@ -272,16 +272,73 @@ skipSFX = new Audio(encodeURI(`assets/sfx/skipSFX.mp3`))
 
 strikeSFX.volume = 0.5;
 
+audioCtx = null
+sfxBuffers = {}
+try {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)()
+}
+catch(e){}
+
 for (sfx of [strikeSFX, confettiSFX, correctSFX, wrongSFX, skipSFX]){
     sfx.preload = "auto";
     sfx.load();
+
+    let sfxName = sfx.src.split("/").pop().replace(".mp3", "");
+    sfx.sfxName = sfxName
+
+    if (audioCtx){
+        fetch(encodeURI(`assets/sfx/${sfxName}.mp3`))
+            .then(response => response.arrayBuffer())
+            .then(data => audioCtx.decodeAudioData(data))
+            .then(buffer => { sfxBuffers[sfxName] = buffer })
+            .catch(() => {});
+    }
 }
+
+document.addEventListener("pointerdown", () => {
+    if (audioCtx && audioCtx.state == "suspended"){ audioCtx.resume() }
+})
 
 function playAudio(audioElement) {
     audioElement.play().catch(() => {});
 }
 
+function songClip(index) {
+    return new Audio(songClips[index] || songsoundlist[index]);
+}
+
+function startProgressBar() {
+    clearInterval(progressBar)
+
+    let bar = document.querySelector(".progression")
+    bar.style.transition = "width 0.1s linear"
+
+    progressBar = setInterval(() => {
+        if (!audio.duration || !isFinite(audio.duration)){ return }
+
+        bar.style.width = Math.min(100, (audio.currentTime / audio.duration) * 100) + "%"
+
+        if (audio.ended || audio.currentTime >= audio.duration){
+            bar.style.width = "100%"
+            clearInterval(progressBar)
+        }
+    }, 10)
+}
+
 function restartSFX(effect) {
+    if (audioCtx && sfxBuffers[effect.sfxName]){
+        if (audioCtx.state == "suspended"){ audioCtx.resume() }
+
+        let source = audioCtx.createBufferSource()
+        let gain = audioCtx.createGain()
+        source.buffer = sfxBuffers[effect.sfxName]
+        gain.gain.value = effect.volume
+        source.connect(gain)
+        gain.connect(audioCtx.destination)
+        source.start(0)
+        return
+    }
+
     effect.pause();
     effect.currentTime = 0;
     playAudio(effect);
@@ -325,6 +382,7 @@ function backbutton(){
 
     clearInterval(fadeOut)
     clearInterval(fadeIn)
+    clearInterval(progressBar)
     audio.pause()
 };
 
@@ -409,13 +467,22 @@ function gamerun(difficulty, quantity){
         songsoundlist.push(encodeURI(`assets/audio-clips/${item}/${difficulty}/${clip}`));
     }
 
-    songAudio = []
-    for (url of songsoundlist){
-        clipAudio = new Audio(url)
-        clipAudio.preload = "auto"
-        clipAudio.load()
-        songAudio.push(clipAudio)
+    if (songClips){
+        for (clipURL of songClips){
+            if (clipURL){ URL.revokeObjectURL(clipURL) }
+        }
     }
+
+    songClips = []
+    for (i = 0; i < songsoundlist.length; i++){
+        songClips.push(null)
+    }
+    songsoundlist.forEach((clipURL, clipIndex) => {
+        fetch(clipURL)
+            .then(response => response.blob())
+            .then(blob => { songClips[clipIndex] = URL.createObjectURL(blob.slice(0, blob.size, "audio/mp4")) })
+            .catch(() => {})
+    })
 
     for (i = 0; i < 5; i++){
         document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]}`).classList.add("hidden")
@@ -431,16 +498,16 @@ function gamerun(difficulty, quantity){
     elem = document.querySelector(".progression");
     elem.style.transition = "width 0.1s linear";
 
-    audio = songAudio[0];
+    audio = songClip(0);
     soundPlayingCount = true
     audio.volume = 0
 
     playAudio(audio);
 
     fadeIn = setInterval(() => {
-        audio.volume = Math.min(1, audio.volume + 0.10);
+        audio.volume = Math.min(1, audio.volume + 0.25);
         if (audio.volume >= 1) clearInterval(fadeIn);
-    }, 50);
+    }, 25);
 
     fadingOut = false
     
@@ -464,13 +531,7 @@ function gamerun(difficulty, quantity){
         document.querySelector(".soundbutton span").style.transform = "translate(2px, 4.5px)";
     })
 
-        progressBar = setInterval(() =>{
-        elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
-        if (audio.currentTime >= audio.duration){
-            clearInterval(progressBar)
-            elem.style.transition = `width ${audio.duration/100}s linear`;
-        }
-    }, 10)
+        startProgressBar()
 
     /**/
 
@@ -544,17 +605,16 @@ function soundrepeat(){
         audio.pause()
     }
 
-    audio = songAudio[(gamesProgression-1)];
-    audio.currentTime = 0
+    audio = songClip((gamesProgression-1));
     soundPlayingCount = true
     audio.volume = 0
 
     playAudio(audio);
 
     fadeIn = setInterval(() => {
-        audio.volume = Math.min(1, audio.volume + 0.10);
+        audio.volume = Math.min(1, audio.volume + 0.25);
         if (audio.volume >= 1) clearInterval(fadeIn);
-    }, 50);
+    }, 25);
 
     fadingOut = false
     
@@ -579,13 +639,7 @@ function soundrepeat(){
         document.querySelector(".soundbutton span").style.transform = "translate(2px, 4.5px)";
     })
 
-        progressBar = setInterval(() =>{
-        elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
-        if (audio.currentTime >= audio.duration){
-            clearInterval(progressBar)
-            elem.style.transition = `width ${audio.duration/100}s linear`;
-        }
-    }, 10)
+        startProgressBar()
 
 }
 
@@ -685,16 +739,16 @@ function skipSong(){
             elem = document.querySelector(".progression");
             elem.style.transition = "width 0.1s linear";
 
-            audio = songAudio[(tempVar)];
+            audio = songClip((tempVar));
             soundPlayingCount = true    
             audio.volume = 0
 
             playAudio(audio);
 
             fadeIn = setInterval(() => {
-                audio.volume = Math.min(1, audio.volume + 0.10);
+                audio.volume = Math.min(1, audio.volume + 0.25);
                 if (audio.volume >= 1) clearInterval(fadeIn);
-            }, 50);
+            }, 25);
 
             fadingOut = false
             
@@ -713,13 +767,7 @@ function skipSong(){
                 }
             });
 
-                progressBar = setInterval(() =>{
-                elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
-                if (audio.currentTime >= audio.duration){
-                    clearInterval(progressBar)
-                    elem.style.transition = `width ${audio.duration/100}s linear`;
-                }
-            }, 10)
+                startProgressBar()
         }
     }
 }
@@ -788,16 +836,16 @@ function submitSong(){
 
                     gamesProgression = tempVar+1
 
-                    audio = songAudio[(tempVar)];
+                    audio = songClip((tempVar));
                     soundPlayingCount = true
                     audio.volume = 0
 
                     playAudio(audio);
 
                     fadeIn = setInterval(() => {
-                        audio.volume = Math.min(1, audio.volume + 0.10);
+                        audio.volume = Math.min(1, audio.volume + 0.25);
                         if (audio.volume >= 1) clearInterval(fadeIn);
-                    }, 50);
+                    }, 25);
 
                     fadingOut = false
                     
@@ -816,13 +864,7 @@ function submitSong(){
                         }
                     });
 
-                        progressBar = setInterval(() =>{
-                        elem.style.width = (audio.currentTime/audio.duration)*100 + "%";
-                        if (audio.currentTime >= audio.duration){
-                            clearInterval(progressBar)
-                            elem.style.transition = `width ${audio.duration/100}s linear`;
-                        }
-                    }, 10)
+                        startProgressBar()
                 }
             }
         }

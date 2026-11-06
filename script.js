@@ -272,6 +272,11 @@ skipSFX = new Audio(encodeURI(`assets/sfx/skipSFX.mp3`))
 
 strikeSFX.volume = 0.5;
 
+for (sfx of [strikeSFX, confettiSFX, correctSFX, wrongSFX, skipSFX]){
+    sfx.preload = "auto";
+    sfx.load();
+}
+
 function playAudio(audioElement) {
     audioElement.play().catch(() => {});
 }
@@ -404,6 +409,14 @@ function gamerun(difficulty, quantity){
         songsoundlist.push(encodeURI(`assets/audio-clips/${item}/${difficulty}/${clip}`));
     }
 
+    songAudio = []
+    for (url of songsoundlist){
+        clipAudio = new Audio(url)
+        clipAudio.preload = "auto"
+        clipAudio.load()
+        songAudio.push(clipAudio)
+    }
+
     for (i = 0; i < 5; i++){
         document.querySelector(`.endgame-songtitles .song.${endgameSongs[i]}`).classList.add("hidden")
     }
@@ -418,7 +431,7 @@ function gamerun(difficulty, quantity){
     elem = document.querySelector(".progression");
     elem.style.transition = "width 0.1s linear";
 
-    audio = new Audio(songsoundlist[(0)]);
+    audio = songAudio[0];
     soundPlayingCount = true
     audio.volume = 0
 
@@ -531,7 +544,8 @@ function soundrepeat(){
         audio.pause()
     }
 
-    audio = new Audio(songsoundlist[(gamesProgression-1)]);
+    audio = songAudio[(gamesProgression-1)];
+    audio.currentTime = 0
     soundPlayingCount = true
     audio.volume = 0
 
@@ -671,7 +685,7 @@ function skipSong(){
             elem = document.querySelector(".progression");
             elem.style.transition = "width 0.1s linear";
 
-            audio = new Audio(songsoundlist[(tempVar)]);
+            audio = songAudio[(tempVar)];
             soundPlayingCount = true    
             audio.volume = 0
 
@@ -774,7 +788,7 @@ function submitSong(){
 
                     gamesProgression = tempVar+1
 
-                    audio = new Audio(songsoundlist[(tempVar)]);
+                    audio = songAudio[(tempVar)];
                     soundPlayingCount = true
                     audio.volume = 0
 

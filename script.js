@@ -409,6 +409,7 @@ function gamerun(difficulty, quantity){
         quantity = quantitySongs
         document.querySelector(".endSpace").classList.add("hidden")
         document.querySelector(".endspace-boxing").classList.add("hidden")
+        document.querySelector(".difficultytitle").textContent = gameDifficultyText[difficulty-1]
     }
     else{difficultyMode = difficulty; quantitySongs = quantity;}
 

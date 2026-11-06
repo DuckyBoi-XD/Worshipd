@@ -13,7 +13,7 @@ A web based game where the goal is to guess the christain contemporary music bas
 
 ## Getting Started
 
-It's very simple, just click here [Worship'd](https://worshipd.duckyccm.me/) or go to **https://worshipd.duckyccm.me/**
+It's very simple, just go to **https://worshipd.duckyccm.me/**
 
 It is recomended to use headphones and to allow auto play of audio if asked.
 
@@ -45,3 +45,7 @@ After choosing both the difficulty and song quantity, you can finally start play
 - Search Bar/Drop Down Menu: Search bar and drop down menu to find the song
 
 The audio should play instantly. In case it doesn't, press either the repeat button or the play button. The aim of the game is to guess the song based on the audio given.
+
+## Notes
+
+Notes, inner thoughts and information can be seen at **https://worshipd.duckyccm.me/songlist**

@@ -557,7 +557,6 @@ function gamerun(difficulty, quantity){
         document.querySelector(`.endgame-songtitles .song.${coverart_count[i]} .songimage`).style.backgroundImage = "url(" + coverarts_endgame[i] + ")"
     }
 
-    console.log(songNameGameList)
 }
 
 
@@ -926,7 +925,6 @@ document.addEventListener("keydown", (key) => {
 
             buttonposition = visiblebuttons.indexOf(document.activeElement)
 
-            console.log(buttonposition, visiblebuttons)
             if(key.code === "ArrowUp" || key.code === "ArrowLeft"){
                 key.preventDefault()
                 buttonTracking = vblength
@@ -947,7 +945,6 @@ document.addEventListener("keydown", (key) => {
 
             if (buttonposition == -1){return}
 
-            console.log(buttonposition, vblength)
             if(key.code === "ArrowUp" || key.code === "ArrowLeft"){
                 key.preventDefault()
                 if (buttonposition == 0){

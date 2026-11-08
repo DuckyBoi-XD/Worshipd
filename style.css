@@ -486,9 +486,15 @@ a.github-logo:hover{
 }
 
 .endgame-controls .restart{
-    font-size: 40px;
-    line-height: 0.8;
-    padding: 0px 9px 9px 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 9px;
+}
+
+.endgame-controls .restart .icon{
+    width: 28px;
+    height: 28px;
 }
 
 .endgame-songtitles .song{
@@ -623,9 +629,35 @@ a.github-logo:hover{
     background-color: #003369;
 }
 
+/* Play / pause / repeat are drawn as inline SVG images so they render
+   identically and stay centred on every device */
+.icon{
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.icon-play{
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjRkZDMzAwIj48cGF0aCBkPSJNOCA1djE0bDExLTd6Ii8+PC9zdmc+");
+}
+
+.icon-pause{
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjRkZDMzAwIj48cGF0aCBkPSJNNiA1aDR2MTRINnpNMTQgNWg0djE0aC00eiIvPjwvc3ZnPg==");
+}
+
+.icon-repeat{
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjRkZDMzAwIj48cGF0aCBkPSJNMTcuNjUgNi4zNUE3Ljk1OCA3Ljk1OCAwIDAgMCAxMiA0Yy00LjQyIDAtOCAzLjU4LTggOHMzLjU4IDggOCA4YzMuNzMgMCA2Ljg0LTIuNTUgNy43My02aC0yLjA4QTUuOTkgNS45OSAwIDAgMSAxMiAxOGMtMy4zMSAwLTYtMi42OS02LTZzMi42OS02IDYtNmMxLjY2IDAgMy4xNC42OSA0LjIyIDEuNzhMMTMgMTFoN1Y0bC0yLjM1IDIuMzV6Ii8+PC9zdmc+");
+}
+
 .running-game .soundControls .soundbutton{
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     border: 2px solid #c69033;
     border-radius: 15px;
@@ -644,15 +676,13 @@ a.github-logo:hover{
     font-size: 30px;
 }
 .running-game .soundControls .soundbutton span{
-    display: inline-block;
-    transform: translate(0px, 4.5px);
-    font-size: 40px;
+    display: inline-flex;
 }
 
 
 .running-game .soundControls .soundrepeat{
     position: relative;
-    display: inline-block;
+    display: inline-flex;
 
     justify-content: center;
     align-items: center;

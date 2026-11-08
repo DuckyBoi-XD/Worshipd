@@ -528,9 +528,7 @@ function gamerun(difficulty, quantity){
         }
     });
     audio.addEventListener("ended", () => {
-        document.querySelector(".soundbutton span").textContent = "▶"
-        document.querySelector(".soundbutton span").style.fontSize = "30px";
-        document.querySelector(".soundbutton span").style.transform = "translate(2px, 4.5px)";
+        setSoundIcon(false)
     })
 
         startProgressBar()
@@ -590,11 +588,17 @@ function dropdownmenuClickPlus(button){
 }
 
 soundPlayingCount = false
- 
+
+function setSoundIcon(playing){
+    let icon = document.querySelector(".soundbutton .icon")
+    if (!icon){ return }
+
+    icon.classList.toggle("icon-pause", playing)
+    icon.classList.toggle("icon-play", !playing)
+}
+
 function soundrepeat(){
-    document.querySelector(".soundbutton span").textContent = "⏸"
-    document.querySelector(".soundbutton span").style.fontSize = "50px";
-    document.querySelector(".soundbutton span").style.transform = "translate(0px, 4.5px)";
+    setSoundIcon(true)
     clearInterval(fadeIn)
     clearInterval(fadeOut)
     clearInterval(progressBar)
@@ -635,9 +639,7 @@ function soundrepeat(){
     });
 
     audio.addEventListener("ended", () => {
-        document.querySelector(".soundbutton span").textContent = "▶"
-        document.querySelector(".soundbutton span").style.fontSize = "30px";
-        document.querySelector(".soundbutton span").style.transform = "translate(2px, 4.5px)";
+        setSoundIcon(false)
     })
 
         startProgressBar()
@@ -651,23 +653,17 @@ function soundplay(){
         clearInterval(fadeIn)
         playAudio(audio)
         audio.volume = 1
-        document.querySelector(".soundbutton span").textContent = "⏸"
-        document.querySelector(".soundbutton span").style.fontSize = "40px";
-        document.querySelector(".soundbutton span").style.transform = "translate(0px, 4.5px)";
+        setSoundIcon(true)
     }
     else if (audio.ended){
         soundrepeat()
-        document.querySelector(".soundbutton span").textContent = "⏸"
-        document.querySelector(".soundbutton span").style.fontSize = "40px";
-        document.querySelector(".soundbutton span").style.transform = "translate(0px, 4.5px)";
+        setSoundIcon(true)
     }
     else if (!audio.paused){
         clearInterval(fadeOut)
         clearInterval(fadeIn)
         audio.pause()
-        document.querySelector(".soundbutton span").textContent = "▶"
-        document.querySelector(".soundbutton span").style.fontSize = "30px";
-        document.querySelector(".soundbutton span").style.transform = "translate(2px, 4.5px)";
+        setSoundIcon(false)
     }
 }
 

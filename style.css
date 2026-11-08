@@ -247,7 +247,7 @@ a.github-logo:hover{
     animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.game-space .box p{
+.game-space .box > p{
     font-family: "DM Serif Display", serif;
     font-size: clamp(15px, 2vw, 30px);
     font-weight: 500;
@@ -1158,6 +1158,11 @@ button.game-button3:hover{
     border-radius: 10px;
     background-color: #002750;
     width: 90vw;
+}
+
+.game-space .game-info{
+    position: relative;
+    width: 100%;
 }
 
 @keyframes fade-in-up {

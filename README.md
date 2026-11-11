@@ -57,3 +57,4 @@ The audio should play instantly. In case it doesn't, press either the repeat but
 
 Notes, inner thoughts and information can be seen at **https://worshipd.duckyccm.me/songlist**
 I personlly think the site looks terrible and would look and ork way better if I supervised an AI to do it.
+The game works best with great internet because it is constantly downloading audio files. It works on websites but for the best experience you should cloning the repo.

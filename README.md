@@ -11,6 +11,13 @@ A web based game where the goal is to guess the christain contemporary music bas
 
 ## Media
 
+![picture of ](assets/media/Screenshot%202026-11-10%20at%207.08.41 AM.png)
+
+![picture of ](assets/media/Screenshot%202026-11-10%20at%207.27.26 AM.png)
+
+![picture of ](assets/media/Screenshot%202026-11-10%20at%207.29.05 AM.png)
+
+
 ## Getting Started
 
 It's very simple, just go to **https://worshipd.duckyccm.me/**
@@ -49,3 +56,4 @@ The audio should play instantly. In case it doesn't, press either the repeat but
 ## Notes
 
 Notes, inner thoughts and information can be seen at **https://worshipd.duckyccm.me/songlist**
+I personlly think the site looks terrible and would look and ork way better if I supervised an AI to do it.

@@ -629,6 +629,10 @@ a.github-logo:hover{
     background-color: #003369;
 }
 
+.running-game .soundControls .gameControls .skipButton{
+    background-color: none;
+}
+
 /* Play / pause / repeat are drawn as inline SVG images so they render
    identically and stay centred on every device */
 .icon{

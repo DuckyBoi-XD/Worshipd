@@ -420,6 +420,8 @@ function gamerun(difficulty, quantity){
         document.querySelector(".gameProgress .box.third").classList.add("hidden")
         document.querySelector(".gameProgress .box.forth").classList.add("hidden")
         document.querySelector(".gameProgress .box.fifth").classList.add("hidden")
+
+        document.querySelector(`.running-game .soundControls .gameControls .skipButton`).style.backgroundColor = "#7d2222";
     }
     else if (quantity == 3){
         songGuessState = [...songGuessStatements[1]];
@@ -427,6 +429,8 @@ function gamerun(difficulty, quantity){
         document.querySelector(".gameProgress .box.third").classList.remove("hidden")
         document.querySelector(".gameProgress .box.forth").classList.add("hidden")
         document.querySelector(".gameProgress .box.fifth").classList.add("hidden")
+
+        document.querySelector(`.skipButton`).style.backgroundColor = 'transparent';
     }
     else if (quantity == 5){
         songGuessState = [...songGuessStatements[2]];
@@ -434,6 +438,8 @@ function gamerun(difficulty, quantity){
         document.querySelector(".gameProgress .box.third").classList.remove("hidden")
         document.querySelector(".gameProgress .box.forth").classList.remove("hidden")
         document.querySelector(".gameProgress .box.fifth").classList.remove("hidden")
+
+        document.querySelector(`.skipButton`).style.backgroundColor = 'transparent';
     }
 
     for (i = 0; i < 3; i++){
@@ -668,7 +674,7 @@ function soundplay(){
 }
 
 function skipSong(){
-    if (skipCooldown) return;
+    if (skipCooldown || quantitySongs == 1) return;
     skipCooldown = true;
     setTimeout(() => { skipCooldown = false; }, 250);
 

@@ -2,6 +2,10 @@
 
 A web based game where the goal is to guess the christain contemporary music based on limited information given.
 
+## Description
+
+What is the purpose of this game? I wanted to create a project based on something about Chirstianity and something that reflects my faith is music, or specifically, worship music. This game is designed to practice and test your Christain music knowledge by giving you a small audio clip of the song for you to listen to and try guess. This, not only strengthens your muscial knowledge but also introduces you to different CCM songs when you're stuck listening to the same ones. This game is suited to christains who listen to this kind of music. Though anyone can play it, and there is the Casual difficulty which gives people more clues on what the song it, to actually get into the game and play harder difficuties, you'll need to listen to the songs a lot.
+
 ## Features
 
 - Web Game: Accessing the game is as easy are going to a website
@@ -21,6 +25,8 @@ A web based game where the goal is to guess the christain contemporary music bas
 ## Getting Started
 
 It's very simple, just go to **https://worshipd.duckyccm.me/**
+
+It should work on any OS and on most browsers.
 
 It is recomended to use headphones and to allow auto play of audio if asked.
 
@@ -56,5 +62,14 @@ The audio should play instantly. In case it doesn't, press either the repeat but
 ## Notes
 
 Notes, inner thoughts and information can be seen at **https://worshipd.duckyccm.me/songlist**
-I personlly think the site looks terrible and would look and ork way better if I supervised an AI to do it.
+I personlly think the site looks terrible and would look and work way better if I supervised an AI to do it.
 The game works best with great internet because it is constantly downloading audio files. It works on websites but for the best experience you should cloning the repo.
+Another reminider, this game can be very difficult for those who don't listen to chirstian music. The difficulty Casual is the best way to fight this where it states the name of the song in the clip.
+
+## Help
+
+If you find any issues you can go to **https://github.com/DuckyBoi-XD/Worshipd/issues** or contact me on slack @DuckyBoi_XD or by email
+
+## Licence
+
+This project is licensed under the GNU License - see the LICENSE file for details

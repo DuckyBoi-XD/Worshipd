@@ -65,6 +65,7 @@ Notes, inner thoughts and information can be seen at **https://worshipd.duckyccm
 I personlly think the site looks terrible and would look and work way better if I supervised an AI to do it.
 The game works best with great internet because it is constantly downloading audio files. It works on websites but for the best experience you should cloning the repo.
 Another reminider, this game can be very difficult for those who don't listen to chirstian music. The difficulty Casual is the best way to fight this where it states the name of the song in the clip.
+The skip button skips the current song and moves on to the next song, not skipping through the entire round.
 
 ## Help
 
